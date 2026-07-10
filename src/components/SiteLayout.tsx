@@ -34,7 +34,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             </Link>
             <nav className="hidden lg:flex items-center gap-1">
               {NAV.map((item) => {
-                const active = pathname === item.to || (item.to !== "/" && pathname.startsWith(item.to));
+                const active = pathname === item.to || pathname.startsWith(item.to + "/");
                 return (
                   <Link
                     key={item.to}
