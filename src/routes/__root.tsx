@@ -80,10 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Central Asian Sufi Orders — A Living Atlas of the Silk Road" },
       { name: "description", content: "A scholarly and spiritually resonant atlas of Central Asian Sufi lineages, masters, sacred sites, manuscripts, and living traditions." },
       { name: "author", content: "Silk Road Sufi Archive" },
-      { property: "og:title", content: "Central Asian Sufi Orders — A Living Atlas" },
-      { property: "og:description", content: "Lineages, masters, shrines, manuscripts, and living practice from Bukhara, Samarkand, Khiva and beyond." },
+      { property: "og:title", content: "Central Asian Sufi Orders — A Living Atlas of the Silk Road" },
+      { property: "og:description", content: "A scholarly and spiritually resonant atlas of Central Asian Sufi lineages, masters, sacred sites, manuscripts, and living traditions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Central Asian Sufi Orders — A Living Atlas of the Silk Road" },
+      { name: "twitter:description", content: "A scholarly and spiritually resonant atlas of Central Asian Sufi lineages, masters, sacred sites, manuscripts, and living traditions." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png" },
     ],
     links: [
       {
