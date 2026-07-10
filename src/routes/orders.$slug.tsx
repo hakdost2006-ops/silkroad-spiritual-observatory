@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getOrder, orders } from "../data/orders";
+import { getOrder, orders, type Order } from "../data/orders";
 import { getMaster } from "../data/masters";
 import { getSite } from "../data/sites";
 import { library } from "../data/library";
@@ -32,7 +32,7 @@ export const Route = createFileRoute("/orders/$slug")({
 });
 
 function OrderPage() {
-  const { order } = Route.useLoaderData();
+  const { order } = Route.useLoaderData() as { order: Order };
   const relatedDownloads = library.filter((l) => l.order === order.slug);
 
   return (
@@ -68,7 +68,7 @@ function OrderPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Key texts</h2>
             <ul className="mt-4 divide-y divide-gold/30 border-y border-gold/30">
-              {order.texts.map((t: string) => (
+              {order.texts.map((t) => (
                 <li key={t.title} className="py-3">
                   <div className="font-serif text-lg text-lapis-deep">{t.title}</div>
                   {t.author && <div className="text-xs text-stone">{t.author}</div>}

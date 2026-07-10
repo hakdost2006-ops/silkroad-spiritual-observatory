@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { getMaster, masters } from "../data/masters";
+import { getMaster, masters, type Master } from "../data/masters";
 import { getOrder } from "../data/orders";
 import { library } from "../data/library";
 import { PageHeader, Panel, FieldLabel, Ornament } from "../components/ui-primitives";
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/masters/$slug")({
 });
 
 function MasterPage() {
-  const { master } = Route.useLoaderData();
+  const { master } = Route.useLoaderData() as { master: Master };
   const order = getOrder(master.order);
   const downloads = library.filter((l) => l.order === master.order).slice(0, 4);
 
