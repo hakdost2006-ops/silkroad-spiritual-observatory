@@ -48,7 +48,7 @@ function OrderPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Core teachings</h2>
             <ul className="mt-4 space-y-2">
-              {order.teachings.map((t) => (
+              {order.teachings.map((t: string) => (
                 <li key={t} className="flex gap-3 text-stone">
                   <span className="text-gold mt-2">◆</span><span>{t}</span>
                 </li>
@@ -58,7 +58,7 @@ function OrderPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Practices</h2>
             <ul className="mt-4 space-y-2">
-              {order.practices.map((t) => (
+              {order.practices.map((t: string) => (
                 <li key={t} className="flex gap-3 text-stone">
                   <span className="text-gold mt-2">◆</span><span>{t}</span>
                 </li>
@@ -68,7 +68,7 @@ function OrderPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Key texts</h2>
             <ul className="mt-4 divide-y divide-gold/30 border-y border-gold/30">
-              {order.texts.map((t) => (
+              {order.texts.map((t: string) => (
                 <li key={t.title} className="py-3">
                   <div className="font-serif text-lg text-lapis-deep">{t.title}</div>
                   {t.author && <div className="text-xs text-stone">{t.author}</div>}
@@ -98,7 +98,7 @@ function OrderPage() {
             <Panel>
               <FieldLabel>Masters</FieldLabel>
               <ul className="space-y-2">
-                {order.masters.map((m) => {
+                {order.masters.map((m: string) => {
                   const master = getMaster(m);
                   if (!master) return null;
                   return (
@@ -116,7 +116,7 @@ function OrderPage() {
             <Panel>
               <FieldLabel>Sacred sites</FieldLabel>
               <ul className="space-y-2">
-                {order.sites.map((s) => {
+                {order.sites.map((s: string) => {
                   const site = getSite(s);
                   if (!site) return null;
                   return <li key={s} className="text-stone">{site.name}</li>;
@@ -128,7 +128,7 @@ function OrderPage() {
             <Panel>
               <FieldLabel>Related orders</FieldLabel>
               <div className="flex flex-wrap gap-2">
-                {order.related.map((r) => {
+                {order.related.map((r: string) => {
                   const rel = orders.find((o) => o.slug === r);
                   if (!rel) return null;
                   return (

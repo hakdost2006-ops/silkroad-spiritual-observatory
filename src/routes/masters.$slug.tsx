@@ -47,7 +47,7 @@ function MasterPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Teachings</h2>
             <ul className="mt-4 space-y-2">
-              {master.teachings.map((t) => (
+              {master.teachings.map((t: string) => (
                 <li key={t} className="flex gap-3 text-stone"><span className="text-gold mt-2">◆</span><span>{t}</span></li>
               ))}
             </ul>
@@ -55,7 +55,7 @@ function MasterPage() {
           <div>
             <h2 className="font-serif text-2xl text-lapis-deep">Works</h2>
             <ul className="mt-4 space-y-1 text-stone">
-              {master.works.map((w) => <li key={w} className="font-serif text-lg text-lapis-deep">{w}</li>)}
+              {master.works.map((w: string) => <li key={w} className="font-serif text-lg text-lapis-deep">{w}</li>)}
             </ul>
           </div>
           <Ornament />
@@ -73,7 +73,7 @@ function MasterPage() {
             <Panel>
               <FieldLabel>Teachers</FieldLabel>
               <ul className="space-y-2">
-                {master.teachers.map((t) => {
+                {master.teachers.map((t: string) => {
                   const teacher = masters.find((m) => m.slug === t);
                   return teacher ? (
                     <li key={t}>
@@ -88,7 +88,7 @@ function MasterPage() {
             <Panel>
               <FieldLabel>Students</FieldLabel>
               <ul className="space-y-2">
-                {master.students.map((s) => {
+                {master.students.map((s: string) => {
                   const st = masters.find((m) => m.slug === s);
                   return st ? (
                     <li key={s}><Link to="/masters/$slug" params={{ slug: s }} className="text-lapis-deep hover:text-gold border-b border-gold/40">{st.name}</Link></li>

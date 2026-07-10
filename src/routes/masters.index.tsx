@@ -3,7 +3,7 @@ import { masters } from "../data/masters";
 import { getOrder } from "../data/orders";
 import { PageHeader } from "../components/ui-primitives";
 
-export const Route = createFileRoute("/masters")({
+export const Route = createFileRoute("/masters/")({
   head: () => ({
     meta: [
       { title: "Masters of the Path — Central Asian Sufi Atlas" },

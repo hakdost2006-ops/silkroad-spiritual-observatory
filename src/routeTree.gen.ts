@@ -9,38 +9,214 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as SitesRouteImport } from './routes/sites'
+import { Route as NursafardiyyaRouteImport } from './routes/nursafardiyya'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as LibraryRouteImport } from './routes/library'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as OrdersIndexRouteImport } from './routes/orders.index'
+import { Route as MastersIndexRouteImport } from './routes/masters.index'
+import { Route as OrdersSlugRouteImport } from './routes/orders.$slug'
+import { Route as MastersSlugRouteImport } from './routes/masters.$slug'
 
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitesRoute = SitesRouteImport.update({
+  id: '/sites',
+  path: '/sites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NursafardiyyaRoute = NursafardiyyaRouteImport.update({
+  id: '/nursafardiyya',
+  path: '/nursafardiyya',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryRoute = LibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrdersIndexRoute = OrdersIndexRouteImport.update({
+  id: '/orders/',
+  path: '/orders/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MastersIndexRoute = MastersIndexRouteImport.update({
+  id: '/masters/',
+  path: '/masters/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrdersSlugRoute = OrdersSlugRouteImport.update({
+  id: '/orders/$slug',
+  path: '/orders/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MastersSlugRoute = MastersSlugRouteImport.update({
+  id: '/masters/$slug',
+  path: '/masters/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/library': typeof LibraryRoute
+  '/map': typeof MapRoute
+  '/nursafardiyya': typeof NursafardiyyaRoute
+  '/sites': typeof SitesRoute
+  '/timeline': typeof TimelineRoute
+  '/masters/$slug': typeof MastersSlugRoute
+  '/orders/$slug': typeof OrdersSlugRoute
+  '/masters/': typeof MastersIndexRoute
+  '/orders/': typeof OrdersIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/library': typeof LibraryRoute
+  '/map': typeof MapRoute
+  '/nursafardiyya': typeof NursafardiyyaRoute
+  '/sites': typeof SitesRoute
+  '/timeline': typeof TimelineRoute
+  '/masters/$slug': typeof MastersSlugRoute
+  '/orders/$slug': typeof OrdersSlugRoute
+  '/masters': typeof MastersIndexRoute
+  '/orders': typeof OrdersIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/library': typeof LibraryRoute
+  '/map': typeof MapRoute
+  '/nursafardiyya': typeof NursafardiyyaRoute
+  '/sites': typeof SitesRoute
+  '/timeline': typeof TimelineRoute
+  '/masters/$slug': typeof MastersSlugRoute
+  '/orders/$slug': typeof OrdersSlugRoute
+  '/masters/': typeof MastersIndexRoute
+  '/orders/': typeof OrdersIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/library'
+    | '/map'
+    | '/nursafardiyya'
+    | '/sites'
+    | '/timeline'
+    | '/masters/$slug'
+    | '/orders/$slug'
+    | '/masters/'
+    | '/orders/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/library'
+    | '/map'
+    | '/nursafardiyya'
+    | '/sites'
+    | '/timeline'
+    | '/masters/$slug'
+    | '/orders/$slug'
+    | '/masters'
+    | '/orders'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/library'
+    | '/map'
+    | '/nursafardiyya'
+    | '/sites'
+    | '/timeline'
+    | '/masters/$slug'
+    | '/orders/$slug'
+    | '/masters/'
+    | '/orders/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  LibraryRoute: typeof LibraryRoute
+  MapRoute: typeof MapRoute
+  NursafardiyyaRoute: typeof NursafardiyyaRoute
+  SitesRoute: typeof SitesRoute
+  TimelineRoute: typeof TimelineRoute
+  MastersSlugRoute: typeof MastersSlugRoute
+  OrdersSlugRoute: typeof OrdersSlugRoute
+  MastersIndexRoute: typeof MastersIndexRoute
+  OrdersIndexRoute: typeof OrdersIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sites': {
+      id: '/sites'
+      path: '/sites'
+      fullPath: '/sites'
+      preLoaderRoute: typeof SitesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nursafardiyya': {
+      id: '/nursafardiyya'
+      path: '/nursafardiyya'
+      fullPath: '/nursafardiyya'
+      preLoaderRoute: typeof NursafardiyyaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +224,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/orders/': {
+      id: '/orders/'
+      path: '/orders'
+      fullPath: '/orders/'
+      preLoaderRoute: typeof OrdersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/masters/': {
+      id: '/masters/'
+      path: '/masters'
+      fullPath: '/masters/'
+      preLoaderRoute: typeof MastersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orders/$slug': {
+      id: '/orders/$slug'
+      path: '/orders/$slug'
+      fullPath: '/orders/$slug'
+      preLoaderRoute: typeof OrdersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/masters/$slug': {
+      id: '/masters/$slug'
+      path: '/masters/$slug'
+      fullPath: '/masters/$slug'
+      preLoaderRoute: typeof MastersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  LibraryRoute: LibraryRoute,
+  MapRoute: MapRoute,
+  NursafardiyyaRoute: NursafardiyyaRoute,
+  SitesRoute: SitesRoute,
+  TimelineRoute: TimelineRoute,
+  MastersSlugRoute: MastersSlugRoute,
+  OrdersSlugRoute: OrdersSlugRoute,
+  MastersIndexRoute: MastersIndexRoute,
+  OrdersIndexRoute: OrdersIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

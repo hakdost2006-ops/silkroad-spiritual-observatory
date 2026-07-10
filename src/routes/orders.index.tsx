@@ -3,7 +3,7 @@ import { orders } from "../data/orders";
 import { PageHeader } from "../components/ui-primitives";
 import { ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/orders")({
+export const Route = createFileRoute("/orders/")({
   head: () => ({
     meta: [
       { title: "Central Asian Sufi Orders — Silsilas of the Silk Road" },
