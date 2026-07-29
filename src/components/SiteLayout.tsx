@@ -5,7 +5,10 @@ import { Menu, X } from "lucide-react";
 const NAV = [
   { to: "/orders", label: "Orders" },
   { to: "/masters", label: "Masters" },
+  { to: "/khwajagan", label: "Khwajagan" },
+  { to: "/silsila", label: "Silsila" },
   { to: "/library", label: "Library" },
+  { to: "/translations", label: "Translations" },
   { to: "/sites", label: "Sacred Sites" },
   { to: "/timeline", label: "Timeline" },
   { to: "/map", label: "Map" },
@@ -29,7 +32,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Emblem className="h-9 w-9 text-lapis transition-transform group-hover:rotate-12" />
               <div className="leading-tight">
                 <div className="font-serif text-lg text-lapis-deep tracking-wide">Silk Road Sufi Atlas</div>
-                <div className="text-[10px] uppercase tracking-[0.22em] text-stone">Orders · Masters · Sites</div>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-stone">Central Asian Sufi Houses</div>
               </div>
             </Link>
             <nav className="hidden lg:flex items-center gap-1">
@@ -87,13 +90,15 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             </div>
             <p className="mt-4 text-sm text-ivory/70 max-w-md leading-relaxed">
               A living archive of Central Asian Sufi orders, masters, sacred geography, manuscripts,
-              and contemporary practice — presented with scholarly care and reverence.
+              and contemporary practice — the Central Asian Sufi Houses gathered with scholarly care and reverence.
             </p>
           </div>
           <FooterCol title="Portals" links={[
             { to: "/orders", label: "Sufi Orders" },
             { to: "/masters", label: "Masters" },
+            { to: "/silsila", label: "Silsila" },
             { to: "/nursafardiyya", label: "Nursafardiyya" },
+            { to: "/translations", label: "Translations" },
             { to: "/library", label: "Library" },
           ]} />
           <FooterCol title="Explore" links={[

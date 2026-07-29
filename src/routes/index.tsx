@@ -29,22 +29,23 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 pt-24 md:pt-36 pb-28 md:pb-40">
           <div className="text-[11px] uppercase tracking-[0.35em] text-gold flex items-center gap-3">
             <span className="h-px w-8 bg-gold/60" />
-            An Atlas of the Silk Road
+            Central Asian Sufi Houses
           </div>
           <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.02] text-balance max-w-5xl">
-            Central Asian
-            <span className="block italic text-gold-soft">Sufi Orders</span>
+            Silk Road
+            <span className="block italic text-gold-soft">Sufi Atlas</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-xl text-ivory/85 leading-relaxed">
-            A living atlas of lineages, masters, sacred sites, manuscripts, healing
-            traditions, and spiritual practice from the heart of the Silk Road.
+            Central Asian Sufi Houses gathered as a living atlas of lineages,
+            masters, sacred sites, manuscripts, healing traditions, and spiritual
+            practice from the heart of the Silk Road.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              to="/orders"
+              to="/khwajagan"
               className="group inline-flex items-center gap-2 bg-gold text-lapis-deep px-6 py-3.5 font-medium tracking-wide hover:bg-gold-soft transition-colors"
             >
-              Explore the Orders
+              Enter Masters of Wisdom
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
@@ -69,8 +70,8 @@ function Index() {
       <section className="relative py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeader
-            eyebrow="Featured Pathways"
-            title="Silsilas of the sober and the ecstatic"
+            eyebrow="Featured Houses"
+            title="Sufi houses of the sober and the ecstatic"
             intro="From the loud Turkic dhikr of the steppe to the silent engraved remembrance of Bukhara — five doorways into the Central Asian path."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -208,7 +209,7 @@ function Index() {
             </Link>
           </div>
           <ul className="space-y-3">
-            {["PDF", "EPUB", "Manuscript", "Article", "Audio", "Video"].map((f) => (
+            {["PDF", "EPUB", "Manuscript", "Brochure", "Audio", "Video"].map((f) => (
               <li key={f} className="flex items-center justify-between border-b border-ivory/10 pb-3">
                 <span className="font-serif text-xl text-gold-soft">{f}</span>
                 <span className="text-xs uppercase tracking-[0.25em] text-ivory/50">Available</span>
@@ -233,7 +234,7 @@ function Index() {
           <p className="mt-6 text-lg text-stone leading-relaxed">
             A contemporary Uzbek Sufi path of Zikr, Sema, breathwork, sacred letters,
             traditional healing, herbal wellness and martial arts — carried in the
-            wider inheritance of the Naqshbandī and Yasavī traditions.
+            wider inheritance of the Yasawiyya tradition.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
             {["Sufi Healing", "Sufi Martial Arts", "Zikr and Sema", "Breathwork", "Sacred Letters", "Herbal Wellness"].map((t) => (

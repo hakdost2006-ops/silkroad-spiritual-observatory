@@ -1,3 +1,6 @@
+import { nursafardiyyaArchive } from "./nursafardiyya";
+import { khwajaganLibrary } from "./khwajagan-library";
+
 export type LibraryItem = {
   id: string;
   title: string;
@@ -6,7 +9,7 @@ export type LibraryItem = {
   order: string; // order slug or "general"
   language: "Arabic" | "Persian" | "Turkic" | "English" | "Russian" | "Uzbek";
   century: string;
-  format: "PDF" | "EPUB" | "Manuscript" | "Article" | "Video" | "Audio";
+  format: "PDF" | "EPUB" | "Manuscript" | "Article" | "Brochure" | "Video" | "Audio";
   topic: string;
   description: string;
   tags: string[];
@@ -26,8 +29,39 @@ export const library: LibraryItem[] = [
     topic: "Mystical psychology",
     description:
       "Foundational Kubrawī treatise on visionary states, coloured lights, and the discipline of the seeker.",
-    tags: ["visions", "photisms", "chilla"],
+    tags: ["najm-al-din-kubra", "visions", "photisms", "chilla"],
     source: "Archival scan; scholarly edition of Meier (1957).",
+  },
+  {
+    id: "kubra-ten-principles",
+    title: "al-Uṣūl al-ʿAshara (The Ten Principles)",
+    author: "Najm al-Dīn Kubrā",
+    translator: "Archive English draft",
+    order: "kubrawiyya",
+    language: "English",
+    century: "13th / modern draft",
+    format: "EPUB",
+    topic: "Practice",
+    description:
+      "English working translation from the Atlas corpus, structured around repentance, renunciation, trust, retreat, remembrance, watchfulness, and riḍā.",
+    tags: ["najm-al-din-kubra", "principles", "practice", "translation"],
+    source:
+      "Atlas translation corpus; awaiting editorial collation with Arabic and Persian witnesses.",
+  },
+  {
+    id: "kubra-minor-treatises",
+    title: "Kubra's Short Treatises: Seeker, Traveller, and Adab",
+    author: "Najm al-Dīn Kubrā",
+    order: "kubrawiyya",
+    language: "Arabic",
+    century: "13th",
+    format: "Manuscript",
+    topic: "Practice",
+    description:
+      "Catalog record for the short epistles on bewilderment, travel, and Sufi conduct represented in the Atlas archive and in scholarly editions.",
+    tags: ["najm-al-din-kubra", "adab", "suluk", "manuscript"],
+    source:
+      "Atlas primary-source archive; compare the scholarly edition of Kubra's minor treatises.",
   },
   {
     id: "diwan-i-hikmat",
@@ -95,7 +129,8 @@ export const library: LibraryItem[] = [
     century: "14th",
     format: "PDF",
     topic: "Litany",
-    description: "Daily litany of the Kubrawī tradition, widely recited across Kashmir and Central Asia.",
+    description:
+      "Daily litany of the Kubrawī tradition, widely recited across Kashmir and Central Asia.",
     tags: ["awrad", "litany", "kashmir"],
     source: "Kashmiri manuscript tradition.",
   },
@@ -137,7 +172,8 @@ export const library: LibraryItem[] = [
     century: "20th",
     format: "Article",
     topic: "Scholarship",
-    description: "Analysis of the endowments through which Khwāja Aḥrār organised Timurid religious life.",
+    description:
+      "Analysis of the endowments through which Khwāja Aḥrār organised Timurid religious life.",
     tags: ["scholarship", "waqf", "timurid"],
     source: "Journal articles and monograph.",
   },
@@ -212,9 +248,21 @@ export const library: LibraryItem[] = [
   },
 ];
 
+library.push(...nursafardiyyaArchive);
+library.push(...khwajaganLibrary);
+
 export const libraryFilters = {
-  order: ["all", "kubrawiyya", "yasaviyya", "khwajagan", "naqshbandiyya", "mujaddidiyya", "nursafardiyya", "general"] as const,
+  order: [
+    "all",
+    "kubrawiyya",
+    "yasaviyya",
+    "khwajagan",
+    "naqshbandiyya",
+    "mujaddidiyya",
+    "nursafardiyya",
+    "general",
+  ] as const,
   language: ["all", "Arabic", "Persian", "Turkic", "English", "Russian", "Uzbek"] as const,
   century: ["all", "12th", "13th", "14th", "16th", "17th", "20th", "21st"] as const,
-  format: ["all", "PDF", "EPUB", "Manuscript", "Article", "Video", "Audio"] as const,
+  format: ["all", "PDF", "EPUB", "Manuscript", "Article", "Brochure", "Video", "Audio"] as const,
 };

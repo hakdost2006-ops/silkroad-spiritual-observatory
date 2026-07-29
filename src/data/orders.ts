@@ -70,9 +70,7 @@ export const orders: Order[] = [
       "Sacred wandering (safar)",
       "Underground chilla-khāna retreat",
     ],
-    texts: [
-      { title: "Dīwān-i Ḥikmat", author: "Aḥmad Yasawī" },
-    ],
+    texts: [{ title: "Dīwān-i Ḥikmat", author: "Aḥmad Yasawī" }],
     masters: ["ahmad-yasawi", "yusuf-hamadani"],
     sites: ["turkistan", "sayram"],
     related: ["khwajagan", "bektashiyya"],
@@ -96,15 +94,8 @@ export const orders: Order[] = [
       "The eight sacred sayings (kalimāt qudsiyya)",
       "Solitude in the crowd (khalwat dar anjuman)",
     ],
-    practices: [
-      "Silent dhikr",
-      "Ṣuḥbat with the shaykh",
-      "Vigilance over the breath",
-    ],
-    texts: [
-      { title: "Kalimāt-i Qudsiyya" },
-      { title: "Risāla of ʿAbd al-Khāliq Ghujdawānī" },
-    ],
+    practices: ["Silent dhikr", "Ṣuḥbat with the shaykh", "Vigilance over the breath"],
+    texts: [{ title: "Kalimāt-i Qudsiyya" }, { title: "Risāla of ʿAbd al-Khāliq Ghujdawānī" }],
     masters: ["yusuf-hamadani", "abd-al-khaliq-ghujdawani", "bahauddin-naqshband"],
     sites: ["ghujduwan", "bukhara"],
     related: ["naqshbandiyya", "yasaviyya"],
@@ -229,7 +220,7 @@ export const orders: Order[] = [
     region: "Uzbekistan and diaspora",
     tagline: "A living Central Asian path of healing, martial arts and Zikr",
     overview:
-      "Nursafardiyya is a contemporary Uzbek Sufi tradition rooted in the wider Central Asian Naqshbandī–Yasavī inheritance. It integrates Zikr and Sema, traditional healing, Sufi martial arts, breathwork, sacred letters and herbal medicine within a coherent living pedagogy.",
+      "Nursafardiyya is a contemporary Uzbek Sufi tradition whose own materials locate its direct spiritual reference in Ahmad Yasawī and the Yasawiyya path. It integrates Zikr and Sema, traditional healing, Sufi martial arts, breathwork, sacred letters and herbal medicine within a coherent living pedagogy.",
     teachings: [
       "Integral practice of body, breath and heart",
       "Sacred letters and their inner correspondences",
@@ -244,7 +235,7 @@ export const orders: Order[] = [
     texts: [{ title: "Archival practice manuals (in preparation)" }],
     masters: [],
     sites: ["nursafardiyya-centers"],
-    related: ["naqshbandiyya", "yasaviyya"],
+    related: ["yasaviyya"],
     legacy:
       "An active carrier of Uzbek Sufi memory into the twenty-first century, presented as spiritual practice and traditional wellness rather than medical treatment.",
     notes:
