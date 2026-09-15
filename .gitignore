@@ -30,3 +30,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private research and working editions. The public portal links to rights holders;
+# it does not publish local source archives, translations, or review PDFs.
+/context/
+/output/
+/tmp/
+/work/

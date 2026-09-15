@@ -86,12 +86,12 @@ export const orders: Order[] = [
     founder: "ʿAbd al-Khāliq Ghujdawānī",
     founded: "12th c. CE — Bukhara",
     region: "Bukhara, Ghujduwan, Transoxiana",
-    tagline: "The silent masters and the eight sacred sayings",
+    tagline: "The path of the masters and the eight sacred sayings",
     overview:
-      "The Khwājagān — 'the Masters' — is the venerable chain of Bukharan sages that culminated in the Naqshbandiyya. Under ʿAbd al-Khāliq Ghujdawānī the tradition of silent dhikr and the eleven principles was consolidated.",
+      "The Khwājagān — 'the Masters' — names the medieval Central Asian field of teachers later remembered as the ancestry of the Naqshbandiyya. Eight sacred sayings are traditionally associated with ʿAbd al-Khāliq Ghujdawānī; three further principles are connected with Bahāʾ al-Dīn Naqshband in the later Naqshbandi formulation.",
     teachings: [
       "Silent remembrance of the heart (dhikr-i khafī)",
-      "The eight sacred sayings (kalimāt qudsiyya)",
+      "The eight sacred sayings (kalimāt qudsiyya), later expanded to eleven principles",
       "Solitude in the crowd (khalwat dar anjuman)",
     ],
     practices: ["Silent dhikr", "Ṣuḥbat with the shaykh", "Vigilance over the breath"],

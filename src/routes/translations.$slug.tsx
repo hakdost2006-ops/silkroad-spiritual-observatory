@@ -75,9 +75,7 @@ function TranslationProjectPage() {
             <h2 className="mt-6 font-serif text-4xl leading-tight text-lapis-deep">
               Why this book comes now
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-stone">
-              {project.websiteRole}
-            </p>
+            <p className="mt-5 text-lg leading-relaxed text-stone">{project.websiteRole}</p>
           </Panel>
 
           {publishedChapter ? (
@@ -153,9 +151,7 @@ function TranslationProjectPage() {
               {project.publicModules.map((module) => (
                 <div key={module} className="border border-gold/25 bg-parchment/40 p-4">
                   <ListChecks className="h-5 w-5 text-gold" />
-                  <h3 className="mt-3 font-serif text-2xl text-lapis-deep">
-                    {module}
-                  </h3>
+                  <h3 className="mt-3 font-serif text-2xl text-lapis-deep">{module}</h3>
                 </div>
               ))}
             </div>

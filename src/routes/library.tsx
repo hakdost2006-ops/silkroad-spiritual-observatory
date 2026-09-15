@@ -8,9 +8,17 @@ export const Route = createFileRoute("/library")({
   head: () => ({
     meta: [
       { title: "Library & Downloads — Silk Road Sufi Atlas" },
-      { name: "description", content: "A searchable archive of Central Asian Sufi manuscripts, translations, articles, audio and video." },
+      {
+        name: "description",
+        content:
+          "A searchable archive of Central Asian Sufi manuscripts, translations, articles, audio and video.",
+      },
       { property: "og:title", content: "The Sufi Library" },
-      { property: "og:description", content: "PDFs, EPUBs, manuscripts and more, filtered by order, language, century and format." },
+      {
+        property: "og:description",
+        content:
+          "PDFs, EPUBs, manuscripts and more, filtered by order, language, century and format.",
+      },
     ],
   }),
   component: LibraryPage,
@@ -30,7 +38,8 @@ function LibraryPage() {
       if (century !== "all" && item.century !== century) return false;
       if (format !== "all" && item.format !== format) return false;
       if (q) {
-        const hay = `${item.title} ${item.author} ${item.description} ${item.tags.join(" ")}`.toLowerCase();
+        const hay =
+          `${item.title} ${item.author} ${item.description} ${item.tags.join(" ")}`.toLowerCase();
         if (!hay.includes(q.toLowerCase())) return false;
       }
       return true;
@@ -48,7 +57,9 @@ function LibraryPage() {
         <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
           <aside className="space-y-6 bg-card border border-gold/25 p-6 h-fit lg:sticky lg:top-24">
             <div>
-              <label className="text-[10px] uppercase tracking-[0.25em] text-gold flex items-center gap-2 mb-2"><Search className="h-3 w-3" /> Search</label>
+              <label className="text-[10px] uppercase tracking-[0.25em] text-gold flex items-center gap-2 mb-2">
+                <Search className="h-3 w-3" /> Search
+              </label>
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -56,10 +67,30 @@ function LibraryPage() {
                 className="w-full bg-parchment border border-gold/30 px-3 py-2 text-sm font-serif focus:outline-none focus:border-gold"
               />
             </div>
-            <Select label="Order" value={order} setValue={setOrder} options={[...libraryFilters.order]} />
-            <Select label="Language" value={lang} setValue={setLang} options={[...libraryFilters.language]} />
-            <Select label="Century" value={century} setValue={setCentury} options={[...libraryFilters.century]} />
-            <Select label="Format" value={format} setValue={setFormat} options={[...libraryFilters.format]} />
+            <Select
+              label="Order"
+              value={order}
+              setValue={setOrder}
+              options={[...libraryFilters.order]}
+            />
+            <Select
+              label="Language"
+              value={lang}
+              setValue={setLang}
+              options={[...libraryFilters.language]}
+            />
+            <Select
+              label="Century"
+              value={century}
+              setValue={setCentury}
+              options={[...libraryFilters.century]}
+            />
+            <Select
+              label="Format"
+              value={format}
+              setValue={setFormat}
+              options={[...libraryFilters.format]}
+            />
             <div className="text-xs text-stone flex items-center gap-2 border-t border-gold/25 pt-4">
               <Filter className="h-3 w-3 text-gold" />
               {results.length} of {library.length} items
@@ -73,7 +104,10 @@ function LibraryPage() {
               </div>
             )}
             {results.map((item) => (
-              <article key={item.id} className="bg-card border border-gold/25 hover:border-gold transition-colors p-6 grid gap-4 md:grid-cols-[1fr_auto]">
+              <article
+                key={item.id}
+                className="bg-card border border-gold/25 hover:border-gold transition-colors p-6 grid gap-4 md:grid-cols-[1fr_auto]"
+              >
                 <div>
                   <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-gold">
                     <span>{item.format}</span>
@@ -84,11 +118,14 @@ function LibraryPage() {
                   </div>
                   <h3 className="mt-2 font-serif text-2xl text-lapis-deep">{item.title}</h3>
                   <div className="text-sm text-stone italic mt-1">
-                    {item.author}{item.translator ? ` · trans. ${item.translator}` : ""}
+                    {item.author}
+                    {item.translator ? ` · trans. ${item.translator}` : ""}
                   </div>
                   <p className="mt-3 text-stone leading-relaxed">{item.description}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {item.tags.map((t) => <Chip key={t}>{t}</Chip>)}
+                    {item.tags.map((t) => (
+                      <Chip key={t}>{t}</Chip>
+                    ))}
                   </div>
                   <div className="mt-3 text-xs text-stone/70">Source: {item.source}</div>
                 </div>
@@ -125,17 +162,31 @@ function LibraryPage() {
   );
 }
 
-function Select({ label, value, setValue, options }: { label: string; value: string; setValue: (v: string) => void; options: string[] }) {
+function Select({
+  label,
+  value,
+  setValue,
+  options,
+}: {
+  label: string;
+  value: string;
+  setValue: (v: string) => void;
+  options: string[];
+}) {
   return (
     <div>
-      <label className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2 block">{label}</label>
+      <label className="text-[10px] uppercase tracking-[0.25em] text-gold mb-2 block">
+        {label}
+      </label>
       <select
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="w-full bg-parchment border border-gold/30 px-3 py-2 text-sm font-serif focus:outline-none focus:border-gold capitalize"
       >
         {options.map((o) => (
-          <option key={o} value={o}>{o === "all" ? `All ${label.toLowerCase()}` : o}</option>
+          <option key={o} value={o}>
+            {o === "all" ? `All ${label.toLowerCase()}` : o}
+          </option>
         ))}
       </select>
     </div>

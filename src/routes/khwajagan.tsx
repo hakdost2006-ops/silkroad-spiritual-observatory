@@ -104,12 +104,17 @@ const masters = [
 ] as const;
 
 const principles = [
-  ["Hush dar dam", "Awareness in the breath"],
-  ["Nazar bar qadam", "Watchfulness over one's step"],
-  ["Safar dar watan", "The inward journey home"],
-  ["Khalwat dar anjuman", "Solitude in the gathering"],
-  ["Nigah dasht", "Guarding attention"],
-  ["Yad dasht", "Sustained recollection"],
+  ["Hush dar dam", "Awareness in the breath", "Khwajagan"],
+  ["Nazar bar qadam", "Watchfulness over one's step", "Khwajagan"],
+  ["Safar dar watan", "The inward journey home", "Khwajagan"],
+  ["Khalwat dar anjuman", "Solitude in the gathering", "Khwajagan"],
+  ["Yad kard", "Returning to remembrance", "Khwajagan"],
+  ["Baz gasht", "The return to God", "Khwajagan"],
+  ["Nigah dasht", "Guarding attention", "Khwajagan"],
+  ["Yad dasht", "Sustained recollection", "Khwajagan"],
+  ["Wuquf zamani", "Reckoning with time", "Later Naqshbandi"],
+  ["Wuquf adadi", "Awareness of number", "Later Naqshbandi"],
+  ["Wuquf qalbi", "Presence of the heart", "Later Naqshbandi"],
 ] as const;
 
 function KhwajaganPage() {
@@ -131,9 +136,9 @@ function KhwajaganPage() {
             The Khwajagan
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ivory/80 md:text-xl">
-            A network of Central Asian masters, places, and teaching communities. Not one
-            uninterrupted golden chain, but a living field from which Yasawiyya and the later
-            Naqshbandi world emerged.
+            The Path of the Masters: Central Asian teachers, places, and teaching communities. It is
+            not one uninterrupted medieval institution, but a living field from which the Yasawiyya
+            and the later Naqshbandi world emerged.
           </p>
           <div className="mt-9 flex flex-wrap gap-3 text-sm">
             <a
@@ -241,18 +246,67 @@ function KhwajaganPage() {
               A discipline carried into ordinary life
             </h2>
             <p className="mt-5 leading-relaxed text-ivory/75">
-              These phrases are associated with the Khwajagan-Naqshbandi world. They are presented
-              here as a vocabulary of spiritual practice, not as clinical technique or a substitute
-              for the distinct practices of every Central Asian order.
+              The first eight phrases are traditionally ascribed to the Khwajagan current centred on
+              Ghijduwani; three further forms of vigilance are associated with Baha al-Din
+              Naqshband. Together they became the well-known eleven principles of the later order.
+              They are a vocabulary of spiritual practice, not a substitute for the distinct
+              practices of every Central Asian order.
             </p>
           </div>
           <div className="mt-12 grid gap-px overflow-hidden border border-ivory/15 bg-ivory/15 md:grid-cols-2 lg:grid-cols-3">
-            {principles.map(([term, meaning]) => (
+            {principles.map(([term, meaning, period]) => (
               <div key={term} className="bg-lapis-deep p-6">
+                <div className="text-[9px] uppercase tracking-[0.2em] text-ivory/45">{period}</div>
                 <div className="font-serif text-2xl text-gold-soft">{term}</div>
                 <div className="mt-2 text-sm text-ivory/70">{meaning}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-gold/25 bg-parchment py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:items-center">
+          <div>
+            <div className="text-[11px] uppercase tracking-[0.28em] text-gold">
+              The Threshold at Bukhara
+            </div>
+            <h2 className="mt-3 font-serif text-4xl leading-tight text-lapis-deep md:text-5xl">
+              From the Path of the Masters to the Naqshbandiyya
+            </h2>
+            <p className="mt-5 max-w-2xl leading-relaxed text-stone">
+              Bahāʾ al-Dīn Naqshband inherited a Khwajagan world of companionship, work, inward
+              remembrance, and Bukhara-oasis shrines. His principal human teacher, Sayyid Amīr
+              Kulāl, stands at the visible threshold. Later Naqshbandi authors read the earlier
+              masters as their ancestry; modern history asks us to keep that devotional continuity
+              distinct from the later consolidation of an order bearing Naqshband's name.
+            </p>
+            <Link
+              to="/masters/$slug"
+              params={{ slug: "bahauddin-naqshband" }}
+              className="mt-7 inline-flex items-center gap-2 border-b border-gold pb-1 text-lapis-deep transition-colors hover:text-ruby"
+            >
+              Meet Baha al-Din Naqshband <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="border border-gold/30 bg-card p-7">
+            <div className="text-[10px] uppercase tracking-[0.24em] text-gold">
+              Reading the transition
+            </div>
+            <ol className="mt-6 space-y-5 text-sm leading-relaxed text-stone">
+              <li>
+                <span className="font-serif text-xl text-lapis-deep">01</span> Khwajagan names a
+                field of masters and remembered succession in Central Asia.
+              </li>
+              <li>
+                <span className="font-serif text-xl text-lapis-deep">02</span> Baha al-Din's Bukhara
+                circle gives that inheritance a durable devotional focus.
+              </li>
+              <li>
+                <span className="font-serif text-xl text-lapis-deep">03</span> Later networks,
+                writings, shrines, and branches make Naqshbandiyya a worldwide order.
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -299,15 +353,15 @@ function KhwajaganPage() {
                 Continue the atlas
               </div>
               <h2 className="mt-2 font-serif text-3xl text-lapis-deep">
-                Begin with Ahmad Yasawi and the Yasawiyya
+                Continue into the Naqshbandiyya
               </h2>
             </div>
             <Link
-              to="/masters/$slug"
-              params={{ slug: "ahmad-yasawi" }}
+              to="/orders/$slug"
+              params={{ slug: "naqshbandiyya" }}
               className="inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory transition-colors hover:bg-lapis"
             >
-              Open Ahmad Yasawi's profile <ArrowRight className="h-4 w-4" />
+              Open the Naqshbandiyya overview <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

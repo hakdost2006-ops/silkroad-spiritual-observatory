@@ -62,49 +62,48 @@ export const nursafardiyyaPractices: NursafardiyyaPractice[] = [
     slug: "ilahism",
     title: "Ilahism",
     kicker: "Divine orientation",
-    body:
-      "The official Nursafardiyya materials present Ilahism as a higher language of divine perfection, moving beyond a narrow category of religion, philosophy, or tariqa into a lived discipline of transformation.",
+    body: "The official Nursafardiyya materials present Ilahism as a higher language of divine perfection, moving beyond a narrow category of religion, philosophy, or tariqa into a lived discipline of transformation.",
     sourceNote: "Based on the Nursafardiyya homepage and Ilahism archive sections.",
   },
   {
     slug: "zikr-sema",
     title: "Zikr and Martial Cosmic Sema",
     kicker: "Voice, breath, movement",
-    body:
-      "The tradition preserves awakening meditation through Zikr and a martial cosmic Sema dance language. This belongs in the portal as a core practice stream, with clear archival framing and safety notes.",
-    sourceNote: "Official brochure: Nursafardiyya's awakening meditation (Zikr) and martial cosmic (Sema) dances, 2008.",
+    body: "The tradition preserves awakening meditation through Zikr and a martial cosmic Sema dance language. This belongs in the portal as a core practice stream, with clear archival framing and safety notes.",
+    sourceNote:
+      "Official brochure: Nursafardiyya's awakening meditation (Zikr) and martial cosmic (Sema) dances, 2008.",
   },
   {
     slug: "respiration",
     title: "Nursafardiyya Respiration",
     kicker: "Breath as method",
-    body:
-      "The respiration materials describe breath as a practical foundation for inner attention, spiritual energy, and disciplined embodiment.",
-    sourceNote: "Local and official archive PDFs include Nursafardiyya respiration materials from 2006.",
+    body: "The respiration materials describe breath as a practical foundation for inner attention, spiritual energy, and disciplined embodiment.",
+    sourceNote:
+      "Local and official archive PDFs include Nursafardiyya respiration materials from 2006.",
   },
   {
     slug: "healing",
     title: "Ancestral Medicine and Herbal Wellness",
     kicker: "Traditional wellness",
-    body:
-      "The healing corpus includes herbal preparation guides, ancestral medicine, health-disease codes, and traditional wellness materials. The portal presents these as cultural and wellness archive materials, not as medical advice.",
-    sourceNote: "Official archive includes the 2015 herbal preparations guide and medicine category.",
+    body: "The healing corpus includes herbal preparation guides, ancestral medicine, health-disease codes, and traditional wellness materials. The portal presents these as cultural and wellness archive materials, not as medical advice.",
+    sourceNote:
+      "Official archive includes the 2015 herbal preparations guide and medicine category.",
   },
   {
     slug: "martial-arts",
     title: "Zurmergan Sufi Martial Arts",
     kicker: "Embodied vigilance",
-    body:
-      "Nursafardiyya martial material connects discipline, movement, stance, and spiritual attention. It should be treated as a major visual section with book plates, posture diagrams, and historical context.",
-    sourceNote: "Official book archive includes Zurmergan Sufi martial arts in pictures, beginning part, 2012.",
+    body: "Nursafardiyya martial material connects discipline, movement, stance, and spiritual attention. It should be treated as a major visual section with book plates, posture diagrams, and historical context.",
+    sourceNote:
+      "Official book archive includes Zurmergan Sufi martial arts in pictures, beginning part, 2012.",
   },
   {
     slug: "qatron",
     title: "Qatron School of Perfection",
     kicker: "School and pedagogy",
-    body:
-      "Qatron appears in Nursafardiyya materials as a school of perfection and as a bridge between traditional values, pedagogy, and practical self-cultivation.",
-    sourceNote: "Official brochure archive lists Qatron: Sufi school of perfection and related traditional-values material.",
+    body: "Qatron appears in Nursafardiyya materials as a school of perfection and as a bridge between traditional values, pedagogy, and practical self-cultivation.",
+    sourceNote:
+      "Official brochure archive lists Qatron: Sufi school of perfection and related traditional-values material.",
   },
 ];
 
@@ -113,7 +112,8 @@ export const nursafardiyyaCenters: NursafardiyyaCenter[] = [
     city: "Kibray / Tashkent",
     region: "Tashkent region",
     title: "Nursafardiyya Medicine",
-    description: "Pharmacy of medicinal herbs and cosmetics; listed as the main Nursafardiyya medicine center.",
+    description:
+      "Pharmacy of medicinal herbs and cosmetics; listed as the main Nursafardiyya medicine center.",
     address:
       "Republic of Uzbekistan, Tashkent city, Kibray district, Nurafshon mahalla, Temiryulchilar-2 street, 1st alleyway, house 1A.",
     phones: ["+998 71 502 11 78", "+998 95 875 11 78"],
@@ -164,7 +164,8 @@ export const nursafardiyyaTeachers: NursafardiyyaTeacher[] = [
     imageKey: "yasawi-mausoleum",
     imageCaption:
       "Mausoleum of Khoja Ahmad Yassaviy in Turkistan, used as a verified heritage image rather than a speculative portrait.",
-    sourceNote: "Qatron: Sufiy School of Perfection, 2007; Mausoleum of Khoja Ahmed Yasawi reference image via Wikimedia.",
+    sourceNote:
+      "Qatron: Sufiy School of Perfection, 2007; Mausoleum of Khoja Ahmed Yasawi reference image via Wikimedia.",
   },
   {
     name: "Safarboy Kushkarov",
@@ -201,8 +202,7 @@ export const nursafardiyyaTeachers: NursafardiyyaTeacher[] = [
     imageKey: "zurmergan-manual",
     imageCaption:
       "Zurmergan visual marker based on the official Nursafardiyya archive and martial-arts manual context.",
-    sourceNote:
-      "Zurmergan Sufiy Martial Arts in Pictures. Beginning Part, 2012.",
+    sourceNote: "Zurmergan Sufiy Martial Arts in Pictures. Beginning Part, 2012.",
   },
 ];
 
@@ -219,8 +219,7 @@ export const qatronDirections: QatronDirection[] = [
   },
   {
     title: "Divine philosophy",
-    description:
-      "The conceptual language of Ilahism, Sufi worldview, and the path of perfection.",
+    description: "The conceptual language of Ilahism, Sufi worldview, and the path of perfection.",
   },
   {
     title: "Poetry and literature",
@@ -244,13 +243,11 @@ export const qatronDirections: QatronDirection[] = [
   },
   {
     title: "System of movements",
-    description:
-      "Beautiful Sufi movements, gymnastics, posture, and embodied preparation.",
+    description: "Beautiful Sufi movements, gymnastics, posture, and embodied preparation.",
   },
   {
     title: "Music",
-    description:
-      "Sama, sound, and states of devotional attention as framed in the Qatron program.",
+    description: "Sama, sound, and states of devotional attention as framed in the Qatron program.",
   },
   {
     title: "Cleanliness",
@@ -259,8 +256,7 @@ export const qatronDirections: QatronDirection[] = [
   },
   {
     title: "Lifestyle",
-    description:
-      "Daily conduct, discipline, service, and ethical formation for the student.",
+    description: "Daily conduct, discipline, service, and ethical formation for the student.",
   },
   {
     title: "Choreography and dance",
@@ -312,9 +308,10 @@ export const nursafardiyyaArchive: LibraryItem[] = [
     century: "21st",
     format: "PDF",
     topic: "Breathwork",
-    description: "Official book archive item on Nursafardiyya breathing exercises, created in 2006.",
+    description:
+      "Official book archive item on Nursafardiyya breathing exercises, created in 2006.",
     tags: ["nursafardiyya", "breath", "respiration"],
-    source: "Official Nursafardiyya file archive; local collection also contains respiration PDFs.",
+    source: "Official Nursafardiyya file archive.",
     href: "https://nursafardiyya.com/en/file-archive/books/",
   },
   {
@@ -326,9 +323,9 @@ export const nursafardiyyaArchive: LibraryItem[] = [
     century: "21st",
     format: "PDF",
     topic: "Breathwork",
-    description: "A 2006 Nursafardiyya respiration text preserved in both the official archive and local PDF collection.",
+    description: "A 2006 Nursafardiyya respiration text listed in the official archive.",
     tags: ["nursafardiyya", "nafas", "breathwork"],
-    source: "Official book archive and local PDF collection.",
+    source: "Official Nursafardiyya book archive.",
     href: "https://nursafardiyya.com/en/file-archive/books/",
   },
   {
@@ -417,7 +414,8 @@ export const nursafardiyyaArchive: LibraryItem[] = [
   },
   {
     id: "herbal-preparations",
-    title: "A Practical Guide of the Use of Medical Herbal Preparations in the Nursafardiyya Medicine",
+    title:
+      "A Practical Guide of the Use of Medical Herbal Preparations in the Nursafardiyya Medicine",
     author: "Nursafardiyya archive",
     order: "nursafardiyya",
     language: "English",
@@ -427,7 +425,7 @@ export const nursafardiyyaArchive: LibraryItem[] = [
     description:
       "A 2015 guide to herbal preparations in Nursafardiyya medicine, presented here as traditional wellness archive material.",
     tags: ["herbs", "wellness", "ancestral medicine"],
-    source: "Official Nursafardiyya medicine archive; local collection contains related Uzbek and English PDFs.",
+    source: "Official Nursafardiyya medicine archive.",
     href: "https://nursafardiyya.com/en/345/",
   },
   {
@@ -513,32 +511,6 @@ export const nursafardiyyaArchive: LibraryItem[] = [
     tags: ["cell-code", "information", "wellness"],
     source: "Official Nursafardiyya site.",
     href: "https://nursafardiyya.com/en/",
-  },
-  {
-    id: "deep-look-medicine-local",
-    title: "A Deep Look at Nursafardiyya Medicine",
-    author: "Nursafardiyya archive",
-    order: "nursafardiyya",
-    language: "Uzbek",
-    century: "21st",
-    format: "PDF",
-    topic: "Medicine",
-    description: "Local collected PDF: Nursafardiyya-tabobatiga-chuqur-nazar.pdf.",
-    tags: ["local collection", "medicine", "uzbek"],
-    source: "Local PDF collection on this computer.",
-  },
-  {
-    id: "welcome-medicine-local",
-    title: "Welcome to Nursafardiyya Medicine",
-    author: "Nursafardiyya archive",
-    order: "nursafardiyya",
-    language: "Uzbek",
-    century: "21st",
-    format: "PDF",
-    topic: "Medicine",
-    description: "Local collected PDF: Nursafardiyya-tabobatiga-xush-kelibsiz.pdf.",
-    tags: ["local collection", "medicine", "uzbek"],
-    source: "Local PDF collection on this computer.",
   },
 ];
 

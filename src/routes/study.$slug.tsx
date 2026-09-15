@@ -7,6 +7,7 @@ import { PageHeader, Panel } from "../components/ui-primitives";
 import kubraIllustration from "../assets/kubra/najm-al-din-kubra-devotional-illustration.webp";
 import kubraMausoleumExterior from "../assets/kubra/kunya-urgench-kubra-mausoleum-exterior.jpg";
 import kubraMausoleumPortal from "../assets/kubra/kunya-urgench-kubra-mausoleum-portal.jpg";
+import { orderVisuals } from "../data/visual-archive";
 
 export const Route = createFileRoute("/study/$slug")({
   loader: ({ params }) => {
@@ -41,6 +42,8 @@ const yasawiMausoleumImage =
   "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mausoleum_of_Khoja_Ahmed_Yasawi_in_Hazrat-e_Turkestan%2C_Kazakhstan.jpg";
 
 function YasawiStudyPage() {
+  const hikmetVisual = orderVisuals.yasaviyya;
+
   return (
     <div>
       <PageHeader
@@ -59,8 +62,8 @@ function YasawiStudyPage() {
             <ArrowLeft className="h-4 w-4" /> Yasawi's master profile
           </Link>
           <div className="flex items-center gap-2 text-xs text-stone">
-            <BookOpen className="h-4 w-4 text-gold" /> Historical Turkic witness · Uzbek and Russian reading
-            witnesses · source notes
+            <BookOpen className="h-4 w-4 text-gold" /> Historical Turkic witness · Uzbek and Russian
+            reading witnesses · source notes
           </div>
         </div>
       </section>
@@ -87,7 +90,7 @@ function YasawiStudyPage() {
                 className="h-full min-h-[24rem] w-full object-cover object-center"
               />
               <figcaption className="mt-3 text-xs leading-relaxed text-stone">
-                Mausoleum of Khoja Ahmed Yasawi, Turkistan. Petar Milošević / Wikimedia Commons, {" "}
+                Mausoleum of Khoja Ahmed Yasawi, Turkistan. Petar Milošević / Wikimedia Commons,{" "}
                 <a
                   href="https://commons.wikimedia.org/wiki/File:Mausoleum_of_Khoja_Ahmed_Yasawi_in_Hazrat-e_Turkestan,_Kazakhstan.jpg"
                   target="_blank"
@@ -100,7 +103,9 @@ function YasawiStudyPage() {
               </figcaption>
             </figure>
             <div className="border border-gold/25 bg-gold/10 p-6 sm:p-8">
-              <div className="text-[10px] uppercase tracking-[0.22em] text-gold">Reading the corpus</div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-gold">
+                Reading the corpus
+              </div>
               <h2 className="mt-3 font-serif text-3xl leading-tight text-lapis-deep">
                 A poem, a voice, a witness
               </h2>
@@ -118,9 +123,59 @@ function YasawiStudyPage() {
             </div>
           </section>
 
+          <section className="grid gap-5 border-b border-gold/25 py-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+            <figure className="overflow-hidden border border-gold/25 bg-card">
+              <img
+                src={hikmetVisual.src}
+                alt={hikmetVisual.alt}
+                className="aspect-[4/3] w-full object-cover"
+              />
+              <figcaption className="p-4 text-xs leading-relaxed text-stone">
+                {hikmetVisual.caption} Image:{" "}
+                <a
+                  href={hikmetVisual.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border-b border-gold/50 hover:text-gold"
+                >
+                  {hikmetVisual.credit}
+                </a>{" "}
+                ({hikmetVisual.license}).
+              </figcaption>
+            </figure>
+            <div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-gold">
+                A living textual tradition
+              </div>
+              <h2 className="mt-3 font-serif text-3xl leading-tight text-lapis-deep">
+                Read the corpus through its witnesses
+              </h2>
+              <p className="mt-5 leading-relaxed text-stone">
+                This photograph records a later Chagatai-language Hikmet in a modern exhibition. It
+                is a doorway into the corpus, not a claim to possess Yasawi's own handwriting. The
+                Atlas names the printed or manuscript witness behind each future translation because
+                the Dīwān survived through copying, recitation, editing, and later circulation.
+              </p>
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Book_of_Wisdom_WDL6935.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 border-b border-gold/50 pb-1 text-sm text-lapis-deep hover:text-gold"
+              >
+                Consult the 1904 Kazan witness <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </section>
+
           {yasawiStudySections.map((section, index) => (
-            <section id={section.id} key={section.id} className="scroll-mt-24 border-b border-gold/25 py-14">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">{section.eyebrow}</div>
+            <section
+              id={section.id}
+              key={section.id}
+              className="scroll-mt-24 border-b border-gold/25 py-14"
+            >
+              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                {section.eyebrow}
+              </div>
               <h2 className="mt-3 max-w-4xl font-serif text-4xl leading-tight text-lapis-deep">
                 {section.title}
               </h2>
@@ -140,12 +195,16 @@ function YasawiStudyPage() {
                   <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-gold">
                     Qur'anic resonance <ExternalLink className="h-3 w-3" />
                   </div>
-                  <div className="mt-2 font-serif text-xl text-lapis-deep">{section.verse.reference}</div>
+                  <div className="mt-2 font-serif text-xl text-lapis-deep">
+                    {section.verse.reference}
+                  </div>
                   <p className="mt-2 text-sm leading-relaxed text-stone">{section.verse.note}</p>
                 </a>
               )}
               <div className="mt-7 border-l-2 border-gold/45 pl-5">
-                <div className="text-[10px] uppercase tracking-[0.2em] text-gold">Sources for this section</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-gold">
+                  Sources for this section
+                </div>
                 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-stone">
                   {section.sourceNotes.map((note) => (
                     <li key={note}>{note}</li>
@@ -156,12 +215,17 @@ function YasawiStudyPage() {
           ))}
 
           <section id="sources" className="scroll-mt-24 py-14">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-gold">Research library</div>
-            <h2 className="mt-3 font-serif text-4xl text-lapis-deep">Sources and editorial practice</h2>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+              Research library
+            </div>
+            <h2 className="mt-3 font-serif text-4xl text-lapis-deep">
+              Sources and editorial practice
+            </h2>
             <p className="mt-5 max-w-4xl text-lg leading-relaxed text-stone">
-              This is the foundation for a witness-aware Yasawi library. The next stage is a designed
-              Uzbek-Russian reader that identifies each source edition, its editorial status, and its
-              relation to the historical Turkic text.
+              This is the foundation for a witness-aware Yasawi library. The public study uses
+              verifiable historical, scholarly, and institutional material. The developing Uzbek,
+              Russian, and English reader remains an editorial project until every poem has a named
+              source witness and its publication rights are clear.
             </p>
             <div className="mt-8 grid gap-4">
               {yasawiStudySources.map((source) => (
@@ -187,7 +251,10 @@ function YasawiStudyPage() {
                   {section.title}
                 </a>
               ))}
-              <a href="#sources" className="block border-b border-gold/20 py-2 text-sm text-lapis-deep hover:text-gold">
+              <a
+                href="#sources"
+                className="block border-b border-gold/20 py-2 text-sm text-lapis-deep hover:text-gold"
+              >
                 Sources and editorial practice
               </a>
             </nav>
@@ -196,10 +263,13 @@ function YasawiStudyPage() {
             <MapPin className="h-5 w-5 text-gold" />
             <h2 className="mt-3 font-serif text-2xl text-lapis-deep">Turkistan / Yasi</h2>
             <p className="mt-3 text-sm leading-relaxed text-stone">
-              The southern Kazakh steppe city where textual memory, Timurid architecture, and a living
-              pilgrimage landscape meet.
+              The southern Kazakh steppe city where textual memory, Timurid architecture, and a
+              living pilgrimage landscape meet.
             </p>
-            <Link to="/map" className="mt-4 inline-flex items-center gap-2 border-b border-gold/50 text-sm text-lapis-deep hover:text-gold">
+            <Link
+              to="/map"
+              className="mt-4 inline-flex items-center gap-2 border-b border-gold/50 text-sm text-lapis-deep hover:text-gold"
+            >
               View on the Atlas map <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </Panel>
@@ -213,19 +283,30 @@ function HikmetWitnessPanel() {
   return (
     <section className="mt-9 border border-gold/25 bg-gold/10 p-5 sm:p-7">
       <div className="text-[10px] uppercase tracking-[0.22em] text-gold">Editorial map</div>
-      <h3 className="mt-2 font-serif text-2xl text-lapis-deep">How the Atlas will publish the Hikmets</h3>
+      <h3 className="mt-2 font-serif text-2xl text-lapis-deep">
+        How the Atlas will publish the Hikmets
+      </h3>
       <div className="mt-5 grid gap-px border border-gold/25 bg-gold/25 md:grid-cols-3">
         <article className="bg-card p-5">
           <div className="text-[10px] tracking-[0.2em] text-gold">01 · Witness</div>
-          <p className="mt-3 text-sm leading-relaxed text-stone">Name the historical Turkic, Uzbek, or Russian edition behind every poem and every translation.</p>
+          <p className="mt-3 text-sm leading-relaxed text-stone">
+            Name the historical Turkic, Uzbek, or Russian edition behind every poem and every
+            translation.
+          </p>
         </article>
         <article className="bg-card p-5">
           <div className="text-[10px] tracking-[0.2em] text-gold">02 · Attribution</div>
-          <p className="mt-3 text-sm leading-relaxed text-stone">Mark poems as early Yasawi tradition, later Yasawi circulation, or uncertain attribution rather than hiding the question.</p>
+          <p className="mt-3 text-sm leading-relaxed text-stone">
+            Mark poems as early Yasawi tradition, later Yasawi circulation, or uncertain attribution
+            rather than hiding the question.
+          </p>
         </article>
         <article className="bg-card p-5">
           <div className="text-[10px] tracking-[0.2em] text-gold">03 · Translation</div>
-          <p className="mt-3 text-sm leading-relaxed text-stone">Set Uzbek and Russian reading texts beside a fresh English literary translation, with a compact glossary and source note.</p>
+          <p className="mt-3 text-sm leading-relaxed text-stone">
+            Set Uzbek and Russian reading texts beside a fresh English literary translation, with a
+            compact glossary and source note.
+          </p>
         </article>
       </div>
     </section>

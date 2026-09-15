@@ -66,9 +66,9 @@ function TranslationLibraryPage() {
                 A disciplined translation pipeline
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ivory/70">
-                The site should not jump from PDF to public claim. Every text
-                moves through a careful sequence so the English portal remains
-                readable, sourced, and honest about what is still in progress.
+                The site should not jump from PDF to public claim. Every text moves through a
+                careful sequence so the English portal remains readable, sourced, and honest about
+                what is still in progress.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -159,22 +159,18 @@ function TranslationLibraryPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="border border-gold/25 bg-card p-8">
               <Languages className="h-8 w-8 text-gold" />
-              <h2 className="mt-5 font-serif text-3xl text-lapis-deep">
-                Translation principle
-              </h2>
+              <h2 className="mt-5 font-serif text-3xl text-lapis-deep">Translation principle</h2>
               <p className="mt-4 leading-relaxed text-stone">
-                Translate for understanding first, polish for beauty second, and
-                keep uncertain terms visible until the glossary settles.
+                Translate for understanding first, polish for beauty second, and keep uncertain
+                terms visible until the glossary settles.
               </p>
             </div>
             <div className="border border-gold/25 bg-card p-8">
               <Layers3 className="h-8 w-8 text-gold" />
-              <h2 className="mt-5 font-serif text-3xl text-lapis-deep">
-                Website principle
-              </h2>
+              <h2 className="mt-5 font-serif text-3xl text-lapis-deep">Website principle</h2>
               <p className="mt-4 leading-relaxed text-stone">
-                Every translation should feed a public knowledge room: breath,
-                medicine, Zurmergan, Qatron directions, teachers, or source archive.
+                Every translation should feed a public knowledge room: breath, medicine, Zurmergan,
+                Qatron directions, teachers, or source archive.
               </p>
             </div>
           </div>

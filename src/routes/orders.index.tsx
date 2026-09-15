@@ -7,9 +7,16 @@ export const Route = createFileRoute("/orders/")({
   head: () => ({
     meta: [
       { title: "Central Asian Sufi Houses — Silsilas of the Silk Road" },
-      { name: "description", content: "The Kubrawiyya, Yasaviyya, Khwājagān, Naqshbandiyya, Mujaddidiyya, Nūrbakhshiyya, Bektashiyya, Chishtiyya and the living Nursafardiyya." },
+      {
+        name: "description",
+        content:
+          "The Kubrawiyya, Yasaviyya, Khwājagān, Naqshbandiyya, Mujaddidiyya, Nūrbakhshiyya, Bektashiyya, Chishtiyya and the living Nursafardiyya.",
+      },
       { property: "og:title", content: "Central Asian Sufi Houses" },
-      { property: "og:description", content: "Lineages, teachings and practices of the great Central Asian Sufi orders." },
+      {
+        property: "og:description",
+        content: "Lineages, teachings and practices of the great Central Asian Sufi orders.",
+      },
     ],
   }),
   component: OrdersIndex,
@@ -34,7 +41,9 @@ function OrdersIndex() {
               >
                 <div className="md:col-span-3">
                   <div className="font-serif text-3xl text-lapis-deep">{o.name}</div>
-                  {o.altNames && <div className="text-xs italic text-stone mt-1">{o.altNames.join(" · ")}</div>}
+                  {o.altNames && (
+                    <div className="text-xs italic text-stone mt-1">{o.altNames.join(" · ")}</div>
+                  )}
                 </div>
                 <div className="md:col-span-2 text-xs uppercase tracking-[0.22em] text-gold">
                   {o.founded}

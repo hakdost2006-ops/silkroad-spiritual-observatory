@@ -1,10 +1,8 @@
 import { qatronDirections } from "./nursafardiyya";
-import {
-  nursafardiyyaUzbekBooks,
-  type NursafardiyyaUzbekBook,
-} from "./nursafardiyya-uzbek-books";
+import { nursafardiyyaUzbekBooks, type NursafardiyyaUzbekBook } from "./nursafardiyya-uzbek-books";
 
-type TranslationPriority = "Core English portal" | "Visual manual" | "Scholarly layer" | "Awaiting source text";
+type TranslationPriority =
+  "Core English portal" | "Visual manual" | "Scholarly layer" | "Awaiting source text";
 
 type KnowledgeDirectionSeed = {
   id: string;
@@ -75,9 +73,15 @@ const directionSeeds: KnowledgeDirectionSeed[] = [
     title: "Secret knowledge and capabilities",
     designIntent:
       "Treat esoteric material carefully as tradition, vocabulary, and inner discipline rather than spectacle.",
-    portalQuestion: "What should be named, what should be contextualized, and what should remain bounded?",
+    portalQuestion:
+      "What should be named, what should be contextualized, and what should remain bounded?",
     translationPriority: "Scholarly layer",
-    bookIds: ["ozlikni-anglash-cyr", "ozlikni-anglash-lat", "tafakkur-tarbiyasi-cyr", "tafakkur-tarbiyasi-lat"],
+    bookIds: [
+      "ozlikni-anglash-cyr",
+      "ozlikni-anglash-lat",
+      "tafakkur-tarbiyasi-cyr",
+      "tafakkur-tarbiyasi-lat",
+    ],
     englishModules: ["Terminology notes", "Boundary language", "Teacher-student context"],
   },
   {
@@ -220,7 +224,9 @@ export const nursafardiyyaKnowledgeStats = {
   directions: nursafardiyyaKnowledgeDirections.length,
   mappedBooks: mappedBookIds.size,
   totalBooks: nursafardiyyaUzbekBooks.length,
-  directionsWithBooks: nursafardiyyaKnowledgeDirections.filter((direction) => direction.books.length > 0).length,
+  directionsWithBooks: nursafardiyyaKnowledgeDirections.filter(
+    (direction) => direction.books.length > 0,
+  ).length,
   translationPriorities: Array.from(
     new Set(nursafardiyyaKnowledgeDirections.map((direction) => direction.translationPriority)),
   ),

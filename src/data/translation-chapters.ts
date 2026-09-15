@@ -16,8 +16,7 @@ export const publishedTranslationChapters: PublishedTranslationChapter[] = [
     title: "Preface",
     source:
       "So'fiy tabobati. Ikkinchi kitob, Alisher Kushkarov (Tashkent, 2004), Latin Uzbek edition, pp. 4-6.",
-    note:
-      "This chapter is translated as a historical and cultural source. Its statements about medicine, healing systems, efficacy, and treatment reflect the author's viewpoint and are not medical advice.",
+    note: "This chapter is translated as a historical and cultural source. Its statements about medicine, healing systems, efficacy, and treatment reflect the author's viewpoint and are not medical advice.",
     quotation: [
       "A man was walking with the Messiah when he noticed several bones lying on the ground. He asked the Messiah to teach him how to bring the dead back to life.",
       "The Messiah replied: ‘This task is not suited to you. You cannot even take proper care of your own health, yet you are interested in influencing others.’",

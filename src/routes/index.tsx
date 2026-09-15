@@ -25,7 +25,10 @@ function Index() {
           className="absolute inset-0 h-full w-full object-cover opacity-55"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-lapis-deep/70 via-lapis-deep/40 to-lapis-deep" />
-        <div className="absolute inset-0 bg-star-tile opacity-[0.08] mix-blend-screen" aria-hidden />
+        <div
+          className="absolute inset-0 bg-star-tile opacity-[0.08] mix-blend-screen"
+          aria-hidden
+        />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 pt-24 md:pt-36 pb-28 md:pb-40">
           <div className="text-[11px] uppercase tracking-[0.35em] text-gold flex items-center gap-3">
             <span className="h-px w-8 bg-gold/60" />
@@ -36,9 +39,8 @@ function Index() {
             <span className="block italic text-gold-soft">Sufi Atlas</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-xl text-ivory/85 leading-relaxed">
-            Central Asian Sufi Houses gathered as a living atlas of lineages,
-            masters, sacred sites, manuscripts, healing traditions, and spiritual
-            practice from the heart of the Silk Road.
+            Central Asian Sufi Houses gathered as a living atlas of lineages, masters, sacred sites,
+            manuscripts, healing traditions, and spiritual practice from the heart of the Silk Road.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -84,7 +86,9 @@ function Index() {
                   params={{ slug }}
                   className={i === 0 ? "lg:col-span-2 lg:row-span-2" : ""}
                 >
-                  <div className={`relative overflow-hidden ${i === 0 ? "h-full min-h-[420px]" : "min-h-[260px]"} p-8 bg-gradient-to-br from-lapis-deep to-lapis`}>
+                  <div
+                    className={`relative overflow-hidden ${i === 0 ? "h-full min-h-[420px]" : "min-h-[260px]"} p-8 bg-gradient-to-br from-lapis-deep to-lapis`}
+                  >
                     <div className="absolute inset-0 bg-star-tile opacity-[0.08]" aria-hidden />
                     <div className="relative flex h-full flex-col justify-between text-ivory">
                       <div>
@@ -97,9 +101,7 @@ function Index() {
                             {o.altNames.join(" · ")}
                           </div>
                         )}
-                        <p className="mt-5 text-ivory/80 leading-relaxed max-w-md">
-                          {o.tagline}
-                        </p>
+                        <p className="mt-5 text-ivory/80 leading-relaxed max-w-md">{o.tagline}</p>
                       </div>
                       <div className="mt-8 flex items-center justify-between text-sm text-gold">
                         <span className="tracking-wide">Enter the pathway</span>
@@ -180,7 +182,9 @@ function Index() {
                 <ScrollText className="h-5 w-5 text-gold shrink-0 mt-1" />
                 <div>
                   <div className="font-serif text-xl text-lapis-deep leading-tight">{m.name}</div>
-                  <div className="text-xs text-stone mt-1">{m.dates} · {m.region}</div>
+                  <div className="text-xs text-stone mt-1">
+                    {m.dates} · {m.region}
+                  </div>
                 </div>
               </Link>
             ))}
@@ -193,13 +197,15 @@ function Index() {
         <div className="absolute inset-0 bg-star-tile opacity-[0.09]" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Library & Downloads</div>
+            <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">
+              Library & Downloads
+            </div>
             <h2 className="font-serif text-4xl md:text-5xl text-balance leading-tight">
               A searchable archive of Central Asian Sufi texts
             </h2>
             <p className="mt-6 text-ivory/80 leading-relaxed max-w-lg">
-              PDFs, EPUBs, translations, manuscripts, guides, articles and audio — filtered by order,
-              language, author, century, topic and format.
+              PDFs, EPUBs, translations, manuscripts, guides, articles and audio — filtered by
+              order, language, author, century, topic and format.
             </p>
             <Link
               to="/library"
@@ -210,7 +216,10 @@ function Index() {
           </div>
           <ul className="space-y-3">
             {["PDF", "EPUB", "Manuscript", "Brochure", "Audio", "Video"].map((f) => (
-              <li key={f} className="flex items-center justify-between border-b border-ivory/10 pb-3">
+              <li
+                key={f}
+                className="flex items-center justify-between border-b border-ivory/10 pb-3"
+              >
                 <span className="font-serif text-xl text-gold-soft">{f}</span>
                 <span className="text-xs uppercase tracking-[0.25em] text-ivory/50">Available</span>
               </li>
@@ -232,12 +241,19 @@ function Index() {
             The Nursafardiyya
           </h2>
           <p className="mt-6 text-lg text-stone leading-relaxed">
-            A contemporary Uzbek Sufi path of Zikr, Sema, breathwork, sacred letters,
-            traditional healing, herbal wellness and martial arts — carried in the
-            wider inheritance of the Yasawiyya tradition.
+            A contemporary Uzbek Sufi path of Zikr, Sema, breathwork, sacred letters, traditional
+            healing, herbal wellness and martial arts — carried in the wider inheritance of the
+            Yasawiyya tradition.
           </p>
           <div className="mt-10 flex flex-wrap gap-3 justify-center">
-            {["Sufi Healing", "Sufi Martial Arts", "Zikr and Sema", "Breathwork", "Sacred Letters", "Herbal Wellness"].map((t) => (
+            {[
+              "Sufi Healing",
+              "Sufi Martial Arts",
+              "Zikr and Sema",
+              "Breathwork",
+              "Sacred Letters",
+              "Herbal Wellness",
+            ].map((t) => (
               <Chip key={t}>{t}</Chip>
             ))}
           </div>

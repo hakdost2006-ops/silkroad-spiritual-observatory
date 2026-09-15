@@ -9,14 +9,12 @@ export const Route = createFileRoute("/silsila")({
       { title: "Sufi Silsila — Silk Road Sufi Atlas" },
       {
         name: "description",
-        content:
-          "A visual lineage map of Central Asian Sufi masters, orders, and living houses.",
+        content: "A visual lineage map of Central Asian Sufi masters, orders, and living houses.",
       },
       { property: "og:title", content: "Sufi Silsila — Central Asian Sufi Houses" },
       {
         property: "og:description",
-        content:
-          "Trace the masters, places, and living lineages of the Silk Road Sufi Atlas.",
+        content: "Trace the masters, places, and living lineages of the Silk Road Sufi Atlas.",
       },
     ],
   }),
@@ -96,9 +94,8 @@ function SilsilaPage() {
                 A map of transmission, not a closed genealogy
               </h2>
               <p className="mt-4 text-stone leading-relaxed">
-                This page treats silsila as a living geography: teacher-student
-                links, shared practices, cities of transmission, and later houses
-                that inherit multiple streams.
+                This page treats silsila as a living geography: teacher-student links, shared
+                practices, cities of transmission, and later houses that inherit multiple streams.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <Chip>Khwajagan</Chip>

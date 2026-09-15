@@ -24,9 +24,7 @@ export function SectionHeader({
       <h2 className="font-serif text-4xl md:text-5xl text-lapis-deep text-balance leading-[1.05]">
         {title}
       </h2>
-      {intro && (
-        <p className="mt-5 text-stone leading-relaxed text-lg text-balance">{intro}</p>
-      )}
+      {intro && <p className="mt-5 text-stone leading-relaxed text-lg text-balance">{intro}</p>}
     </div>
   );
 }
@@ -50,9 +48,7 @@ export function PageHeader({
         <h1 className="font-serif text-5xl md:text-6xl text-lapis-deep leading-[1.02] text-balance max-w-4xl">
           {title}
         </h1>
-        {intro && (
-          <p className="mt-6 text-stone text-lg leading-relaxed max-w-2xl">{intro}</p>
-        )}
+        {intro && <p className="mt-6 text-stone text-lg leading-relaxed max-w-2xl">{intro}</p>}
       </div>
     </section>
   );
@@ -76,7 +72,12 @@ export function Ornament({ className = "" }: { className?: string }) {
   );
 }
 
-export function CardLink({ to, params, children, className = "" }: {
+export function CardLink({
+  to,
+  params,
+  children,
+  className = "",
+}: {
   to: string;
   params?: Record<string, string>;
   children: ReactNode;
@@ -102,9 +103,7 @@ export function Chip({ children }: { children: ReactNode }) {
 }
 
 export function Panel({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={`bg-card border border-gold/25 p-6 md:p-8 ${className}`}>{children}</div>
-  );
+  return <div className={`bg-card border border-gold/25 p-6 md:p-8 ${className}`}>{children}</div>;
 }
 
 export function FieldLabel({ children }: { children: ReactNode }) {

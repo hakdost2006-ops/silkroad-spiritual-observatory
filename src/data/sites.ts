@@ -34,7 +34,8 @@ export const sites: Site[] = [
     founded: "14th century",
     orders: ["naqshbandiyya"],
     masters: ["bahauddin-naqshband"],
-    description: "The shrine of Khwāja Bahāʾ al-Dīn Naqshband, principal ziyāra of the Naqshbandiyya.",
+    description:
+      "The shrine of Khwāja Bahāʾ al-Dīn Naqshband, principal ziyāra of the Naqshbandiyya.",
     x: 53,
     y: 60,
   },
@@ -84,7 +85,8 @@ export const sites: Site[] = [
     founded: "12th–13th c.",
     orders: ["kubrawiyya"],
     masters: ["najm-al-din-kubra"],
-    description: "Medieval Khwarazmian capital and shrine city of Najm al-Dīn Kubrā, martyred here in 1221.",
+    description:
+      "Medieval Khwarazmian capital and shrine city of Najm al-Dīn Kubrā, martyred here in 1221.",
     x: 40,
     y: 45,
   },
@@ -96,7 +98,8 @@ export const sites: Site[] = [
     founded: "Ancient / 11th–12th c.",
     orders: ["khwajagan"],
     masters: ["yusuf-hamadani"],
-    description: "Once one of the largest cities in the medieval world; site of the shrine of Yūsuf Hamadānī.",
+    description:
+      "Once one of the largest cities in the medieval world; site of the shrine of Yūsuf Hamadānī.",
     x: 42,
     y: 55,
   },
@@ -145,7 +148,8 @@ export const sites: Site[] = [
     founded: "Ancient",
     orders: ["khwajagan", "chishtiyya"],
     masters: [],
-    description: "'Mother of cities', early hearth of Khurasani Sufism and birthplace of Rūmī's family.",
+    description:
+      "'Mother of cities', early hearth of Khurasani Sufism and birthplace of Rūmī's family.",
     x: 55,
     y: 75,
   },
@@ -181,7 +185,8 @@ export const sites: Site[] = [
     founded: "Contemporary",
     orders: ["nursafardiyya"],
     masters: [],
-    description: "Contemporary Uzbek centres of the Nursafardiyya living tradition of practice, healing and study.",
+    description:
+      "Contemporary Uzbek centres of the Nursafardiyya living tradition of practice, healing and study.",
     x: 54,
     y: 62,
   },

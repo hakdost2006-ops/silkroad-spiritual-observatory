@@ -7,7 +7,6 @@ export type NursafardiyyaUzbekBook = {
   topic: string;
   description: string;
   page: string;
-  download: string;
 };
 
 export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
@@ -20,7 +19,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "History and lineage",
     description: "Uzbek Cyrillic edition of the historical Nursafardiyya pathway text.",
     page: "https://nursafardiyya.com/316/#top",
-    download: "https://drive.google.com/uc?export=download&id=19wAXJMhtOM4z8VMEb_J11wPIqy1heLAf",
   },
   {
     id: "tarixiy-nurli-yol-lat",
@@ -31,7 +29,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "History and lineage",
     description: "Latin Uzbek edition of the historical Nursafardiyya pathway text.",
     page: "https://nursafardiyya.com/315/#top",
-    download: "https://drive.google.com/uc?export=download&id=1A08080WrQkF-9vHqBAekcmRU2JX5em7a",
   },
   {
     id: "zurmergan-pictures-cyr",
@@ -42,7 +39,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Zurmergan martial arts",
     description: "Illustrated Cyrillic Uzbek introduction to Zurmergan Sufi martial arts.",
     page: "https://nursafardiyya.com/314/#top",
-    download: "https://drive.google.com/uc?export=download&id=19Z2C2e9wmzsu-7N6zbKX3UVTxA2cPLvT",
   },
   {
     id: "zurmergan-pictures-lat",
@@ -53,7 +49,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Zurmergan martial arts",
     description: "Illustrated Latin Uzbek introduction to Zurmergan Sufi martial arts.",
     page: "https://nursafardiyya.com/313/#top",
-    download: "https://drive.google.com/uc?export=download&id=1Aexfmq-3BmzHfbrY1RpQ13Wp2skRftiQ",
   },
   {
     id: "sufiy-tabobati-cyr",
@@ -64,7 +59,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Sufi medicine",
     description: "Cyrillic Uzbek book on Sufi medicine inside the Nursafardiyya archive.",
     page: "https://nursafardiyya.com/312/#top",
-    download: "https://drive.google.com/uc?export=download&id=19E9ZdRMu4zrv2Z_NbzVjQSrvIElRaavq",
   },
   {
     id: "sufiy-tabobati-lat",
@@ -75,7 +69,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Sufi medicine",
     description: "Latin Uzbek book on Sufi medicine inside the Nursafardiyya archive.",
     page: "https://nursafardiyya.com/311/#top",
-    download: "https://drive.google.com/uc?export=download&id=19EQa9SzIzqz6wP7nn_o3FGIVgz4GDW5o",
   },
   {
     id: "sufiy-sheriyati-cyr",
@@ -86,7 +79,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Poetry and literature",
     description: "Cyrillic Uzbek poetry volume from the Nursafardiyya book archive.",
     page: "https://nursafardiyya.com/310/#top",
-    download: "https://drive.google.com/uc?export=download&id=195D9LsnBdg1Ey6cKlVI1mvLC-0R2Ldwb",
   },
   {
     id: "sufiy-sheriyati-lat",
@@ -97,7 +89,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Poetry and literature",
     description: "Latin Uzbek poetry volume from the Nursafardiyya book archive.",
     page: "https://nursafardiyya.com/309/#top",
-    download: "https://drive.google.com/uc?export=download&id=197MWHcMy3EA5km_i5YHT06mQGO482w9x",
   },
   {
     id: "ozlikni-anglash-cyr",
@@ -108,7 +99,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Self-knowledge",
     description: "Cyrillic Uzbek book on self-knowledge and the path of inner recognition.",
     page: "https://nursafardiyya.com/308/#top",
-    download: "https://drive.google.com/uc?export=download&id=18loTS62iPyG-Jabt0xYUQkgReBz8b-TC",
   },
   {
     id: "ozlikni-anglash-lat",
@@ -119,7 +109,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Self-knowledge",
     description: "Latin Uzbek book on self-knowledge and the path of inner recognition.",
     page: "https://nursafardiyya.com/307/#top",
-    download: "https://drive.google.com/uc?export=download&id=18kf_CXT7ehYCBNEcW8Tq0XVfryfOe32g",
   },
   {
     id: "tafakkur-tarbiyasi-cyr",
@@ -130,7 +119,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Thought training",
     description: "Cyrillic Uzbek text on Nursafardiyya thought formation and education.",
     page: "https://nursafardiyya.com/306/#top",
-    download: "https://drive.google.com/uc?export=download&id=18ZFL4KkaEy04L1SqMPVPaj8jX4gKIR-K",
   },
   {
     id: "tafakkur-tarbiyasi-lat",
@@ -141,7 +129,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Thought training",
     description: "Latin Uzbek text on Nursafardiyya thought formation and education.",
     page: "https://nursafardiyya.com/305/#top",
-    download: "https://drive.google.com/uc?export=download&id=18b2m1eGkynaZOWMx2qlI0pxLZvZB5DJI",
   },
   {
     id: "chuqur-nazar-cyr",
@@ -152,7 +139,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Sufi medicine",
     description: "Cyrillic Uzbek medicine text framed around Qo'chqor mulla-tabib's reflections.",
     page: "https://nursafardiyya.com/304/#top",
-    download: "https://drive.google.com/uc?export=download&id=17wwt5w2g2ElI3WMm83DkFvPvTnAVyD1C",
   },
   {
     id: "chuqur-nazar-lat",
@@ -163,7 +149,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Sufi medicine",
     description: "Latin Uzbek medicine text framed around Qo'chqor mulla-tabib's reflections.",
     page: "https://nursafardiyya.com/303/#top",
-    download: "https://drive.google.com/uc?export=download&id=18QkCvmssj-hqbpIgp5W9M0pfnbk-Nv7_",
   },
   {
     id: "asl-pardoz-cyr",
@@ -174,7 +159,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Cosmetology and lineage care",
     description: "Cyrillic Uzbek book on Nursafardiyya ancestral beauty and care.",
     page: "https://nursafardiyya.com/301/#top",
-    download: "https://drive.google.com/uc?export=download&id=17qjtfezTcP65DzLEtGO-uPBnpsZYgdhI",
   },
   {
     id: "asl-pardoz-lat",
@@ -185,7 +169,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Cosmetology and lineage care",
     description: "Latin Uzbek book on Nursafardiyya ancestral beauty and care.",
     page: "https://nursafardiyya.com/299/#top",
-    download: "https://drive.google.com/uc?export=download&id=18GtzSQJDVOkkndZJJ33mgvxLcTiixxLC",
   },
   {
     id: "sufiy-jang-sanati-cyr",
@@ -196,7 +179,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Zurmergan martial arts",
     description: "Cyrillic Uzbek text on Nursafardiyya Sufi martial art.",
     page: "https://nursafardiyya.com/298/#top",
-    download: "https://drive.google.com/uc?export=download&id=17oVUfitXQxl8NNwU6Y5r62jBdx8xvY8B",
   },
   {
     id: "sufiy-jang-sanati-lat",
@@ -207,7 +189,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Zurmergan martial arts",
     description: "Latin Uzbek text on Nursafardiyya Sufi martial art.",
     page: "https://nursafardiyya.com/297/#top",
-    download: "https://drive.google.com/uc?export=download&id=18GD06ogMbBGe-eWE8OKPpZlwzDnw6DDF",
   },
   {
     id: "haq-ul-yaqin-cyr",
@@ -216,9 +197,9 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     year: "2011",
     size: "310 KB",
     topic: "Movement program",
-    description: "Cyrillic Uzbek Haq-ul yaqin level of the martial arts and movement system program.",
+    description:
+      "Cyrillic Uzbek Haq-ul yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/296/#top",
-    download: "https://drive.google.com/uc?export=download&id=17jSJhoCF-cj1BX9CZeS9FkakS3XgNeBS",
   },
   {
     id: "haq-ul-yaqin-lat",
@@ -229,7 +210,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Movement program",
     description: "Latin Uzbek Xaq-ul yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/295/#top",
-    download: "https://drive.google.com/uc?export=download&id=182Eu38WbXhM6mc92gOVhKoNNQ5sYDi24",
   },
   {
     id: "ilmal-yaqin-cyr",
@@ -238,9 +218,9 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     year: "2011",
     size: "362 KB",
     topic: "Movement program",
-    description: "Cyrillic Uzbek Ilmal yaqin level of the martial arts and movement system program.",
+    description:
+      "Cyrillic Uzbek Ilmal yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/294/#top",
-    download: "https://drive.google.com/uc?export=download&id=17XqW-y-iBGtAPp1pgP2gt74HVPIwRqGZ",
   },
   {
     id: "ilmal-yaqin-lat",
@@ -251,7 +231,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Movement program",
     description: "Latin Uzbek Ilmal yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/293/#top",
-    download: "https://drive.google.com/uc?export=download&id=17zv7ITdiG6fBGucEjuVdIT-jG7V5c84u",
   },
   {
     id: "aynal-yaqin-cyr",
@@ -260,9 +239,9 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     year: "2011",
     size: "2.18 MB",
     topic: "Movement program",
-    description: "Cyrillic Uzbek A'ynal yaqin level of the martial arts and movement system program.",
+    description:
+      "Cyrillic Uzbek A'ynal yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/292/#top",
-    download: "https://drive.google.com/uc?export=download&id=17M_tHkC3Prd4fy_TeI-uT03DXhg_uiHh",
   },
   {
     id: "aynal-yaqin-lat",
@@ -273,7 +252,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Movement program",
     description: "Latin Uzbek A'ynal yaqin level of the martial arts and movement system program.",
     page: "https://nursafardiyya.com/291/#top",
-    download: "https://drive.google.com/uc?export=download&id=17yECtSzuz1-Uubvf7PqWh8rf_D_QR904",
   },
   {
     id: "nafasiyoti-cyr",
@@ -284,7 +262,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Respiration",
     description: "Cyrillic Uzbek Nursafardiyya respiration book.",
     page: "https://nursafardiyya.com/287/#top",
-    download: "https://drive.google.com/uc?export=download&id=16ZRIEZvu61w7UgvLNFRrRD0tl_07Z5YK",
   },
   {
     id: "nafasiyoti-lat",
@@ -295,7 +272,6 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     topic: "Respiration",
     description: "Latin Uzbek Nursafardiyya respiration book.",
     page: "https://nursafardiyya.com/286/#top",
-    download: "https://drive.google.com/uc?export=download&id=16jEwE90dTj-i-VTCSt16f9XCXx7kzegr",
   },
   {
     id: "milliy-raqslar-cyr",
@@ -304,9 +280,9 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     year: "2008",
     size: "1.42 MB",
     topic: "Movement, dance, and games",
-    description: "Cyrillic Uzbek book on national dances and martial games in the Nursafardiyya movement system.",
+    description:
+      "Cyrillic Uzbek book on national dances and martial games in the Nursafardiyya movement system.",
     page: "https://nursafardiyya.com/285/#top",
-    download: "https://drive.google.com/uc?export=download&id=16NlF8BFkg9G9JN97bBuJgxWFTups9wCp",
   },
   {
     id: "milliy-raqslar-lat",
@@ -315,8 +291,8 @@ export const nursafardiyyaUzbekBooks: NursafardiyyaUzbekBook[] = [
     year: "2008",
     size: "1.41 MB",
     topic: "Movement, dance, and games",
-    description: "Latin Uzbek book on national dances and martial games in the Nursafardiyya movement system.",
+    description:
+      "Latin Uzbek book on national dances and martial games in the Nursafardiyya movement system.",
     page: "https://nursafardiyya.com/283/#top",
-    download: "https://drive.google.com/uc?export=download&id=16TwABeRdv-ewLYKAumxyDpuRh4ItYKpB",
   },
 ];

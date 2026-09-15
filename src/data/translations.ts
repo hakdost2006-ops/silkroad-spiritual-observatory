@@ -1,8 +1,5 @@
 import { nursafardiyyaKnowledgeDirections } from "./nursafardiyya-knowledge";
-import {
-  nursafardiyyaUzbekBooks,
-  type NursafardiyyaUzbekBook,
-} from "./nursafardiyya-uzbek-books";
+import { nursafardiyyaUzbekBooks, type NursafardiyyaUzbekBook } from "./nursafardiyya-uzbek-books";
 
 export type TranslationStatus =
   | "Selected for translation"
@@ -32,7 +29,9 @@ export type TranslationProject = {
 };
 
 const bookById = new Map(nursafardiyyaUzbekBooks.map((book) => [book.id, book]));
-const directionById = new Map(nursafardiyyaKnowledgeDirections.map((direction) => [direction.id, direction]));
+const directionById = new Map(
+  nursafardiyyaKnowledgeDirections.map((direction) => [direction.id, direction]),
+);
 
 export const translationProjects: TranslationProject[] = [
   {

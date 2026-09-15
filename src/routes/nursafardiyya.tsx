@@ -7,7 +7,6 @@ import {
   FileText,
   GitBranch,
   HeartPulse,
-  Languages,
   MapPin,
   Sword,
 } from "lucide-react";
@@ -50,7 +49,6 @@ export const Route = createFileRoute("/nursafardiyya")({
 });
 
 const featured = nursafardiyyaArchive.slice(0, 6);
-const localCollected = nursafardiyyaArchive.filter((item) => item.source.includes("Local"));
 const portalIndex = [
   { label: "Ilahism", href: "#ilahism" },
   { label: "Zikr & Sema", href: "#zikr-sema" },
@@ -61,12 +59,9 @@ const portalIndex = [
   { label: "Teachers", href: "#teachers" },
   { label: "Centers", href: "#centers" },
   { label: "Uzbek Books", href: "#uzbek-books" },
-  { label: "Translations", href: "#translations" },
 ];
 
-const uzbekBookTopics = Array.from(
-  new Set(nursafardiyyaUzbekBooks.map((book) => book.topic)),
-);
+const uzbekBookTopics = Array.from(new Set(nursafardiyyaUzbekBooks.map((book) => book.topic)));
 
 const uzbekBookStats = [
   { value: nursafardiyyaUzbekBooks.length, label: "official Uzbek PDFs" },
@@ -85,7 +80,7 @@ const knowledgeStats = [
     value: nursafardiyyaKnowledgeStats.directionsWithBooks,
     label: "directions already sourced",
   },
-  { value: "English", label: "translation layer planned" },
+  { value: "Official site", label: "materials remain with publisher" },
 ];
 
 const sourceCards = [
@@ -169,9 +164,9 @@ function NursafardiyyaPage() {
                 </span>
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ivory/85 md:text-xl">
-                A contemporary Uzbek Sufi tradition of Ilahism, Zikr, Sema,
-                breathwork, sacred letters, ancestral medicine, herbal wellness,
-                Qatron pedagogy, and Zurmergan Sufi martial arts.
+                A contemporary Uzbek Sufi tradition of Ilahism, Zikr, Sema, breathwork, sacred
+                letters, ancestral medicine, herbal wellness, Qatron pedagogy, and Zurmergan Sufi
+                martial arts.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
@@ -186,17 +181,19 @@ function NursafardiyyaPage() {
                 >
                   Open the Archive <Archive className="h-4 w-4" />
                 </a>
-                <Link
-                  to="/translations"
+                <a
+                  href="https://nursafardiyya.com/en/"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-gold/50 px-5 py-3 text-ivory hover:bg-gold/10 transition-colors"
                 >
-                  Translation Library <Languages className="h-4 w-4" />
-                </Link>
+                  Official Nursafardiyya site <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
               <p className="mt-6 max-w-xl text-xs leading-relaxed text-ivory/60">
-                Healing and herbal materials are presented as cultural,
-                traditional wellness, and archival resources. They are not
-                medical advice or a substitute for professional care.
+                Healing and herbal materials are presented as cultural, traditional wellness, and
+                archival resources. They are not medical advice or a substitute for professional
+                care.
               </p>
             </div>
 
@@ -218,9 +215,7 @@ function NursafardiyyaPage() {
                   </div>
                 </div>
               </div>
-              <div className="text-[10px] uppercase tracking-[0.28em] text-gold">
-                Portal Index
-              </div>
+              <div className="text-[10px] uppercase tracking-[0.28em] text-gold">Portal Index</div>
               <div className="mt-5 grid grid-cols-2 gap-3">
                 {portalIndex.map((item) => (
                   <a
@@ -274,10 +269,9 @@ function NursafardiyyaPage() {
                 A Yassaviyya bridge into a contemporary Uzbek tradition
               </h2>
               <p className="mt-6 leading-relaxed text-stone">
-                The Nursafardiyya materials point to Hoja Ahmad Yassaviy as the
-                spiritual teacher honored by Sufi Tabib. In this atlas,
-                Nursafardiyya is therefore connected directly to the Yassaviyya
-                stream only. Kubrawiyya and Naqshbandiyya remain neighboring
+                The Nursafardiyya materials point to Hoja Ahmad Yassaviy as the spiritual teacher
+                honored by Sufi Tabib. In this atlas, Nursafardiyya is therefore connected directly
+                to the Yassaviyya stream only. Kubrawiyya and Naqshbandiyya remain neighboring
                 Central Asian orders, not direct Nursafardiyya lineage links.
               </p>
               <Link
@@ -288,7 +282,11 @@ function NursafardiyyaPage() {
               </Link>
             </div>
             <div className="relative min-h-[420px] overflow-hidden border-4 border-lapis-deep bg-lapis-deep">
-              <img src={mapImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+              <img
+                src={mapImg}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-25"
+              />
               <div className="absolute inset-0 bg-star-tile opacity-[0.08]" />
               {nursafardiyyaBridgeNodes.map((node) => (
                 <div
@@ -382,20 +380,18 @@ function NursafardiyyaPage() {
                 Qatron Knowledge Architecture
               </div>
               <h2 className="mt-4 font-serif text-5xl leading-tight text-gold-soft">
-                Fourteen directions as the future English portal
+                Fourteen directions as a guide to the tradition
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ivory/75">
-                The best structure is not a long list of PDFs. The Qatron
-                directions become the site's knowledge rooms: each one gathers
-                Uzbek source books, English summaries, translation status,
-                visual material, and careful practice boundaries.
+                The Qatron directions give visitors a way to understand the school without
+                reproducing its materials here. Each direction introduces a theme, names its
+                official source books, and leads readers back to the Nursafardiyya archive for the
+                full texts.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {knowledgeStats.map((stat) => (
                   <div key={stat.label} className="border border-gold/25 bg-ivory/[0.04] p-4">
-                    <div className="font-serif text-3xl text-gold-soft">
-                      {stat.value}
-                    </div>
+                    <div className="font-serif text-3xl text-gold-soft">{stat.value}</div>
                     <div className="mt-1 text-[10px] uppercase tracking-[0.22em] text-ivory/55">
                       {stat.label}
                     </div>
@@ -404,13 +400,12 @@ function NursafardiyyaPage() {
               </div>
               <div className="mt-8 border border-gold/25 bg-ivory/[0.04] p-5">
                 <div className="text-[10px] uppercase tracking-[0.24em] text-gold">
-                  Translation model
+                  Editorial boundary
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-ivory/70">
-                  Each book can move from Uzbek PDF to extracted text, bilingual
-                  glossary, English chapter summary, verified translation, and
-                  finally a public teaching page connected to one or more
-                  Qatron directions.
+                  The Silk Road Sufi Atlas provides contextual introductions and source pointers.
+                  Nursafardiyya books, manuals, and other materials remain on the official
+                  Nursafardiyya website.
                 </p>
               </div>
             </div>
@@ -468,8 +463,7 @@ function NursafardiyyaPage() {
                       </div>
                     ) : (
                       <p className="mt-3 text-xs leading-relaxed text-ivory/55">
-                        Waiting for matching source PDFs or local archive
-                        extraction.
+                        Official source material has not yet been mapped to this direction.
                       </p>
                     )}
                     <div className="mt-5 flex flex-wrap gap-2">
@@ -504,9 +498,7 @@ function NursafardiyyaPage() {
               <h2 className="mt-4 font-serif text-2xl leading-tight text-lapis-deep">
                 {principle.title}
               </h2>
-              <p className="mt-3 text-sm leading-relaxed text-stone">
-                {principle.description}
-              </p>
+              <p className="mt-3 text-sm leading-relaxed text-stone">{principle.description}</p>
             </Panel>
           ))}
         </div>
@@ -523,17 +515,14 @@ function NursafardiyyaPage() {
                 Twenty-eight public books from the official archive
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-stone">
-                The Uzbek Nursafardiyya archive is the source layer beneath the
-                14-direction portal. Each PDF can become a structured knowledge
-                object: source metadata, Uzbek text, glossary, English summary,
-                translation draft, and finally a public teaching page.
+                These titles form the source map behind this page. They are named here for
+                orientation, while the books themselves remain with Nursafardiyya. Every title below
+                opens its official Nursafardiyya page.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {uzbekBookStats.map((stat) => (
                   <div key={stat.label} className="border border-gold/25 bg-card p-4">
-                    <div className="font-serif text-3xl text-lapis-deep">
-                      {stat.value}
-                    </div>
+                    <div className="font-serif text-3xl text-lapis-deep">{stat.value}</div>
                     <div className="mt-1 text-[10px] uppercase tracking-[0.22em] text-stone/65">
                       {stat.label}
                     </div>
@@ -587,9 +576,7 @@ function NursafardiyyaPage() {
                       <h3 className="mt-4 font-serif text-2xl leading-tight text-lapis-deep">
                         {book.title}
                       </h3>
-                      <p className="mt-3 text-sm leading-relaxed text-stone">
-                        {book.description}
-                      </p>
+                      <p className="mt-3 text-sm leading-relaxed text-stone">{book.description}</p>
                     </div>
                   </div>
                   <div className="flex border-t border-gold/20">
@@ -597,19 +584,10 @@ function NursafardiyyaPage() {
                       href={book.page}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-2 px-4 py-3 text-sm text-lapis-deep transition-colors hover:bg-gold/10"
+                      className="inline-flex flex-1 items-center justify-center gap-2 bg-lapis-deep px-4 py-3 text-sm text-ivory transition-colors hover:bg-lapis"
                     >
                       <FileText className="h-4 w-4" />
-                      Source
-                    </a>
-                    <a
-                      href={book.download}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-2 border-l border-gold/20 bg-lapis-deep px-4 py-3 text-sm text-ivory transition-colors hover:bg-lapis"
-                    >
-                      <BookOpen className="h-4 w-4" />
-                      PDF
+                      View on official site
                     </a>
                   </div>
                 </article>
@@ -619,55 +597,12 @@ function NursafardiyyaPage() {
         </div>
       </section>
 
-      <section id="translations" className="mx-auto max-w-7xl px-5 lg:px-8 py-20">
-        <div className="grid gap-10 border border-gold/25 bg-card p-6 md:p-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-          <div>
-            <div className="text-[11px] uppercase tracking-[0.28em] text-gold">
-              Translation Library
-            </div>
-            <h2 className="mt-4 font-serif text-5xl leading-tight text-lapis-deep">
-              The next layer is English knowledge
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-stone">
-              The Uzbek archive now has a translation pathway. We begin with
-              respiration, medicine, and Zurmergan so the portal gains a clear
-              foundation before expanding into poetry, history, and specialized
-              movement manuals.
-            </p>
-            <Link
-              to="/translations"
-              className="mt-8 inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory transition-colors hover:bg-lapis"
-            >
-              Open translation library <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              ["Phase 1", "Nursafardiyya Respiration", "Breath, zikr, attention, method"],
-              ["Phase 2", "Sufi Medicine", "Traditional wellness and cultural healing"],
-              ["Phase 3", "Sufi Martial Art", "Zurmergan, movement, discipline"],
-              ["Phase 4", "Illustrated Zurmergan", "Visual plates and movement vocabulary"],
-            ].map(([phase, title, detail]) => (
-              <div key={title} className="border border-gold/25 bg-parchment/45 p-5">
-                <div className="text-[10px] uppercase tracking-[0.22em] text-gold">
-                  {phase}
-                </div>
-                <h3 className="mt-3 font-serif text-2xl leading-tight text-lapis-deep">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-stone">{detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="archive" className="mx-auto max-w-7xl px-5 lg:px-8 py-20">
         <div id="books" className="absolute -mt-24" />
         <SectionHeader
-          eyebrow="Books and Downloads"
-          title="Nursafardiyya archive stack"
-          intro="Official online archive items are combined with the local PDF collection found on this computer. Links currently point to source pages; direct file downloads can be attached as the rights and file locations are finalized."
+          eyebrow="Official Sources"
+          title="A guide to the Nursafardiyya archive"
+          intro="This Atlas names key books and brochures for context, but does not host or reproduce Nursafardiyya documents. Follow each link to the official Nursafardiyya website."
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {featured.map((item) => (
@@ -684,9 +619,7 @@ function NursafardiyyaPage() {
                 <h2 className="mt-4 font-serif text-2xl leading-tight text-lapis-deep">
                   {item.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-stone">
-                  {item.description}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-stone">{item.description}</p>
                 <div className="mt-4 text-xs text-stone/70">Source: {item.source}</div>
               </div>
               <a
@@ -701,12 +634,14 @@ function NursafardiyyaPage() {
             </article>
           ))}
         </div>
-        <Link
-          to="/library"
+        <a
+          href="https://nursafardiyya.com/en/file-archive/books/"
+          target="_blank"
+          rel="noreferrer"
           className="mt-8 inline-flex items-center gap-2 border border-gold/50 px-5 py-3 text-lapis-deep hover:bg-gold/10 transition-colors"
         >
-          Browse all {nursafardiyyaArchive.length} Nursafardiyya items <BookOpen className="h-4 w-4" />
-        </Link>
+          Browse the official archive <ArrowRight className="h-4 w-4" />
+        </a>
       </section>
 
       <section className="bg-parchment py-20">
@@ -714,7 +649,7 @@ function NursafardiyyaPage() {
           <SectionHeader
             eyebrow="Source Trail"
             title="What this scroll page is based on"
-            intro="The current version uses the official Nursafardiyya archive and extracted notes from public PDFs. The next layer can add page-level citations, cover images, and downloadable public files where sharing rights are clear."
+            intro="The Atlas draws its contextual information from the official Nursafardiyya website and links readers back to it. Nursafardiyya retains ownership and control of its books, manuals, and other materials."
           />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {sourceCards.map((source) => (
@@ -722,9 +657,7 @@ function NursafardiyyaPage() {
                 <h2 className="font-serif text-2xl leading-tight text-lapis-deep">
                   {source.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-stone">
-                  {source.detail}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-stone">{source.detail}</p>
                 <a
                   href={source.href}
                   target="_blank"
@@ -750,12 +683,16 @@ function NursafardiyyaPage() {
               Active places of practice and wellness
             </h2>
             <p className="mt-5 text-ivory/75 leading-relaxed text-lg text-balance">
-              The official Nursafardiyya contact page lists a main Tashkent/Kibray center and branch offices in Sirdarya, Bukhara, and Fergana.
+              The official Nursafardiyya contact page lists a main Tashkent/Kibray center and branch
+              offices in Sirdarya, Bukhara, and Fergana.
             </p>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {nursafardiyyaCenters.map((center) => (
-              <article key={`${center.city}-${center.title}`} className="border border-gold/30 bg-ivory/[0.04] p-6">
+              <article
+                key={`${center.city}-${center.title}`}
+                className="border border-gold/30 bg-ivory/[0.04] p-6"
+              >
                 <div className="flex items-start gap-3">
                   <Building2 className="mt-1 h-5 w-5 shrink-0 text-gold" />
                   <div>
@@ -788,24 +725,24 @@ function NursafardiyyaPage() {
             <HeartPulse className="h-7 w-7 text-gold" />
             <h2 className="mt-4 font-serif text-3xl text-lapis-deep">Healing boundary</h2>
             <p className="mt-3 text-stone leading-relaxed">
-              Healing texts are framed as cultural and traditional wellness archives,
-              with clear language around safety and medical claims.
+              Healing texts are framed as cultural and traditional wellness archives, with clear
+              language around safety and medical claims.
             </p>
           </Panel>
           <Panel>
             <Sword className="h-7 w-7 text-gold" />
             <h2 className="mt-4 font-serif text-3xl text-lapis-deep">Martial boundary</h2>
             <p className="mt-3 text-stone leading-relaxed">
-              Martial arts materials should become visual learning pages with posture
-              plates, context, and careful practice disclaimers.
+              Martial arts materials should become visual learning pages with posture plates,
+              context, and careful practice disclaimers.
             </p>
           </Panel>
           <Panel>
             <Archive className="h-7 w-7 text-gold" />
             <h2 className="mt-4 font-serif text-3xl text-lapis-deep">Archive boundary</h2>
             <p className="mt-3 text-stone leading-relaxed">
-              Local PDFs are inventoried first; public downloads are attached only
-              when source, provenance, and sharing rights are clear.
+              Nursafardiyya books and manuals are cited by title and linked to their official pages;
+              the Atlas does not host them.
             </p>
           </Panel>
         </div>

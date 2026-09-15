@@ -157,7 +157,11 @@
     font-feature-settings: "ss01", "cv11";
   }
 
-  h1, h2, h3, h4, .font-serif {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
     font-family: var(--font-serif);
     letter-spacing: -0.01em;
   }
@@ -169,16 +173,39 @@
 
 @utility bg-tile-pattern {
   background-image:
-    radial-gradient(circle at 1px 1px, color-mix(in oklab, var(--gold) 22%, transparent) 1px, transparent 0),
-    linear-gradient(135deg, transparent 46%, color-mix(in oklab, var(--turquoise) 15%, transparent) 46% 54%, transparent 54%);
-  background-size: 22px 22px, 44px 44px;
+    radial-gradient(
+      circle at 1px 1px,
+      color-mix(in oklab, var(--gold) 22%, transparent) 1px,
+      transparent 0
+    ),
+    linear-gradient(
+      135deg,
+      transparent 46%,
+      color-mix(in oklab, var(--turquoise) 15%, transparent) 46% 54%,
+      transparent 54%
+    );
+  background-size:
+    22px 22px,
+    44px 44px;
 }
 
 @utility bg-star-tile {
   background-color: var(--lapis-deep);
   background-image:
-    radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--gold) 25%, transparent) 0 2px, transparent 3px),
-    radial-gradient(circle at 0 0, color-mix(in oklab, var(--turquoise) 22%, transparent) 0 2px, transparent 3px),
-    radial-gradient(circle at 100% 100%, color-mix(in oklab, var(--turquoise) 22%, transparent) 0 2px, transparent 3px);
+    radial-gradient(
+      circle at 50% 50%,
+      color-mix(in oklab, var(--gold) 25%, transparent) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 0 0,
+      color-mix(in oklab, var(--turquoise) 22%, transparent) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 100% 100%,
+      color-mix(in oklab, var(--turquoise) 22%, transparent) 0 2px,
+      transparent 3px
+    );
   background-size: 28px 28px;
 }

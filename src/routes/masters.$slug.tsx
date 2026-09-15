@@ -284,7 +284,9 @@ function YasawiStudyLink() {
   return (
     <section className="border-y border-gold/30 py-10">
       <div className="text-[10px] uppercase tracking-[0.25em] text-gold">Primary corpus</div>
-      <h2 className="mt-2 font-serif text-3xl text-lapis-deep">The Dīwān-i Hikmat and its living witnesses</h2>
+      <h2 className="mt-2 font-serif text-3xl text-lapis-deep">
+        The Dīwān-i Hikmat and its living witnesses
+      </h2>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed text-stone">
         Yasawi's wisdom poems are a layered corpus, carried through manuscripts, recitation, later
         Yasawi poets, and modern Uzbek and Russian editions. The Atlas study makes that history part

@@ -6,9 +6,16 @@ export const Route = createFileRoute("/timeline")({
   head: () => ({
     meta: [
       { title: "Timeline — Central Asian Sufism from Khurasan to Today" },
-      { name: "description", content: "Nine centuries of Central Asian Sufi tradition, from early Khurasan to the living Nursafardiyya." },
+      {
+        name: "description",
+        content:
+          "Nine centuries of Central Asian Sufi tradition, from early Khurasan to the living Nursafardiyya.",
+      },
       { property: "og:title", content: "A Timeline of Central Asian Sufism" },
-      { property: "og:description", content: "From early Khurasani Sufism to living contemporary orders." },
+      {
+        property: "og:description",
+        content: "From early Khurasani Sufism to living contemporary orders.",
+      },
     ],
   }),
   component: TimelinePage,
@@ -17,7 +24,11 @@ export const Route = createFileRoute("/timeline")({
 function TimelinePage() {
   return (
     <div>
-      <PageHeader eyebrow="Timeline" title="Nine centuries of the path" intro="From the circles of early Khurasan to the living orders of the twenty-first century." />
+      <PageHeader
+        eyebrow="Timeline"
+        title="Nine centuries of the path"
+        intro="From the circles of early Khurasan to the living orders of the twenty-first century."
+      />
       <section className="mx-auto max-w-4xl px-5 lg:px-8 py-16">
         <ol className="relative border-l-2 border-gold/40 pl-8 space-y-14">
           {timeline.map((t, i) => (

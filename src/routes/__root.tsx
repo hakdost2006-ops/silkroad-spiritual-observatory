@@ -78,16 +78,36 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      { name: "description", content: "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions." },
+      {
+        name: "description",
+        content:
+          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
+      },
       { name: "author", content: "Silk Road Sufi Archive" },
       { property: "og:title", content: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      { property: "og:description", content: "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions." },
+      {
+        property: "og:description",
+        content:
+          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      { name: "twitter:description", content: "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png",
+      },
     ],
     links: [
       {
