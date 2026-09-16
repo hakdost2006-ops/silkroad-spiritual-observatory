@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useLocation } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ExternalLink, Filter, Search } from "lucide-react";
 import { library, libraryFilters } from "../data/library";
@@ -25,6 +25,7 @@ export const Route = createFileRoute("/library")({
 });
 
 function LibraryPage() {
+  const { pathname } = useLocation();
   const [q, setQ] = useState("");
   const [order, setOrder] = useState<string>("all");
   const [lang, setLang] = useState<string>("all");
@@ -45,6 +46,10 @@ function LibraryPage() {
       return true;
     });
   }, [q, order, lang, century, format]);
+
+  if (pathname !== "/library") {
+    return <Outlet />;
+  }
 
   return (
     <div>
