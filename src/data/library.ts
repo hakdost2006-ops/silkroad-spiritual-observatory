@@ -1,5 +1,6 @@
 import { nursafardiyyaArchive } from "./nursafardiyya";
 import { khwajaganLibrary } from "./khwajagan-library";
+import { idriesShahLibrary } from "./idries-shah-library";
 
 export type LibraryItem = {
   id: string;
@@ -9,12 +10,16 @@ export type LibraryItem = {
   order: string; // order slug or "general"
   language: "Arabic" | "Persian" | "Turkic" | "English" | "Russian" | "Uzbek";
   century: string;
-  format: "PDF" | "EPUB" | "Manuscript" | "Article" | "Brochure" | "Video" | "Audio";
+  format: "Book" | "PDF" | "EPUB" | "Manuscript" | "Article" | "Brochure" | "Video" | "Audio";
   topic: string;
   description: string;
   tags: string[];
   source: string;
   href?: string;
+  linkLabel?: string;
+  amazonUrl?: string;
+  detailedOverview?: string;
+  collection?: "idries-shah";
 };
 
 export const library: LibraryItem[] = [
@@ -195,6 +200,7 @@ export const library: LibraryItem[] = [
 
 library.push(...nursafardiyyaArchive);
 library.push(...khwajaganLibrary);
+library.push(...idriesShahLibrary);
 
 export const libraryFilters = {
   order: [
@@ -209,5 +215,15 @@ export const libraryFilters = {
   ] as const,
   language: ["all", "Arabic", "Persian", "Turkic", "English", "Russian", "Uzbek"] as const,
   century: ["all", "12th", "13th", "14th", "16th", "17th", "20th", "21st"] as const,
-  format: ["all", "PDF", "EPUB", "Manuscript", "Article", "Brochure", "Video", "Audio"] as const,
+  format: [
+    "all",
+    "Book",
+    "PDF",
+    "EPUB",
+    "Manuscript",
+    "Article",
+    "Brochure",
+    "Video",
+    "Audio",
+  ] as const,
 };

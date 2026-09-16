@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { Download, FileText, Filter, Search } from "lucide-react";
+import { ExternalLink, Filter, Search } from "lucide-react";
 import { library, libraryFilters } from "../data/library";
 import { PageHeader, Chip } from "../components/ui-primitives";
 
@@ -130,28 +130,20 @@ function LibraryPage() {
                   <div className="mt-3 text-xs text-stone/70">Source: {item.source}</div>
                 </div>
                 <div className="md:pl-6 md:border-l md:border-gold/25 flex md:flex-col items-start md:items-stretch gap-3 md:min-w-[160px]">
-                  <a
-                    href={item.href ?? "#"}
-                    target={item.href ? "_blank" : undefined}
-                    rel={item.href ? "noreferrer" : undefined}
-                    aria-disabled={!item.href}
-                    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm transition-colors ${
-                      item.href
-                        ? "bg-lapis-deep text-ivory hover:bg-lapis"
-                        : "bg-stone/20 text-stone cursor-not-allowed"
-                    }`}
-                  >
-                    <Download className="h-4 w-4" /> Download
-                  </a>
-                  <a
-                    href={item.href ?? "#"}
-                    target={item.href ? "_blank" : undefined}
-                    rel={item.href ? "noreferrer" : undefined}
-                    aria-disabled={!item.href}
-                    className="inline-flex items-center justify-center gap-2 border border-gold/50 text-lapis-deep px-4 py-2.5 text-sm hover:bg-gold/10 transition-colors"
-                  >
-                    <FileText className="h-4 w-4" /> Source
-                  </a>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 bg-lapis-deep px-4 py-2.5 text-sm text-ivory transition-colors hover:bg-lapis"
+                    >
+                      <ExternalLink className="h-4 w-4" /> {item.linkLabel ?? "Open source"}
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center justify-center gap-2 bg-stone/20 px-4 py-2.5 text-sm text-stone">
+                      Catalogue record
+                    </span>
+                  )}
                 </div>
               </article>
             ))}

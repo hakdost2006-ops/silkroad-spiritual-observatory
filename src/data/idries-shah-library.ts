@@ -1,0 +1,147 @@
+import type { LibraryItem } from "./library";
+
+// Modern copyrighted works: public records link only to the rights holder's editions.
+export const idriesShahLibrary: LibraryItem[] = [
+  {
+    id: "idries-shah-the-sufis",
+    title: "The Sufis",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Modern Sufi reception",
+    description:
+      "Shah's wide-ranging introduction to Sufi figures, stories, and the idea of a practical wisdom tradition. Read it as an influential modern interpretation, not as a substitute for critical editions or historical scholarship.",
+    tags: ["idries-shah", "modern-reception", "sufi-studies", "reading-path"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/the-sufis/",
+    linkLabel: "Official edition",
+    amazonUrl: "https://www.amazon.com/s?k=The+Sufis+Idries+Shah",
+    detailedOverview:
+      "The gateway volume for Shah's presentation of Sufism. It moves between figures, anecdotes, vocabulary, and a large claim about a practical current of wisdom. For Atlas research, use it to understand a twentieth-century English idiom of Sufism and then trace each historical assertion back to a primary text or modern specialist study.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-way-of-the-sufi",
+    title: "The Way of the Sufi",
+    author: "Idries Shah",
+    order: "naqshbandiyya",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Orders and teaching traditions",
+    description:
+      "A compendium of stories, sayings, poems, and short studies that includes Shah's presentation of the Naqshbandi, Chishti, Qadiri, and Suhrawardi orders. It is a useful map of twentieth-century English-language reception, to be read beside classical texts and specialist research.",
+    tags: ["idries-shah", "naqshbandiyya", "teaching-stories", "modern-reception"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/the-way-of-the-sufi/",
+    linkLabel: "Official edition",
+    amazonUrl: "https://www.amazon.com/s?k=The+Way+of+the+Sufi+Idries+Shah",
+    detailedOverview:
+      "The most directly relevant Shah volume for the Naqshbandi section. Its contents bring together classical authors, four orders, masters, teaching stories, contemplative themes, and questions of study. The Atlas treats its Naqshbandi chapter as a record of Shah's influential synthesis, then places it in conversation with Central Asian sources for Khwajagan, Baha al-Din Naqshband, and later Mujaddidi transmission.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-tales-of-the-dervishes",
+    title: "Tales of the Dervishes",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Teaching stories",
+    description:
+      "A modern collection of tales gathered and adapted from Persian, Arabic, Turkish, literary, and oral traditions. Its value in the Atlas is as a guide to narrative motifs, not as a licence to reproduce Shah's wording.",
+    tags: ["idries-shah", "teaching-stories", "dervishes", "story-tradition"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/tales-of-the-dervishes/",
+    linkLabel: "Official edition",
+    amazonUrl: "https://www.amazon.com/s?k=Tales+of+the+Dervishes+Idries+Shah",
+    detailedOverview:
+      "A reading book for the teaching-story tradition rather than a documentary history. Its stories travel across Persian, Arabic, Turkish, literary, and oral worlds. Use the collection to notice recurring motifs, then locate an older witness before assigning a tale to a particular master, city, or order. The selection, arrangement, and English language of this edition are protected.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-world-tales",
+    title: "World Tales",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Comparative folklore",
+    description:
+      "A comparative anthology of recurring folktale patterns from many regions. It belongs in the library as a study aid for transmission, adaptation, and story migration rather than as a source for Central Asian lineage claims.",
+    tags: ["idries-shah", "folklore", "comparative-reading", "teaching-stories"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/world-tales/",
+    linkLabel: "Official edition",
+    amazonUrl: "https://www.amazon.com/s?k=World+Tales+Idries+Shah",
+    detailedOverview:
+      "A comparative shelf for thinking about how stories cross languages, regions, and generations. It can sharpen editorial questions about transmission and adaptation, but it is not evidence that a tale's every version descends from one Sufi source. In Atlas essays, identify the particular text, language, and place of a tale before drawing historical conclusions.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-exploits-nasrudin",
+    title: "The Exploits of the Incomparable Mulla Nasrudin",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Nasrudin tradition",
+    description:
+      "A modern arrangement of Nasrudin anecdotes in which comedy exposes haste, vanity, and fixed ideas. The Nasrudin figure is widely shared across languages and regions; this edition's selection and phrasing remain copyrighted.",
+    tags: ["idries-shah", "nasrudin", "humour", "teaching-stories"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/the-exploits-of-the-incomparable-mulla-nasrudin/",
+    linkLabel: "Official edition",
+    amazonUrl:
+      "https://www.amazon.com/s?k=The+Exploits+of+the+Incomparable+Mulla+Nasrudin+Idries+Shah",
+    detailedOverview:
+      "A sequence of comic encounters in which the joke often exposes a quick conclusion, a social pretence, or a blind spot in reasoning. Nasrudin belongs to a far wider multilingual folk world than any single modern anthology. The Atlas may discuss the tradition and its Central Asian connections, but will not reproduce this edition's curated text or imply that every anecdote has one fixed origin.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-pleasantries-nasrudin",
+    title: "The Pleasantries of the Incredible Mulla Nasrudin",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Nasrudin tradition",
+    description:
+      "A companion Nasrudin collection that uses humour and reversal as an occasion for reflection. It is catalogued as a modern literary reception of a broad folk tradition, not as a primary medieval source.",
+    tags: ["idries-shah", "nasrudin", "humour", "modern-reception"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/the-pleasantries-of-the-incredible-mulla-nasrudin/",
+    linkLabel: "Official edition",
+    amazonUrl:
+      "https://www.amazon.com/s?k=The+Pleasantries+of+the+Incredible+Mulla+Nasrudin+Idries+Shah",
+    detailedOverview:
+      "A companion volume that makes comic reversal a discipline of attention. It is useful for readers who want to study how humour functions in modern Sufi reception, alongside the older Nasrudin, Afandi, and Hodja story worlds. Its bibliographic role here is deliberately modest: it is a contemporary authored arrangement, not a medieval manuscript witness.",
+    collection: "idries-shah",
+  },
+  {
+    id: "idries-shah-world-of-the-sufi",
+    title: "The World of the Sufi",
+    author: "Idries Shah",
+    order: "general",
+    language: "English",
+    century: "20th",
+    format: "Book",
+    topic: "Sufi studies",
+    description:
+      "An anthology assembled by Shah on Sufi thought, study, and contemporary reception. Read it alongside independently sourced scholarship, especially when it makes historical, institutional, or cross-cultural claims.",
+    tags: ["idries-shah", "anthology", "sufi-studies", "modern-reception"],
+    source: "Official Idries Shah Foundation edition and publication record.",
+    href: "https://idriesshahfoundation.org/books/the-world-of-the-sufi/",
+    linkLabel: "Official edition",
+    amazonUrl: "https://www.amazon.com/s?k=The+World+of+the+Sufi+Idries+Shah",
+    detailedOverview:
+      "A broad anthology intended to introduce readers to Sufi thought and its modern reception. It can be an entry point into names and themes, yet every historical quotation or attribution needs to be checked in its own source tradition. For the Atlas, this book opens questions; it does not settle questions of authorship, doctrine, or lineage.",
+    collection: "idries-shah",
+  },
+];

@@ -500,6 +500,12 @@ function NaqshbandiyyaPage() {
             >
               Read the Iranica study <BookOpenText className="h-4 w-4" />
             </a>
+            <Link
+              to="/library/idries-shah"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-lapis-deep hover:text-ruby"
+            >
+              Browse the Idries Shah reception library <ArrowRight className="h-4 w-4" />
+            </Link>
           </aside>
         </div>
       </section>
