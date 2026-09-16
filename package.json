@@ -8,6 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "prepare:sites": "bash scripts/prepare-sites-package.sh",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
