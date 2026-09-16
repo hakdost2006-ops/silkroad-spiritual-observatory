@@ -57,7 +57,7 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 
 ## Outcome
 
-**VALIDATED** — a source-aware Idries Shah shelf and a clearly attributed Golden Sufi Center panel are ready for public deployment.
+**EXTERNALLY VERIFIED** — the source-aware Idries Shah shelf and clearly attributed Golden Sufi Center panel are live at `https://silk-road-sufi-atlas-review.hakdost2006.chatgpt.site/library/idries-shah`.
 
 ## Completed
 
@@ -71,6 +71,8 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 - `pnpm run lint`: 0 errors; 6 pre-existing Fast Refresh warnings in shared UI primitives.
 - `pnpm run build`: passed.
 - `git diff --check`: passed.
+- Sites version 5 deployed successfully from commit `5cf4fab5f125be7e6ca750c15cdff0461dc084c8`.
+- Live browser smoke test confirmed the Idries Shah heading, seven detailed-overview panels, seven Amazon links, and the Golden Sufi source section.
 
 ## Boundaries Preserved
 
@@ -80,4 +82,4 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 
 ## Remaining Gate
 
-- Save, deploy, and visually inspect the live `/library/idries-shah` route.
+- Editorially deepen individual Naqshbandi master profiles from primary sources and specialist scholarship; retain the modern source layer as contextual, not evidentiary, material.
