@@ -25,6 +25,7 @@ import { Route as TranslationsSlugRouteImport } from './routes/translations.$slu
 import { Route as StudySlugRouteImport } from './routes/study.$slug'
 import { Route as OrdersSlugRouteImport } from './routes/orders.$slug'
 import { Route as MastersSlugRouteImport } from './routes/masters.$slug'
+import { Route as LibraryIdriesShahRouteImport } from './routes/library.idries-shah'
 
 const TimelineRoute = TimelineRouteImport.update({
   id: '/timeline',
@@ -106,17 +107,23 @@ const MastersSlugRoute = MastersSlugRouteImport.update({
   path: '/masters/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LibraryIdriesShahRoute = LibraryIdriesShahRouteImport.update({
+  id: '/idries-shah',
+  path: '/idries-shah',
+  getParentRoute: () => LibraryRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/khwajagan': typeof KhwajaganRoute
-  '/library': typeof LibraryRoute
+  '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
@@ -129,12 +136,13 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/khwajagan': typeof KhwajaganRoute
-  '/library': typeof LibraryRoute
+  '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
@@ -148,12 +156,13 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/khwajagan': typeof KhwajaganRoute
-  '/library': typeof LibraryRoute
+  '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/library/idries-shah'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
@@ -192,6 +202,7 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/library/idries-shah'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/library/idries-shah'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
@@ -223,7 +235,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   KhwajaganRoute: typeof KhwajaganRoute
-  LibraryRoute: typeof LibraryRoute
+  LibraryRoute: typeof LibraryRouteWithChildren
   MapRoute: typeof MapRoute
   NursafardiyyaRoute: typeof NursafardiyyaRoute
   SilsilaRoute: typeof SilsilaRoute
@@ -352,14 +364,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MastersSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/library/idries-shah': {
+      id: '/library/idries-shah'
+      path: '/idries-shah'
+      fullPath: '/library/idries-shah'
+      preLoaderRoute: typeof LibraryIdriesShahRouteImport
+      parentRoute: typeof LibraryRoute
+    }
   }
 }
+
+interface LibraryRouteChildren {
+  LibraryIdriesShahRoute: typeof LibraryIdriesShahRoute
+}
+
+const LibraryRouteChildren: LibraryRouteChildren = {
+  LibraryIdriesShahRoute: LibraryIdriesShahRoute,
+}
+
+const LibraryRouteWithChildren =
+  LibraryRoute._addFileChildren(LibraryRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   KhwajaganRoute: KhwajaganRoute,
-  LibraryRoute: LibraryRoute,
+  LibraryRoute: LibraryRouteWithChildren,
   MapRoute: MapRoute,
   NursafardiyyaRoute: NursafardiyyaRoute,
   SilsilaRoute: SilsilaRoute,
