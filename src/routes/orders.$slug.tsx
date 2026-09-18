@@ -5,7 +5,14 @@ import { getSite } from "../data/sites";
 import { library } from "../data/library";
 import { orderVisuals } from "../data/visual-archive";
 import { PageHeader, Panel, FieldLabel, Chip, Ornament } from "../components/ui-primitives";
-import { ArrowRight, BookOpenText, MapPinned, Network, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpenText,
+  ExternalLink,
+  MapPinned,
+  Network,
+  ShieldCheck,
+} from "lucide-react";
 
 export const Route = createFileRoute("/orders/$slug")({
   loader: ({ params }) => {
@@ -459,6 +466,86 @@ function NaqshbandiyyaPage() {
               ))}
             </ol>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-lapis-deep py-20 text-ivory">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="text-[11px] uppercase tracking-[0.28em] text-gold">
+              Living global continuations
+            </div>
+            <h2 className="mt-3 font-serif text-4xl md:text-5xl">
+              From the Bukhara oasis to a wider world
+            </h2>
+            <p className="mt-5 leading-relaxed text-ivory/75">
+              The Atlas follows the Naqshbandi inheritance beyond Central Asia without making every
+              later community identical to its medieval source. The Mujaddidi renewal carried a
+              Central Asian inheritance into South Asia; from there, modern teachers and communities
+              developed new languages, practices, and publics.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-px overflow-hidden border border-ivory/20 bg-ivory/20 lg:grid-cols-3">
+            <div className="bg-lapis-deep p-7">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                01 · Central Asian roots
+              </div>
+              <h3 className="mt-4 font-serif text-3xl text-gold-soft">Khwajagan and Bukhara</h3>
+              <p className="mt-4 text-sm leading-relaxed text-ivory/70">
+                The historical ground of this Atlas: the masters, shrine geography, texts, and
+                devotional disciplines that formed around Transoxiana and Bahāʾ al-Dīn Naqshband.
+              </p>
+            </div>
+            <div className="bg-lapis-deep p-7">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                02 · South Asian renewal
+              </div>
+              <h3 className="mt-4 font-serif text-3xl text-gold-soft">Mujaddidi transmission</h3>
+              <p className="mt-4 text-sm leading-relaxed text-ivory/70">
+                Aḥmad Sirhindī's Mujaddidiyya became a major South Asian Naqshbandi formation. It is
+                the historical bridge through which several later global lines understand their
+                connection to the Central Asian tradition.
+              </p>
+            </div>
+            <div className="bg-lapis-deep p-7">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                03 · Contemporary community
+              </div>
+              <h3 className="mt-4 font-serif text-3xl text-gold-soft">Golden Sufi Center</h3>
+              <p className="mt-4 text-sm leading-relaxed text-ivory/70">
+                The Center presents a Naqshbandiyya-Mujaddidiyya chain from the Khwajagan through
+                India to Irina Tweedie, Llewellyn Vaughan-Lee, and Emmanuel Vaughan-Lee. The Atlas
+                records this as a living community's lineage account and as a distinct modern,
+                cross-tradition expression of Mujaddidi inheritance.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+                <a
+                  href="https://goldensufi.org/about/naqshbandiyya-mujaddidiyya-golden-chain/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-gold hover:text-gold-soft"
+                >
+                  Read the Center's chain <ExternalLink className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://www.mdpi.com/2077-1444/13/8/690"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-gold hover:text-gold-soft"
+                >
+                  Read the scholarly context <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-7 max-w-4xl border-l-2 border-gold pl-5 text-sm leading-relaxed text-ivory/65">
+            Editorial note: this contemporary branch is part of the Atlas's global Naqshbandi story,
+            but it is not drawn as a direct medieval node on the Central Asian silsila map. Its own
+            chain is named as a community record; independent scholarship supplies the wider
+            context.
+          </p>
         </div>
       </section>
 
