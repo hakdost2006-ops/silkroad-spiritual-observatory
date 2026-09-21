@@ -115,6 +115,69 @@ const sourceCards = [
     href: "https://nursafardiyya.com/file-archive/books/#top",
   },
 ];
+
+const officialReadingPaths = [
+  {
+    title: "Ilahism and the path of perfection",
+    category: "Divine orientation",
+    opening:
+      "Nursafardiyya presents Ilahism as a language of divine perfection rather than a narrow label for one school of thought. In the Atlas, it is approached as the worldview through which transformation, self-knowledge, and ethical cultivation are joined.",
+    continuation:
+      "The official archive provides the school's own terms and fuller account of this vision.",
+    sourceTitle: "Official Nursafardiyya archive",
+    href: "https://nursafardiyya.com/en/file-archive/books/",
+  },
+  {
+    title: "Breath, attention, and remembrance",
+    category: "Respiration",
+    opening:
+      "In the Nursafardiyya corpus, breath is described as a disciplined foundation for attention and embodied spiritual work. It belongs beside the wider Central Asian concern with wakefulness, but its particular vocabulary and sequence remain part of the school's own teaching materials.",
+    continuation:
+      "Read the official respiration material in its original setting rather than treating this introduction as a practice manual.",
+    sourceTitle: "Official Nursafardiyya book archive",
+    href: "https://nursafardiyya.com/file-archive/books/#top",
+  },
+  {
+    title: "Healing as a cultural archive",
+    category: "Traditional wellness",
+    opening:
+      "The healing books gather herbs, bodywork, inherited wellness knowledge, and a vocabulary of care. The Atlas can trace this archive and its place in the school, but it does not turn traditional materials into clinical advice or substitute for professional care.",
+    continuation:
+      "The official archive keeps the books, context, and any responsible use guidance with their originating institution.",
+    sourceTitle: "Official Nursafardiyya book archive",
+    href: "https://nursafardiyya.com/file-archive/books/#top",
+  },
+  {
+    title: "Qatron as a school of formation",
+    category: "Qatron pedagogy",
+    opening:
+      "Qatron organizes the school as an education of the whole person: script and memory, breath and movement, music and self-discipline, care and service. Its fourteen directions make the tradition legible as a curriculum rather than a loose collection of spiritual interests.",
+    continuation:
+      "The Qatron brochure is the right place to continue with the school's own explanation of that curriculum.",
+    sourceTitle: "Qatron: Sufi School of Perfection",
+    href: "https://nursafardiyya.com/en/349/",
+  },
+  {
+    title: "Zurmergan and disciplined embodiment",
+    category: "Martial arts",
+    opening:
+      "Zurmergan is presented in the official material as more than display or sport: it brings posture, movement, breath, vigilance, and ethical formation together under master-guided study. That means its physical details should not be detached from the setting in which they are taught.",
+    continuation:
+      "The illustrated official manual is the proper next step for readers seeking the school's own visual and training language.",
+    sourceTitle: "Zurmergan Sufiy Martial Arts in Pictures",
+    href: "https://nursafardiyya.com/en/67/",
+  },
+  {
+    title: "Teacher, student, and living transmission",
+    category: "Murshid-murid",
+    opening:
+      "A lineage is not only a diagram of names. It is also an ethic of attention, responsibility, and companionship between teacher and student. Nursafardiyya's own materials put this relationship at the center of how knowledge is received and practiced.",
+    continuation:
+      "The school's handbook gives the fuller account of the murshid-murid relationship in its own language.",
+    sourceTitle: "Murshid-Murid Relationship in Nursafardiyya",
+    href: "https://nursafardiyya.com/en/348/",
+  },
+];
 const nursafardiyyaBridgeNodes = silsilaNodes.filter((node) =>
   ["yusuf-hamadani", "ahmad-yasawi", "nursafardiyya"].includes(node.id),
 );
@@ -255,6 +318,41 @@ function NursafardiyyaPage() {
               </p>
             </Panel>
           ))}
+        </div>
+
+        <div className="mt-20 border-t border-gold/25 pt-16">
+          <SectionHeader
+            eyebrow="Begin here, continue at the source"
+            title="Six reading paths into the Nursafardiyya archive"
+            intro="These are original Atlas openings. They orient the reader, then return them to Nursafardiyya for the full articles, books, and teaching context."
+          />
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {officialReadingPaths.map((path, index) => (
+              <article key={path.title} className="border border-gold/25 bg-card p-6">
+                <div className="flex items-center justify-between gap-4">
+                  <Chip>{path.category}</Chip>
+                  <div className="font-serif text-2xl text-gold">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                </div>
+                <h3 className="mt-5 font-serif text-3xl leading-tight text-lapis-deep">
+                  {path.title}
+                </h3>
+                <p className="mt-4 leading-relaxed text-stone">{path.opening}</p>
+                <div className="mt-6 border-l-2 border-gold bg-parchment/70 px-4 py-3">
+                  <p className="text-sm leading-relaxed text-stone">{path.continuation}</p>
+                  <a
+                    href={path.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 text-sm text-lapis-deep transition-colors hover:text-ruby"
+                  >
+                    Continue with {path.sourceTitle} <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

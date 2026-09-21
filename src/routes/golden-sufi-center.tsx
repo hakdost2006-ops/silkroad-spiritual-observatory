@@ -12,22 +12,34 @@ import { Chip, PageHeader, Panel, SectionHeader } from "../components/ui-primiti
 const publicMethods = [
   {
     title: "Silent remembrance and the heart",
-    body: "The Center describes silent dhikr and meditation of the heart as central features of its work. Here the Atlas records a public description of a living community; it does not turn a relationship-based practice into a self-guided exercise.",
+    opening:
+      "For the Naqshbandi tradition, remembrance is not only a matter of words recited aloud. It is also an education of attention: a patient turning of the heart toward the divine, worked out in the presence of a guide and a community. The Center places this inherited language of silent dhikr at the center of its contemporary approach.",
+    body: "This is where the Atlas stops short of instruction. The Center's own essay explains how it understands meditation of the heart, while the relationship-based character of the practice remains with its teachers and community.",
+    sourceTitle: "The Sufi Meditation of the Heart",
     href: "https://goldensufi.org/article/the-sufi-meditation-of-the-heart/",
   },
   {
     title: "Companionship and spiritual attention",
-    body: "Its public language gives importance to suhba, the company of fellow seekers, and rabita, the inward bond with a guide. These terms have long Naqshbandi histories, while their contemporary expression belongs to the Center's own teaching context.",
+    opening:
+      "The old Central Asian vocabulary of suhba, spiritual companionship, resists the image of a seeker working alone. The path was remembered in conversation, service, shared silence, and the difficult education of character. The Golden Sufi Center continues to use this relational language in describing its community life.",
+    body: "Rabita, the inward bond with a guide, has its own varied Naqshbandi history. The Center's public account gives its contemporary meaning within its own teaching context rather than as a detached historical formula.",
+    sourceTitle: "About the Golden Sufi Center",
     href: "https://goldensufi.org/about/",
   },
   {
     title: "Dreamwork and psychological listening",
-    body: "The Center also develops a modern conversation between Sufi symbolism, dreams, and depth psychology. That is a contemporary interpretive development, not a medieval Naqshbandi method projected backward into Central Asia.",
+    opening:
+      "Dreams have long occupied a subtle place in Sufi memory: they may disturb, console, or disclose an image whose meaning cannot be reduced to a rule. In the Golden Sufi Center's modern work, this symbolic field meets the language of depth psychology and careful listening.",
+    body: "That meeting is one of the Center's distinctive contemporary developments. It should not be projected backward as a standard medieval Naqshbandi method, and its fuller articulation belongs to the Center's own published work.",
+    sourceTitle: "Sufi Dreamwork",
     href: "https://goldensufi.org/article/sufi-dreamwork/",
   },
   {
     title: "The work of ordinary life",
-    body: "Its published accounts place spiritual attention amid work, family, service, conversation, and retreat. This resonates with the older Khwajagan ideal of inward recollection in the midst of the world, while remaining a present-day community's articulation.",
+    opening:
+      "The Khwajagan ideal of khalwat dar anjuman, solitude in the crowd, made ordinary life part of spiritual work rather than an interruption to it. Trade, family, hospitality, service, and the demands of a town could become the field in which inward attention was tested.",
+    body: "The Golden Sufi Center describes its own contemporary version through work, family, service, conversation, and retreat. The resonance is real, but the modern articulation remains the Center's own.",
+    sourceTitle: "Neither of the East nor of the West",
     href: "https://goldensufi.org/article/neither-of-the-east-nor-of-the-west/",
   },
 ];
@@ -209,15 +221,21 @@ function GoldenSufiCenterPage() {
                   )}
                 </div>
                 <h3 className="mt-5 font-serif text-3xl text-lapis-deep">{method.title}</h3>
+                <p className="mt-4 leading-relaxed text-stone">{method.opening}</p>
                 <p className="mt-4 leading-relaxed text-stone">{method.body}</p>
-                <a
-                  href={method.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm text-lapis-deep hover:text-ruby"
-                >
-                  Read the public source <ExternalLink className="h-4 w-4" />
-                </a>
+                <div className="mt-6 border-l-2 border-gold bg-parchment/70 px-4 py-3">
+                  <div className="text-[10px] uppercase tracking-[0.22em] text-gold">
+                    Continue with the tradition
+                  </div>
+                  <a
+                    href={method.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-flex items-center gap-2 text-sm text-lapis-deep hover:text-ruby"
+                  >
+                    Read {method.sourceTitle} <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </article>
             ))}
           </div>

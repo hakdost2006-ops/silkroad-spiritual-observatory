@@ -133,3 +133,38 @@ Review the new profile on the public site, then move into the master-by-master N
 
 - Did not attach or alter `sufiatlas.com`.
 - Did not offer spiritual instruction or represent community practices as universally applicable.
+
+---
+
+# SRSFA-20260921-02: Official-Source Reading Gates
+
+## Outcome
+
+**VALIDATED** — original introductory reading paths are ready for the Nursafardiyya and Golden Sufi Center pages; the next gate is public deployment.
+
+## Completed
+
+- Added six Nursafardiyya reading paths for Ilahism, respiration, healing, Qatron, Zurmergan, and the murshid-murid relationship.
+- Expanded the four Golden Sufi Center method cards into original introductory passages with clear links to the Center's own public essays.
+- Kept the handoff points early and explicit, so the external source retains its authority, context, and copyrighted expression.
+
+## Validation
+
+- `pnpm run build`: passed.
+- `pnpm run lint`: 0 errors; 6 existing Fast Refresh warnings in shared UI primitives.
+- `git diff --check`: passed.
+
+## Files Changed
+
+- `src/routes/nursafardiyya.tsx`
+- `src/routes/golden-sufi-center.tsx`
+- `AGENT_HANDOFF.md`
+
+## Boundaries Preserved
+
+- No external article text, book pages, PDFs, instructional detail, or proprietary material is reproduced.
+- Every reading gate is identified by its structure and wording as an Atlas introduction and links only to the originating organization's public source.
+
+## Remaining Gate
+
+Deploy the approved update to the current public review URL, then visually verify both page sections.
