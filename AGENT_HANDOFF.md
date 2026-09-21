@@ -90,7 +90,7 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 
 ## Outcome
 
-**VALIDATED** — a dedicated, source-aware profile is ready at `/golden-sufi-center` for the next public review deployment.
+**EXTERNALLY VERIFIED** — the dedicated, source-aware profile is live at `https://silk-road-sufi-atlas-review.hakdost2006.chatgpt.site/golden-sufi-center`.
 
 ## Completed
 
@@ -105,6 +105,8 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 - `pnpm run build`: passed.
 - `pnpm run lint`: 0 errors; 6 existing Fast Refresh warnings in shared UI primitives.
 - `git diff --check`: passed.
+- Sites version 6 deployed successfully from commit `7f984ad50f4e044d838bead8e086174c3eef4889`.
+- Live browser smoke test: confirmed the profile heading, readable lineage section, five official-edition links, Naqshbandiyya entry point, and no browser errors.
 
 ## Files Changed
 
@@ -121,7 +123,7 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 
 ## Remaining Gate
 
-Package and deploy the approved code to the existing public review URL. Attach `sufiatlas.com` only through a separate custom-domain approval and DNS verification step.
+Attach `sufiatlas.com` only through a separate custom-domain approval and DNS verification step.
 
 ## Recommended Next Action
 
