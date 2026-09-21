@@ -73,7 +73,7 @@ function TranslationProjectPage() {
               ))}
             </div>
             <h2 className="mt-6 font-serif text-4xl leading-tight text-lapis-deep">
-              Why this book comes now
+              Why this book belongs in the collection
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-stone">{project.websiteRole}</p>
           </Panel>
@@ -122,9 +122,9 @@ function TranslationProjectPage() {
 
           <Panel>
             <SectionHeader
-              eyebrow="Translation Plan"
-              title="From PDF to public English"
-              intro="This page is deliberately staged. It can hold rough extraction, glossary work, English summaries, and polished public translation without mixing them up."
+              eyebrow="Editorial Path"
+              title="From source edition to public English"
+              intro="Source text, terminology, English interpretation, and publication-ready translation are kept distinct so readers can understand both the text and its editorial frame."
             />
             <div className="mt-10 space-y-3">
               {project.translationPlan.map((step, index) => (
@@ -161,7 +161,7 @@ function TranslationProjectPage() {
             <SectionHeader
               eyebrow="Glossary Seeds"
               title="Terms to stabilize before public translation"
-              intro="These are not final translations yet. They are the first terms to track consistently across breathing, medicine, zikr, and Zurmergan."
+              intro="These terms are tracked consistently across breathing, medicine, zikr, and Zurmergan as the English reading collection grows."
             />
             <div className="mt-8 flex flex-wrap gap-2">
               {project.glossarySeeds.map((term) => (
@@ -225,7 +225,7 @@ function TranslationProjectPage() {
           <Panel>
             <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-gold">
               <Languages className="h-3.5 w-3.5" />
-              Pipeline position
+              Editorial position
             </div>
             <div className="mt-5 space-y-2">
               {translationPipeline.map((step, index) => (

@@ -2,7 +2,7 @@ import { qatronDirections } from "./nursafardiyya";
 import { nursafardiyyaUzbekBooks, type NursafardiyyaUzbekBook } from "./nursafardiyya-uzbek-books";
 
 type TranslationPriority =
-  "Core English portal" | "Visual manual" | "Scholarly layer" | "Awaiting source text";
+  "Core English portal" | "Visual manual" | "Scholarly layer" | "Source mapping in progress";
 
 type KnowledgeDirectionSeed = {
   id: string;
@@ -27,7 +27,7 @@ const directionSeeds: KnowledgeDirectionSeed[] = [
     designIntent:
       "Present sacred writing as discipline: line, breath, memory, and Uzbek script culture.",
     portalQuestion: "How does written form train attention and spiritual memory?",
-    translationPriority: "Awaiting source text",
+    translationPriority: "Source mapping in progress",
     bookIds: [],
     englishModules: ["Script gallery", "Terms and alphabets", "Historical writing notes"],
   },
@@ -129,7 +129,7 @@ const directionSeeds: KnowledgeDirectionSeed[] = [
     designIntent:
       "Frame sound, rhythm, sama, and devotional attention with room for audio and future source material.",
     portalQuestion: "How do sound and rhythm support remembrance?",
-    translationPriority: "Awaiting source text",
+    translationPriority: "Source mapping in progress",
     bookIds: ["milliy-raqslar-cyr", "milliy-raqslar-lat"],
     englishModules: ["Sama notes", "Rhythm vocabulary", "Audio archive plan"],
   },

@@ -3,12 +3,12 @@ import { nursafardiyyaUzbekBooks, type NursafardiyyaUzbekBook } from "./nursafar
 
 export type TranslationStatus =
   | "Selected for translation"
-  | "Text extraction needed"
-  | "Translation brief ready"
+  | "Source preparation"
+  | "Editorial brief ready"
   | "Opening chapter translated"
-  | "Glossary drafting"
-  | "English summary planned"
-  | "Publishable translation later";
+  | "Glossary in development"
+  | "English overview in development"
+  | "Editorial review";
 
 export type TranslationPriority = "Phase 1" | "Phase 2" | "Phase 3" | "Phase 4";
 
@@ -98,7 +98,7 @@ export const translationProjects: TranslationProject[] = [
     englishTitle: "Nursafardiyya Sufi Martial Art",
     focus: "Zurmergan, movement, discipline, service, and embodied vigilance",
     priority: "Phase 3",
-    status: "Text extraction needed",
+    status: "Source preparation",
     rationale:
       "The martial arts book should follow breathing and medicine so Zurmergan can be explained through breath, discipline, ethics, and safety.",
     websiteRole:
@@ -127,7 +127,7 @@ export const translationProjects: TranslationProject[] = [
     englishTitle: "Zurmergan Sufi Martial Arts in Pictures",
     focus: "Illustrated movement, visual plates, posture vocabulary, and training sequence",
     priority: "Phase 4",
-    status: "English summary planned",
+    status: "English overview in development",
     rationale:
       "The illustrated Zurmergan book is visually powerful, but it should come after the core martial vocabulary is established.",
     websiteRole:
@@ -171,12 +171,12 @@ export function getProjectDirections(project: TranslationProject) {
 }
 
 export const translationPipeline = [
-  "Source PDF",
-  "Text extraction",
-  "Uzbek cleanup",
-  "Glossary",
-  "English summary",
-  "Draft translation",
+  "Source edition",
+  "Text preparation",
+  "Uzbek collation",
+  "Terminology glossary",
+  "English overview",
+  "Literary translation",
   "Editorial review",
-  "Public teaching page",
+  "Public reading page",
 ];

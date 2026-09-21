@@ -463,7 +463,7 @@ function NursafardiyyaPage() {
                       </div>
                     ) : (
                       <p className="mt-3 text-xs leading-relaxed text-ivory/55">
-                        Official source material has not yet been mapped to this direction.
+                        Source mapping for this direction is in progress.
                       </p>
                     )}
                     <div className="mt-5 flex flex-wrap gap-2">

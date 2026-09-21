@@ -15,7 +15,7 @@ export const Route = createFileRoute("/translations/")({
       {
         name: "description",
         content:
-          "Translation pipeline for the Nursafardiyya Uzbek book archive: source PDFs, glossary, English summaries, and future public teaching pages.",
+          "A source-aware English reading program for the Nursafardiyya Uzbek book archive, with official editions, terminology, context, and carefully prepared public pages.",
       },
       { property: "og:title", content: "Nursafardiyya Translation Library" },
       {
@@ -33,8 +33,8 @@ function TranslationLibraryPage() {
     <div>
       <PageHeader
         eyebrow="Translation Library"
-        title="From Uzbek source books to English teaching pages"
-        intro="This is the working bridge between the official Nursafardiyya PDFs and the public English portal: each book becomes source metadata, extracted text, glossary, summary, translation draft, and finally a readable teaching page."
+        title="From Uzbek source books to English reading pages"
+        intro="A source-aware bridge between the official Nursafardiyya editions and the English portal. Each book is approached through bibliographic context, terminology, translation, and editorial review."
       />
 
       <section className="mx-auto max-w-7xl px-5 lg:px-8 py-16">
@@ -60,15 +60,16 @@ function TranslationLibraryPage() {
           <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
             <div>
               <div className="text-[11px] uppercase tracking-[0.28em] text-gold">
-                Working Method
+                Editorial Method
               </div>
               <h2 className="mt-4 font-serif text-5xl leading-tight text-gold-soft">
-                A disciplined translation pipeline
+                A disciplined path from source to reader
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-ivory/70">
-                The site should not jump from PDF to public claim. Every text moves through a
-                careful sequence so the English portal remains readable, sourced, and honest about
-                what is still in progress.
+                Every public page begins with its source edition and moves through a careful
+                sequence of collation, terminology, translation, and review. The aim is a readable
+                English portal that remains faithful to its sources and clear about its editorial
+                frame.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -88,8 +89,8 @@ function TranslationLibraryPage() {
       <section className="mx-auto max-w-7xl px-5 lg:px-8 py-20">
         <SectionHeader
           eyebrow="Foundation Sequence"
-          title="Translate the spine first"
-          intro="The first English layer should follow breath, healing, and martial discipline. That gives the portal a coherent base before we translate poetry, history, and specialized movement manuals."
+          title="Build the English foundation"
+          intro="The first English layer follows breath, healing, and martial discipline. Together these fields establish a coherent vocabulary for later work on poetry, history, and specialized movement manuals."
         />
         <div className="mt-12 space-y-5">
           {translationProjects.map((project) => {

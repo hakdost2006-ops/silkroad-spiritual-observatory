@@ -41,17 +41,17 @@ export const library: LibraryItem[] = [
     id: "kubra-ten-principles",
     title: "al-Uṣūl al-ʿAshara (The Ten Principles)",
     author: "Najm al-Dīn Kubrā",
-    translator: "Archive English draft",
+    translator: "Atlas editorial translation",
     order: "kubrawiyya",
     language: "English",
-    century: "13th / modern draft",
+    century: "13th / modern edition",
     format: "EPUB",
     topic: "Practice",
     description:
-      "English working translation from the Atlas corpus, structured around repentance, renunciation, trust, retreat, remembrance, watchfulness, and riḍā.",
+      "English editorial translation from the Atlas corpus, structured around repentance, renunciation, trust, retreat, remembrance, watchfulness, and riḍā.",
     tags: ["najm-al-din-kubra", "principles", "practice", "translation"],
     source:
-      "Atlas translation corpus; awaiting editorial collation with Arabic and Persian witnesses.",
+      "Atlas translation corpus; editorial collation with Arabic and Persian witnesses remains in progress.",
   },
   {
     id: "kubra-minor-treatises",
