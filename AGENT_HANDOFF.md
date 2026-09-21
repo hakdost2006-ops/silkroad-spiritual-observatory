@@ -83,3 +83,51 @@ Collect feedback from Nursafardiyya readers on the live portal, then deepen the 
 ## Remaining Gate
 
 - Editorially deepen individual Naqshbandi master profiles from primary sources and specialist scholarship; retain the modern source layer as contextual, not evidentiary, material.
+
+---
+
+# SRSFA-20260921-01: Golden Sufi Center Profile
+
+## Outcome
+
+**VALIDATED** — a dedicated, source-aware profile is ready at `/golden-sufi-center` for the next public review deployment.
+
+## Completed
+
+- Created a substantial Golden Sufi Center page that situates the community's own Naqshbandiyya-Mujaddidiyya lineage account across Central Asia, South Asia, and its modern worldwide setting.
+- Kept the historical Khwajagan and Mujaddidi record distinct from the Center's self-described contemporary transmission.
+- Added public-source orientation for silent remembrance, companionship, dreamwork, and ordinary-life practice without republishing instruction, private teaching, or copyrighted texts.
+- Added a five-book reading shelf linking only to the Center's official publications and shop.
+- Linked the profile from the Naqshbandiyya page.
+
+## Validation
+
+- `pnpm run build`: passed.
+- `pnpm run lint`: 0 errors; 6 existing Fast Refresh warnings in shared UI primitives.
+- `git diff --check`: passed.
+
+## Files Changed
+
+- `src/routes/golden-sufi-center.tsx`
+- `src/routes/orders.$slug.tsx`
+- `src/routeTree.gen.ts`
+- `AGENT_HANDOFF.md`
+
+## Boundaries Preserved
+
+- No Golden Sufi Center book, PDF, or teaching text is hosted or reproduced.
+- The Center's chain is explicitly labeled as its own published lineage record.
+- The page makes no claim that a modern cross-tradition expression substitutes for historical Islamic Naqshbandiyya.
+
+## Remaining Gate
+
+Package and deploy the approved code to the existing public review URL. Attach `sufiatlas.com` only through a separate custom-domain approval and DNS verification step.
+
+## Recommended Next Action
+
+Review the new profile on the public site, then move into the master-by-master Naqshbandi source library and biographies.
+
+## Actions Not Taken
+
+- Did not attach or alter `sufiatlas.com`.
+- Did not offer spiritual instruction or represent community practices as universally applicable.

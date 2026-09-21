@@ -16,6 +16,7 @@ import { Route as NursafardiyyaRouteImport } from './routes/nursafardiyya'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as KhwajaganRouteImport } from './routes/khwajagan'
+import { Route as GoldenSufiCenterRouteImport } from './routes/golden-sufi-center'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TranslationsIndexRouteImport } from './routes/translations.index'
@@ -60,6 +61,11 @@ const LibraryRoute = LibraryRouteImport.update({
 const KhwajaganRoute = KhwajaganRouteImport.update({
   id: '/khwajagan',
   path: '/khwajagan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoldenSufiCenterRoute = GoldenSufiCenterRouteImport.update({
+  id: '/golden-sufi-center',
+  path: '/golden-sufi-center',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -116,6 +122,7 @@ const LibraryIdriesShahRoute = LibraryIdriesShahRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
@@ -135,6 +142,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
     | '/map'
@@ -195,6 +205,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
     | '/map'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
     | '/map'
@@ -234,6 +246,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  GoldenSufiCenterRoute: typeof GoldenSufiCenterRoute
   KhwajaganRoute: typeof KhwajaganRoute
   LibraryRoute: typeof LibraryRouteWithChildren
   MapRoute: typeof MapRoute
@@ -299,6 +312,13 @@ declare module '@tanstack/react-router' {
       path: '/khwajagan'
       fullPath: '/khwajagan'
       preLoaderRoute: typeof KhwajaganRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/golden-sufi-center': {
+      id: '/golden-sufi-center'
+      path: '/golden-sufi-center'
+      fullPath: '/golden-sufi-center'
+      preLoaderRoute: typeof GoldenSufiCenterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -388,6 +408,7 @@ const LibraryRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  GoldenSufiCenterRoute: GoldenSufiCenterRoute,
   KhwajaganRoute: KhwajaganRoute,
   LibraryRoute: LibraryRouteWithChildren,
   MapRoute: MapRoute,

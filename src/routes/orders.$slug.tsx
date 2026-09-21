@@ -520,6 +520,12 @@ function NaqshbandiyyaPage() {
                 cross-tradition expression of Mujaddidi inheritance.
               </p>
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+                <Link
+                  to="/golden-sufi-center"
+                  className="inline-flex items-center gap-2 text-gold hover:text-gold-soft"
+                >
+                  Explore the Atlas profile <ArrowRight className="h-4 w-4" />
+                </Link>
                 <a
                   href="https://goldensufi.org/about/naqshbandiyya-mujaddidiyya-golden-chain/"
                   target="_blank"
