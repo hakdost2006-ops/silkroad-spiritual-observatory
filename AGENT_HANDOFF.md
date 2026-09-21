@@ -140,7 +140,7 @@ Review the new profile on the public site, then move into the master-by-master N
 
 ## Outcome
 
-**VALIDATED** — original introductory reading paths are ready for the Nursafardiyya and Golden Sufi Center pages; the next gate is public deployment.
+**EXTERNALLY VERIFIED** — original introductory reading paths are live on the Nursafardiyya and Golden Sufi Center pages.
 
 ## Completed
 
@@ -153,6 +153,8 @@ Review the new profile on the public site, then move into the master-by-master N
 - `pnpm run build`: passed.
 - `pnpm run lint`: 0 errors; 6 existing Fast Refresh warnings in shared UI primitives.
 - `git diff --check`: passed.
+- Sites version 7 deployed successfully from commit `833a969c73ecbbd5ff344ffa571a75ad0877f99c`.
+- Live browser smoke test: confirmed four Golden Sufi Center continuation gates, six Nursafardiyya continuation gates, and no browser errors.
 
 ## Files Changed
 
@@ -167,4 +169,4 @@ Review the new profile on the public site, then move into the master-by-master N
 
 ## Remaining Gate
 
-Deploy the approved update to the current public review URL, then visually verify both page sections.
+Gather feedback from the source communities on the editorial introductions before adding more official-source reading paths.
