@@ -41,17 +41,19 @@ export const library: LibraryItem[] = [
     id: "kubra-ten-principles",
     title: "al-Uṣūl al-ʿAshara (The Ten Principles)",
     author: "Najm al-Dīn Kubrā",
-    translator: "Atlas editorial translation",
+    translator: "Silk Road Sufi Atlas, from the Urdu of Muhammad Ghazanfar Ali Waraich",
     order: "kubrawiyya",
     language: "English",
     century: "13th / modern edition",
-    format: "EPUB",
+    format: "PDF",
     topic: "Practice",
     description:
-      "English editorial translation from the Atlas corpus, structured around repentance, renunciation, trust, retreat, remembrance, watchfulness, and riḍā.",
+      "A designed English research edition of Kubra's tenfold path through repentance, renunciation, trust, contentment, seclusion, remembrance, turning, patience, watchfulness, and riḍā.",
     tags: ["najm-al-din-kubra", "principles", "practice", "translation"],
     source:
-      "Atlas translation corpus; editorial collation with Arabic and Persian witnesses remains in progress.",
+      "Atlas English working translation from the Urdu edition of Professor Muhammad Ghazanfar Ali Waraich, with the Persian translation and commentary attributed in that edition to Abd al-Ghafur Lari. Direct Arabic collation remains in progress.",
+    href: "/downloads/al-usul-al-asharah-ten-principles-english-research-edition.pdf",
+    linkLabel: "Download English PDF",
   },
   {
     id: "kubra-minor-treatises",
