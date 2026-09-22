@@ -170,3 +170,33 @@ Review the new profile on the public site, then move into the master-by-master N
 ## Remaining Gate
 
 Gather feedback from the source communities on the editorial introductions before adding more official-source reading paths.
+
+---
+
+# SRSFA-20260921-03: Production Domain Activation
+
+## Outcome
+
+**EXTERNALLY VERIFIED** — `https://sufiatlas.com` is active with SSL and serves the Silk Road Sufi Atlas.
+
+## Completed
+
+- Registered the production hostname with the existing public Site.
+- Added the required apex routing and verification records in the user's Cloudflare DNS zone.
+- Confirmed active provider and SSL status, then opened the live production site successfully in the browser.
+
+## Validation
+
+- Hosting custom-domain status: active.
+- SSL status: active.
+- Browser smoke test: `https://sufiatlas.com` loaded the Silk Road Sufi Atlas homepage without browser errors.
+
+## Remaining Gate
+
+- `www.sufiatlas.com` is not configured; decide later whether it should redirect to the apex domain.
+- Continue editorial and source-community review of published material.
+
+## Actions Not Taken
+
+- Did not change the site's public access policy.
+- Did not configure email, analytics, accounts, or a `www` redirect.
