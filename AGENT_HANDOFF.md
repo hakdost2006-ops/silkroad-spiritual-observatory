@@ -200,3 +200,39 @@ Gather feedback from the source communities on the editorial introductions befor
 
 - Did not change the site's public access policy.
 - Did not configure email, analytics, accounts, or a `www` redirect.
+
+---
+
+# SRSFA-20260921-04: Academia Central Asian Sufism Intake
+
+## Outcome
+
+**VALIDATED** — a private, rights-aware initial intake now maps the first high-value Academia.edu sources to specific Atlas improvements.
+
+## Completed
+
+- Verified the user's authenticated Academia.edu access.
+- Reviewed and catalogued initial sources for early Khwajagan-Naqshbandiyya organization, Timurid Herat expansion, the Yasawi shrine's artistic history, and the major DeWeese-Gross Central Asia volume.
+- Recorded source-specific website uses, candidates, gaps, and rights constraints in the private research ledger.
+- Confirmed that Academia is presently weak for Kubrawiyya exact-title searching; retained the existing non-Academia Kubra research route rather than padding the corpus with weak matches.
+
+## Validation
+
+- Reviewed accessible source pages, titles, author data, abstracts, identifiers, and publication data for ACA-CA-01 through ACA-CA-04.
+- Confirmed logged-in access and individual PDF availability.
+
+## Files Changed
+
+- `context/research/ACADEMIA_CENTRAL_ASIAN_SUFI_INTAKE.md`
+- `../../KNOWLEDGE_MAP.md`
+- `AGENT_HANDOFF.md`
+
+## Remaining Gate
+
+Perform page-specific extraction from the first four sources, with page numbers and claim labels, before revising public master or order pages. Establish a confirmed private download location before storing additional PDFs.
+
+## Actions Not Taken
+
+- Did not bulk scrape Academia.edu or create an uncurated PDF archive.
+- Did not republish, translate, or closely paraphrase any source text.
+- Did not change public website prose on the basis of abstracts alone.
