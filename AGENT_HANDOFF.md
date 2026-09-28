@@ -243,7 +243,7 @@ Perform page-specific extraction from the first four sources, with page numbers 
 
 ## Outcome
 
-**VALIDATED LOCALLY** — the Kubrawiyya order page has been rebuilt as a long-form Atlas narrative and is ready for editorial review at `http://127.0.0.1:5182/orders/kubrawiyya`. It has not been deployed.
+**EXTERNALLY VERIFIED** — the Kubrawiyya order page has been rebuilt as a long-form Atlas narrative and is live at `https://sufiatlas.com/orders/kubrawiyya`.
 
 ## Completed
 
@@ -264,6 +264,8 @@ Perform page-specific extraction from the first four sources, with page numbers 
 - Desktop browser QA at 1440 × 900: all seven chapters, route strip, sticky journey navigation, descendant field, reading links, and sources rendered without horizontal overflow.
 - Mobile browser QA at 390 × 844: the hero, chapter typography, route grid, branch cards, reading links, and footer rendered without horizontal overflow.
 - All five page images loaded; browser console reported no errors or warnings.
+- Sites version 9 deployed successfully from commit `8863d8877c417d098ffd6cce9591410c24e5eab2`.
+- The public custom-domain route returned HTTP 200 and live-content checks confirmed the new biography heading, descendant-lineage section, and “Eclipse without extinction” chapter.
 
 ## Files Changed
 
@@ -293,10 +295,10 @@ Perform page-specific extraction from the first four sources, with page numbers 
 
 ## Remaining Gate
 
-- Editorially review the narrative voice and the qualified Ashrafi, Shattari, Firdawsi, and Chinese transmission summaries before public deployment.
+- Continue editorial and specialist review of the qualified Ashrafi, Shattari, Firdawsi, and Chinese transmission summaries as the evidence base grows.
 - A future map pass should turn the route strip into a geographically interactive journey without reducing the chapter evidence notes.
 
 ## Actions Not Taken
 
-- Did not deploy the changes to `sufiatlas.com`.
 - Did not alter the existing Kubra research paper, founder translations, or live downloadable edition.
+- Did not launch new Yasawi, Naqshbandi, or Academy research agents in this publication task.
