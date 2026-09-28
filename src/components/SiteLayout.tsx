@@ -42,7 +42,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 </div>
               </div>
             </Link>
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center gap-1">
               {NAV.map((item) => {
                 const active = pathname === item.to || pathname.startsWith(item.to + "/");
                 return (
@@ -61,14 +61,14 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             </nav>
             <button
               onClick={() => setOpen((v) => !v)}
-              className="lg:hidden p-2 text-lapis-deep"
+              className="xl:hidden p-2 text-lapis-deep"
               aria-label="Toggle menu"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
           {open && (
-            <nav className="lg:hidden pb-4 grid grid-cols-2 gap-1">
+            <nav className="xl:hidden pb-4 grid grid-cols-2 gap-1">
               {NAV.map((item) => (
                 <Link
                   key={item.to}

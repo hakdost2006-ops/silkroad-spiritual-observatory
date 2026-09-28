@@ -236,3 +236,67 @@ Perform page-specific extraction from the first four sources, with page numbers 
 - Did not bulk scrape Academia.edu or create an uncurated PDF archive.
 - Did not republish, translate, or closely paraphrase any source text.
 - Did not change public website prose on the basis of abstracts alone.
+
+---
+
+# SRSFA-20260927-01: Kubrawiyya Biography of an Order
+
+## Outcome
+
+**VALIDATED LOCALLY** — the Kubrawiyya order page has been rebuilt as a long-form Atlas narrative and is ready for editorial review at `http://127.0.0.1:5182/orders/kubrawiyya`. It has not been deployed.
+
+## Completed
+
+- Replaced the generic order template for `/orders/kubrawiyya` with a dedicated seven-chapter biography of the order.
+- Opened with Kubra's teachers and the path's Suhrawardi-rooted ancestry, then followed the Khwarazmian teaching house, the rupture of 1221, and the order's dispersal into Bukhara, Jand, and Iran.
+- Traced the Iranian development through Simnani, the eastern flowering through 'Ali Hamadani, and the continuation into Badakhshan, Khuttalan, Kashmir, India, and China.
+- Added a qualified descendant-lineage field for the Hamadaniyya, Nurbakhshiyya, Dhahabiyya, Ashrafiyya, Firdawsiyya, and the reported Shattari connection.
+- Kept direct descent, regional continuation, later initiatic report, institutional succession, devotional afterlife, and intellectual influence visibly distinct.
+- Added chapter-level evidence notes and source drawers, a route chronology, founder and geography links, further-reading gates, image attribution, and an explicit explanation that the Naqshbandiyya is not a Kubrawi branch.
+- Updated the Kubrawiyya order-index summary so its short introduction reflects the complete transregional history.
+- Moved the full global desktop navigation to the `xl` breakpoint to prevent overflow at narrower desktop and tablet widths.
+
+## Validation
+
+- `pnpm run lint`: 0 errors; 6 pre-existing Fast Refresh warnings in shared UI primitives.
+- `pnpm run build`: passed, including the Cloudflare/Nitro production build.
+- `git diff --check`: passed.
+- Desktop browser QA at 1440 × 900: all seven chapters, route strip, sticky journey navigation, descendant field, reading links, and sources rendered without horizontal overflow.
+- Mobile browser QA at 390 × 844: the hero, chapter typography, route grid, branch cards, reading links, and footer rendered without horizontal overflow.
+- All five page images loaded; browser console reported no errors or warnings.
+
+## Files Changed
+
+- `src/components/KubrawiyyaStory.tsx`
+- `src/data/kubrawiyya-journey.ts`
+- `src/routes/orders.$slug.tsx`
+- `src/data/orders.ts`
+- `src/components/SiteLayout.tsx`
+- `AGENT_HANDOFF.md`
+- `../KNOWLEDGE_MAP.md`
+
+## Source Controls
+
+- Founder and order framing: Hamid Algar, “Kobrawiya i. The Eponym” and “Kobrawiya ii. The Order,” *Encyclopaedia Iranica*.
+- Hamadani transmission: Gerhard Böwering, “ʿAli Hamadani,” *Encyclopaedia Iranica*.
+- Central Asian institutions and eclipse: Devin DeWeese's controlled local studies.
+- Founder teachings: the Atlas Kubrawi corpus and Marijan Molé's shorter-treatise edition.
+- Post-eclipse memory: Daniel Beben's study, linked through its DOI.
+
+## Boundaries Preserved
+
+- The page does not turn later hagiographic detail into unqualified biography.
+- It does not treat every later school that resembles the Kubrawiyya as a descendant lineage.
+- The devotional illustration is identified as later visual remembrance, not a contemporary likeness.
+- Image credits and licenses are visible and linked where a public source record is available.
+- The research paper remains the denser scholarly apparatus; this page is its Atlas storytelling adaptation, not a substitute for the paper.
+
+## Remaining Gate
+
+- Editorially review the narrative voice and the qualified Ashrafi, Shattari, Firdawsi, and Chinese transmission summaries before public deployment.
+- A future map pass should turn the route strip into a geographically interactive journey without reducing the chapter evidence notes.
+
+## Actions Not Taken
+
+- Did not deploy the changes to `sufiatlas.com`.
+- Did not alter the existing Kubra research paper, founder translations, or live downloadable edition.

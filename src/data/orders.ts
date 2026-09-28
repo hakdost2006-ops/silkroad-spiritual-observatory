@@ -24,10 +24,10 @@ export const orders: Order[] = [
     altNames: ["Kubravi", "Kubrawi"],
     founder: "Najm al-Dīn Kubrā",
     founded: "c. 1200 CE — Khwarazm",
-    region: "Khwarazm, Khurasan, Kashmir",
-    tagline: "Visionary light and the science of coloured lights",
+    region: "Khwarazm, Persia, Central Asia, Kashmir, India, China",
+    tagline: "A Khwarazmian path whose descendants crossed the Silk Roads",
     overview:
-      "Founded in Khwarazm by the martyr-saint Najm al-Dīn Kubrā, the Kubrawiyya is renowned for its refined mystical psychology, its doctrine of photisms and coloured lights witnessed on the path, and its expansive lineage which later reached Kashmir and China.",
+      "The Kubrawiyya grew from Najm al-Dīn Kubrā's teaching house in Khwarazm, but its life cannot be contained within one founder or city. The Mongol destruction of 1221 turned the lineage into roads: toward Bukhara and the Turkic steppe, through Persia and Simnan, and onward with ʿAlī Hamadānī into Badakhshan and Kashmir. Its descendants later included the Nurbakhshiyya and Dhahabiyya, while its texts and sacred geographies continued to shape Sufi memory from India to China.",
     teachings: [
       "The science of luminous visions (photisms)",
       "Suhbat with the shaykh as mirror of the soul",
@@ -46,7 +46,7 @@ export const orders: Order[] = [
     sites: ["kunya-urgench", "bukhara"],
     related: ["nurbakhshiyya", "khwajagan"],
     legacy:
-      "The Kubrawī contemplative psychology deeply influenced later Persianate Sufism and, through Mīr Sayyid ʿAlī Hamadānī, shaped the Islamic culture of Kashmir.",
+      "The Kubrawī inheritance survived both through named descendant lineages and through a wider afterlife of visionary psychology, retreat discipline, Persian spiritual anthropology, shrines, manuscripts, and regional memory.",
     notes:
       "Ibn ʿArabī referred to Najm al-Dīn Kubrā as the 'shaykh who fashions saints'. His martyrdom at the hands of the Mongols (1221) is preserved in the collective memory of Central Asia.",
   },

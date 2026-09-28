@@ -5,6 +5,7 @@ import { getSite } from "../data/sites";
 import { library } from "../data/library";
 import { orderVisuals } from "../data/visual-archive";
 import { PageHeader, Panel, FieldLabel, Chip, Ornament } from "../components/ui-primitives";
+import { KubrawiyyaStory } from "../components/KubrawiyyaStory";
 import {
   ArrowRight,
   BookOpenText,
@@ -44,6 +45,7 @@ export const Route = createFileRoute("/orders/$slug")({
 
 function OrderPage() {
   const { order } = Route.useLoaderData() as { order: Order };
+  if (order.slug === "kubrawiyya") return <KubrawiyyaStory />;
   if (order.slug === "naqshbandiyya") return <NaqshbandiyyaPage />;
 
   const relatedDownloads = library.filter((l) => l.order === order.slug);
