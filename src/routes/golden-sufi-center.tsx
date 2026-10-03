@@ -2,9 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookOpenText,
+  Compass,
   ExternalLink,
   HeartHandshake,
   Network,
+  SearchCheck,
   ShieldCheck,
 } from "lucide-react";
 import { Chip, PageHeader, Panel, SectionHeader } from "../components/ui-primitives";
@@ -46,39 +48,101 @@ const publicMethods = [
 
 const readingShelf = [
   {
+    title: "Travelling the Path of Love",
+    author: "Edited by Llewellyn Vaughan-Lee; biographical notes by Sara Sviri",
+    description:
+      "A transregional anthology arranged as a journey from the identity of the Sufi through longing, remembrance, surrender, knowledge, annihilation, and union. The Atlas uses it as a map toward masters and themes, then verifies individual sayings in earlier sources.",
+    use: "Core source-literacy and narrative-design text",
+    href: "https://shop.goldensufi.org/products/travelling-the-path-of-love",
+  },
+  {
     title: "Sufism: The Transformation of the Heart",
     author: "Llewellyn Vaughan-Lee",
     description:
       "A concise introduction to Sufi love, the heart, remembrance, service, and the role of a guide. Read it as a doorway into Vaughan-Lee's own teaching language rather than as a general history of Sufism.",
+    use: "Foundation orientation",
     href: "https://goldensufi.org/publications/books/sufism-the-transformation-of-the-heart/",
+  },
+  {
+    title: "Love Is a Fire",
+    author: "Llewellyn Vaughan-Lee",
+    description:
+      "A sustained modern account of longing and the stages of the path of love. It can help shape an accessible narrative arc when paired with, and clearly distinguished from, order-specific primary texts.",
+    use: "Love, longing, and the journey home",
+    href: "https://shop.goldensufi.org/products/love-is-a-fire",
   },
   {
     title: "The Bond with the Beloved",
     author: "Llewellyn Vaughan-Lee",
     description:
       "A book centered on longing, devotion, and the intimacy of the seeker with the divine Beloved. It is especially useful for understanding the Center's devotional vocabulary.",
+    use: "Lover-Beloved language; effort and grace",
     href: "https://shop.goldensufi.org/products/the-bond-with-the-beloved",
-  },
-  {
-    title: "Catching the Thread",
-    author: "Llewellyn Vaughan-Lee",
-    description:
-      "A meeting point of Sufi teaching, dreamwork, and Jungian psychology. The book illuminates a distinctive modern layer of the Center's work rather than a universal template for reading dreams.",
-    href: "https://shop.goldensufi.org/products/catching-the-thread",
   },
   {
     title: "In the Company of Friends",
     author: "Llewellyn Vaughan-Lee",
     description:
       "Reflections on companionship, service, and the shared life of a spiritual community. It offers a public window onto how relational practice is framed in the Center's contemporary setting.",
+    use: "Companionship, community, and service",
     href: "https://shop.goldensufi.org/products/in-the-company-of-friends",
   },
   {
-    title: "Daughter of Fire",
-    author: "Irina Tweedie",
+    title: "The Face Before I Was Born",
+    author: "Llewellyn Vaughan-Lee",
     description:
-      "Tweedie's account of her years with Radha Mohan Lal in India is an important modern witness for the line later associated with the Golden Sufi Center. It should be read alongside independent scholarship and the Center's own lineage account.",
-    href: "https://shop.goldensufi.org/",
+      "A spiritual autobiography spanning inward intensity, psychological crisis, family life, and the slow integration of two worlds. It belongs in a course on testimony and genre, with strong contextual safeguards.",
+    use: "Modern spiritual autobiography",
+    href: "https://shop.goldensufi.org/products/the-face-before-i-was-born",
+  },
+  {
+    title: "Catching the Thread",
+    author: "Llewellyn Vaughan-Lee",
+    description:
+      "A meeting point of Sufi teaching, dreamwork, and Jungian psychology. The book illuminates a distinctive modern synthesis rather than a universal or medieval template for reading dreams.",
+    use: "Advanced seminar in psychology and dreamwork",
+    href: "https://shop.goldensufi.org/products/catching-the-thread",
+  },
+  {
+    title: "For Love of the Real",
+    author: "Llewellyn Vaughan-Lee with Hilary Hart",
+    description:
+      "A mature synthesis of the search for the Real, oneness, nature, and the pressures of modern materialism. It is strongest as a contemporary capstone rather than a source for medieval history.",
+    use: "Capstone in contemporary mystical witness",
+    href: "https://shop.goldensufi.org/products/for-love-of-the-real",
+  },
+];
+
+const pathMovements = [
+  {
+    number: "01",
+    title: "Orientation",
+    chapters: "The Sufi - The Path - Teacher and Disciple",
+    body: "Who is travelling, what is being sought, and why a tradition of companionship matters.",
+  },
+  {
+    number: "02",
+    title: "Awakening",
+    chapters: "Longing - Remembrance - Meditation and Prayer",
+    body: "The heart begins to turn, remember, and listen. The Atlas presents the language; living communities retain their practices.",
+  },
+  {
+    number: "03",
+    title: "Transformation",
+    chapters: "Suffering and Surrender - Polishing the Heart - Light upon Light",
+    body: "Trial, ethical refinement, and illumination appear as a movement of formation rather than a promise of special experience.",
+  },
+  {
+    number: "04",
+    title: "Love and Knowledge",
+    chapters: "Lover and Beloved - Valley of Love - Knowledge of God",
+    body: "Devotional poetry and experiential language meet questions of knowledge, interpretation, and the limits of speech.",
+  },
+  {
+    number: "05",
+    title: "Effacement and Return",
+    chapters: "Wheresoever You Turn - Annihilation of the Self - Union",
+    body: "The anthology ends at the most delicate vocabulary of the path, where historical context and theological precision matter most.",
   },
 ];
 
@@ -242,12 +306,77 @@ function GoldenSufiCenterPage() {
         </div>
       </section>
 
+      <section className="bg-lapis-deep py-20 text-ivory">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+            <div>
+              <div className="text-[11px] uppercase tracking-[0.28em] text-gold">
+                Travelling the Path of Love
+              </div>
+              <h2 className="mt-3 max-w-3xl font-serif text-4xl leading-[1.05] text-ivory md:text-5xl">
+                Fifteen chapters become five movements through the path
+              </h2>
+            </div>
+            <p className="text-base leading-relaxed text-ivory/72">
+              Vaughan-Lee's anthology gathers many centuries and regions into one contemplative
+              sequence. We use that sequence as an editorial map, then return each saying to its own
+              author, language, genre, and historical setting.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-px overflow-hidden border border-ivory/20 bg-ivory/20 md:grid-cols-2 xl:grid-cols-5">
+            {pathMovements.map((movement, index) => (
+              <article
+                key={movement.number}
+                className={`min-h-[280px] bg-lapis-deep p-6 ${
+                  index === pathMovements.length - 1 ? "md:col-span-2 xl:col-span-1" : ""
+                }`}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                    Movement {movement.number}
+                  </span>
+                  <Compass className="h-5 w-5 text-gold/80" />
+                </div>
+                <h3 className="mt-6 font-serif text-3xl text-gold-soft">{movement.title}</h3>
+                <p className="mt-4 text-xs uppercase leading-relaxed tracking-[0.14em] text-ivory/55">
+                  {movement.chapters}
+                </p>
+                <p className="mt-5 text-sm leading-relaxed text-ivory/72">{movement.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-5 border-t border-ivory/20 pt-8 md:grid-cols-[auto_1fr_auto] md:items-center">
+            <SearchCheck className="h-7 w-7 text-gold" />
+            <div>
+              <h3 className="font-serif text-2xl text-ivory">
+                A saying is a lead, not yet evidence
+              </h3>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-ivory/68">
+                Before a saying enters a master's biography or an Academy lesson, we trace its
+                attribution, source language, earliest practical witness, translation history, and
+                rights status. The private research copy is not hosted by the Atlas.
+              </p>
+            </div>
+            <a
+              href="https://shop.goldensufi.org/products/travelling-the-path-of-love"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 border-b border-gold pb-1 text-sm text-gold hover:text-gold-soft"
+            >
+              Official edition <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
         <div>
           <SectionHeader
             eyebrow="A contemporary library"
-            title="Books for understanding this particular voice"
-            intro="These are reading guides to officially available editions. The Atlas does not reproduce the books or imply that these modern works stand in for classical Naqshbandi sources."
+            title="A reading path for the Atlas and Academy"
+            intro="These books have different jobs: orientation, devotional language, community, autobiography, psychology, and contemporary application. None stands in for the classical Naqshbandi corpus."
           />
           <a
             href="https://shop.goldensufi.org/"
@@ -271,6 +400,7 @@ function GoldenSufiCenterPage() {
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-stone">
                 {book.description}
               </p>
+              <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-ruby">{book.use}</p>
               <a
                 href={book.href}
                 target="_blank"
