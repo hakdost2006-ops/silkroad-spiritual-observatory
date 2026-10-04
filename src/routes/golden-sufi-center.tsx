@@ -53,6 +53,7 @@ const readingShelf = [
     description:
       "A transregional anthology arranged as a journey from the identity of the Sufi through longing, remembrance, surrender, knowledge, annihilation, and union. The Atlas uses it as a map toward masters and themes, then verifies individual sayings in earlier sources.",
     use: "Core source-literacy and narrative-design text",
+    status: "In the Atlas research library",
     href: "https://shop.goldensufi.org/products/travelling-the-path-of-love",
   },
   {
@@ -61,7 +62,8 @@ const readingShelf = [
     description:
       "A concise introduction to Sufi love, the heart, remembrance, service, and the role of a guide. Read it as a doorway into Vaughan-Lee's own teaching language rather than as a general history of Sufism.",
     use: "Foundation orientation",
-    href: "https://goldensufi.org/publications/books/sufism-the-transformation-of-the-heart/",
+    status: "In the Atlas research library",
+    href: "https://shop.goldensufi.org/products/sufism",
   },
   {
     title: "Love Is a Fire",
@@ -69,7 +71,17 @@ const readingShelf = [
     description:
       "A sustained modern account of longing and the stages of the path of love. It can help shape an accessible narrative arc when paired with, and clearly distinguished from, order-specific primary texts.",
     use: "Love, longing, and the journey home",
+    status: "In the Atlas research library",
     href: "https://shop.goldensufi.org/products/love-is-a-fire",
+  },
+  {
+    title: "Moshkel Gosha",
+    author: "Llewellyn Vaughan-Lee",
+    description:
+      "A Persian teaching tale accompanied by a close modern commentary on need, the unknown, remembrance, storytelling, and the meeting of inner and ordinary life. It is particularly useful for studying how a traditional story is interpreted rather than merely summarized.",
+    use: "Teaching story, commentary, and interpretive method",
+    status: "In the Atlas research library",
+    href: "https://shop.goldensufi.org/products/moshkel-gosha",
   },
   {
     title: "The Bond with the Beloved",
@@ -77,6 +89,7 @@ const readingShelf = [
     description:
       "A book centered on longing, devotion, and the intimacy of the seeker with the divine Beloved. It is especially useful for understanding the Center's devotional vocabulary.",
     use: "Lover-Beloved language; effort and grace",
+    status: "Recommended next acquisition",
     href: "https://shop.goldensufi.org/products/the-bond-with-the-beloved",
   },
   {
@@ -85,6 +98,7 @@ const readingShelf = [
     description:
       "Reflections on companionship, service, and the shared life of a spiritual community. It offers a public window onto how relational practice is framed in the Center's contemporary setting.",
     use: "Companionship, community, and service",
+    status: "In the Atlas research library",
     href: "https://shop.goldensufi.org/products/in-the-company-of-friends",
   },
   {
@@ -93,6 +107,7 @@ const readingShelf = [
     description:
       "A spiritual autobiography spanning inward intensity, psychological crisis, family life, and the slow integration of two worlds. It belongs in a course on testimony and genre, with strong contextual safeguards.",
     use: "Modern spiritual autobiography",
+    status: "In the Atlas research library",
     href: "https://shop.goldensufi.org/products/the-face-before-i-was-born",
   },
   {
@@ -101,6 +116,7 @@ const readingShelf = [
     description:
       "A meeting point of Sufi teaching, dreamwork, and Jungian psychology. The book illuminates a distinctive modern synthesis rather than a universal or medieval template for reading dreams.",
     use: "Advanced seminar in psychology and dreamwork",
+    status: "In the Atlas research library",
     href: "https://shop.goldensufi.org/products/catching-the-thread",
   },
   {
@@ -109,6 +125,7 @@ const readingShelf = [
     description:
       "A mature synthesis of the search for the Real, oneness, nature, and the pressures of modern materialism. It is strongest as a contemporary capstone rather than a source for medieval history.",
     use: "Capstone in contemporary mystical witness",
+    status: "Recommended next acquisition",
     href: "https://shop.goldensufi.org/products/for-love-of-the-real",
   },
 ];
@@ -400,7 +417,10 @@ function GoldenSufiCenterPage() {
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-stone">
                 {book.description}
               </p>
-              <p className="mt-3 text-[10px] uppercase tracking-[0.2em] text-ruby">{book.use}</p>
+              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-[10px] uppercase tracking-[0.2em]">
+                <span className="text-ruby">{book.use}</span>
+                <span className="text-gold">{book.status}</span>
+              </div>
               <a
                 href={book.href}
                 target="_blank"
@@ -441,6 +461,12 @@ function GoldenSufiCenterPage() {
                 className="inline-flex items-center gap-2 text-lapis-deep hover:text-ruby"
               >
                 Khwajagan <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/library"
+                className="inline-flex items-center gap-2 text-lapis-deep hover:text-ruby"
+              >
+                Golden Sufi books <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/library/idries-shah"

@@ -1,6 +1,7 @@
 import { nursafardiyyaArchive } from "./nursafardiyya";
 import { khwajaganLibrary } from "./khwajagan-library";
 import { idriesShahLibrary } from "./idries-shah-library";
+import { goldenSufiLibrary } from "./golden-sufi-library";
 
 export type LibraryItem = {
   id: string;
@@ -19,7 +20,7 @@ export type LibraryItem = {
   linkLabel?: string;
   amazonUrl?: string;
   detailedOverview?: string;
-  collection?: "idries-shah";
+  collection?: "idries-shah" | "golden-sufi";
 };
 
 export const library: LibraryItem[] = [
@@ -203,8 +204,10 @@ export const library: LibraryItem[] = [
 library.push(...nursafardiyyaArchive);
 library.push(...khwajaganLibrary);
 library.push(...idriesShahLibrary);
+library.push(...goldenSufiLibrary);
 
 export const libraryFilters = {
+  collection: ["all", "golden-sufi", "idries-shah"] as const,
   order: [
     "all",
     "kubrawiyya",

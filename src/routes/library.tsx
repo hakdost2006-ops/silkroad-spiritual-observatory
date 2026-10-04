@@ -27,6 +27,7 @@ export const Route = createFileRoute("/library")({
 function LibraryPage() {
   const { pathname } = useLocation();
   const [q, setQ] = useState("");
+  const [collection, setCollection] = useState<string>("all");
   const [order, setOrder] = useState<string>("all");
   const [lang, setLang] = useState<string>("all");
   const [century, setCentury] = useState<string>("all");
@@ -34,18 +35,19 @@ function LibraryPage() {
 
   const results = useMemo(() => {
     return library.filter((item) => {
+      if (collection !== "all" && item.collection !== collection) return false;
       if (order !== "all" && item.order !== order) return false;
       if (lang !== "all" && item.language !== lang) return false;
       if (century !== "all" && item.century !== century) return false;
       if (format !== "all" && item.format !== format) return false;
       if (q) {
         const hay =
-          `${item.title} ${item.author} ${item.description} ${item.tags.join(" ")}`.toLowerCase();
+          `${item.title} ${item.author} ${item.topic} ${item.description} ${item.detailedOverview ?? ""} ${item.tags.join(" ")}`.toLowerCase();
         if (!hay.includes(q.toLowerCase())) return false;
       }
       return true;
     });
-  }, [q, order, lang, century, format]);
+  }, [q, collection, order, lang, century, format]);
 
   if (pathname !== "/library") {
     return <Outlet />;
@@ -72,6 +74,12 @@ function LibraryPage() {
                 className="w-full bg-parchment border border-gold/30 px-3 py-2 text-sm font-serif focus:outline-none focus:border-gold"
               />
             </div>
+            <Select
+              label="Collection"
+              value={collection}
+              setValue={setCollection}
+              options={[...libraryFilters.collection]}
+            />
             <Select
               label="Order"
               value={order}
@@ -115,6 +123,12 @@ function LibraryPage() {
               >
                 <div>
                   <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-gold">
+                    {item.collection && (
+                      <>
+                        <span>{collectionLabels[item.collection]}</span>
+                        <span className="text-stone/60">·</span>
+                      </>
+                    )}
                     <span>{item.format}</span>
                     <span className="text-stone/60">·</span>
                     <span>{item.language}</span>
@@ -182,10 +196,22 @@ function Select({
       >
         {options.map((o) => (
           <option key={o} value={o}>
-            {o === "all" ? `All ${label.toLowerCase()}` : o}
+            {o === "all" ? `All ${label.toLowerCase()}` : formatOption(o)}
           </option>
         ))}
       </select>
     </div>
   );
+}
+
+const collectionLabels = {
+  "golden-sufi": "Golden Sufi Center",
+  "idries-shah": "Idries Shah",
+} as const;
+
+function formatOption(option: string) {
+  return option
+    .split("-")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
