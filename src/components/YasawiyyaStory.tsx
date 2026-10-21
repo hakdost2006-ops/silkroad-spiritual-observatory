@@ -419,7 +419,19 @@ function SuccessorRoads() {
             {yasawiyyaSuccessorRoads.map((road) => (
               <article key={road.name} className="grid gap-4 py-6 sm:grid-cols-[0.75fr_1.25fr]">
                 <div>
-                  <h3 className="font-serif text-2xl text-ivory">{road.name}</h3>
+                  <h3 className="font-serif text-2xl text-ivory">
+                    {road.masterSlug ? (
+                      <Link
+                        to="/masters/$slug"
+                        params={{ slug: road.masterSlug }}
+                        className="border-b border-gold/40 transition-colors hover:text-gold"
+                      >
+                        {road.name}
+                      </Link>
+                    ) : (
+                      road.name
+                    )}
+                  </h3>
                   <p className="mt-2 text-xs uppercase tracking-[0.16em] text-gold">
                     {road.readiness}
                   </p>

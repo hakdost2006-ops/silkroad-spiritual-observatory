@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -11,23 +10,30 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { useLocale, localeHref, resolveLocale, localizedPaths } from "../i18n/locale";
+import { localeLinks } from "../i18n/head";
+import { pageCopy } from "../i18n/copy";
 
 function NotFoundComponent() {
+  const { locale } = useLocale();
+  const copy = locale === "en" ? undefined : pageCopy[locale];
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">
+          {copy?.notFound ?? "Page not found"}
+        </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          {copy?.notFoundBody ?? "The page you're looking for doesn't exist or has been moved."}
         </p>
         <div className="mt-6">
-          <Link
-            to="/"
+          <a
+            href={localeHref("/", locale)}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
-          </Link>
+            {copy?.home ?? "Go home"}
+          </a>
         </div>
       </div>
     </div>
@@ -35,6 +41,8 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+  const { locale } = useLocale();
+  const copy = locale === "en" ? undefined : pageCopy[locale];
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -45,10 +53,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          {copy?.error ?? "This page didn't load"}
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          {copy?.errorBody ??
+            "Something went wrong on our end. You can try refreshing or head back home."}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -58,13 +67,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Try again
+            {copy?.retry ?? "Try again"}
           </button>
           <a
-            href="/"
+            href={localeHref("/", locale)}
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
-            Go home
+            {copy?.home ?? "Go home"}
           </a>
         </div>
       </div>
@@ -73,7 +82,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
+  head: ({ matches }) => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -91,6 +100,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_US" },
+      {
+        property: "og:url",
+        content: `https://sufiatlas.com${matches[matches.length - 1]?.pathname ?? "/"}`,
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
       {
@@ -110,6 +124,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     links: [
+      ...(resolveLocale(matches[matches.length - 1]?.pathname ?? "/").locale === "en" &&
+      localizedPaths.includes(
+        resolveLocale(matches[matches.length - 1]?.pathname ?? "/")
+          .path as (typeof localizedPaths)[number],
+      )
+        ? localeLinks(resolveLocale(matches[matches.length - 1]?.pathname ?? "/").path)
+        : []),
       {
         rel: "stylesheet",
         href: appCss,
@@ -130,8 +151,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const { locale } = useLocale();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <HeadContent />
       </head>

@@ -579,6 +579,12 @@ function NaqshbandiyyaPage() {
             >
               Follow the shrine geography <MapPinned className="h-4 w-4" />
             </Link>
+            <Link
+              to="/lineage/naqshbandiyya"
+              className="mt-5 flex w-fit items-center gap-2 border-b border-gold pb-1 text-lapis-deep transition-colors hover:text-ruby"
+            >
+              Open the source-aware lineage atlas <Network className="h-4 w-4" />
+            </Link>
           </div>
           <aside className="border-l-4 border-gold bg-parchment p-7">
             <ShieldCheck className="h-6 w-6 text-ruby" />
@@ -617,12 +623,20 @@ function NaqshbandiyyaPage() {
               Return to the masters who preceded the name
             </h2>
           </div>
-          <Link
-            to="/khwajagan"
-            className="inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory transition-colors hover:bg-lapis"
-          >
-            Explore the Khwajagan <ArrowRight className="h-4 w-4" />
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/lineage/naqshbandiyya"
+              className="inline-flex items-center gap-2 bg-ruby px-5 py-3 text-ivory transition-colors hover:bg-lapis"
+            >
+              Trace the lineage <Network className="h-4 w-4" />
+            </Link>
+            <Link
+              to="/khwajagan"
+              className="inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory transition-colors hover:bg-lapis"
+            >
+              Explore the Khwajagan <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </div>

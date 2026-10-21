@@ -254,7 +254,7 @@ export function KubrawiyyaStory() {
                   {source.title}
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-stone">{source.citation}</p>
-                {source.href && (
+                {"href" in source && source.href && (
                   <a
                     href={source.href}
                     target="_blank"

@@ -16,6 +16,76 @@ export const masterDeepReadings: Record<string, MasterDeepReading> = {
     afterlife:
       "The Timurid mausoleum at Turkistan turned Yasawi’s grave into a monumental centre of pilgrimage and a living archive of Turkic Muslim memory. Visitors encounter not only a historical teacher, but a saintly presence woven into Kazakhstan’s sacred geography.",
   },
+  "arslan-baba": {
+    lifeInPlace:
+      "Arslan Baba belongs to the Otrar oasis, where the Syr Darya, caravan roads, cultivated settlements, and the open steppe met. His biography cannot be separated from that threshold landscape: he is remembered less as the author of a book than as the bearer of a trust.",
+    practice:
+      "The Arslan Baba story makes service the form of transmission. What passes to Yasawi is not information alone, but an inheritance guarded faithfully until its proper recipient appears. Read in this way, the hagiography teaches patience, custodianship, and humility.",
+    textsAndSayings:
+      "No independent corpus can yet be securely attached to him. His teaching lives through Yasawi narratives and pilgrimage memory, which should be read as devotional witnesses to a community's understanding of origins rather than as contemporary transcripts.",
+    afterlife:
+      "The mausoleum near Otrar remains a major station on the road to Turkistan. The journey between the two shrines gives physical form to a remembered relation between first blessing and mature teaching.",
+  },
+  "sufi-muhammad-danishmand": {
+    lifeInPlace:
+      "Danishmand emerges from the early Yasawi world around Otrar and Transoxiana, but he is encountered most clearly through a later manuscript trail. His landscape is therefore both geographic and textual: a circle of teaching remembered in books copied generations afterward.",
+    practice:
+      "The attributed Mirror of Hearts centres formation in the inward life. Knowledge becomes valuable when it makes the heart truthful, remembrance steady, and companionship ethically demanding.",
+    textsAndSayings:
+      "Mir'at al-qulub is indispensable and delicate evidence. Its later witnesses preserve early teaching memory, but redactions and attribution layers must be collated before individual formulations are presented as Danishmand's exact words.",
+    afterlife:
+      "His afterlife is quieter than that of shrine-centred successors. It survives through a branch of teachers and through the intellectual labour of communities that continued to copy and interpret the early Yasawi archive.",
+  },
+  "hakim-ata": {
+    lifeInPlace:
+      "Hakim Ata carries the Yasawi inheritance northwest into Khwarazm and the lower Amu Darya world. Baqirgan, Qonghirat, and the approaches to the Aral Sea give his memory a riverine and frontier geography distinct from the monumental centre at Turkistan.",
+    practice:
+      "His poetic world turns the reader toward repentance, mortality, the prophetic stories, and the unveiling of self-deception. Hikmet is not ornamental verse here; it is speech meant to awaken conscience in a community that hears, remembers, and recites.",
+    textsAndSayings:
+      "The Baqirgan Kitabi is a layered collected corpus, while Akhir Zaman Kitabi, Hazret-i Meryem Kitabi, and the Mi'rajnama represent important attributed works. The later Hakim Ata Kitabi tells his saintly life but is not his autobiography. Each title must be read according to its own witness history.",
+    afterlife:
+      "Hakim Ata's influence lies both in poetry and in succession. Later memory connects him to Zangi Ata and Anbar Ana, while print culture carried the Baqirgan corpus far beyond Khwarazm. He is not simply a lesser Yasawi: he is a second centre of Turkic Sufi literary memory.",
+  },
+  "zangi-ata": {
+    lifeInPlace:
+      "Zangi Ata belongs to the cultivated Tashkent oasis and the roads leading toward the western Tian Shan. Later stories place holiness close to herding, labour, and the social margins, making the ordinary world the ground of his authority.",
+    practice:
+      "His remembered teaching emphasizes humility, service, and the force of companionship. The stories ask the reader to recognise spiritual dignity where status-conscious society might fail to see it.",
+    textsAndSayings:
+      "No large personal corpus survives. A poem attributed to him is reported in later manuscript witnesses, while most teaching memory comes through hagiography and the succession accounts of his four prominent disciples.",
+    afterlife:
+      "The Zangi Ata complex, shared with the memory of Anbar Ana, remains one of the most visible Yasawi-related sacred places in Uzbekistan. Its endurance shows how a successor's legacy can be carried primarily by pilgrimage and local devotion.",
+  },
+  "anbar-ana": {
+    lifeInPlace:
+      "Anbar Ana appears within the moving sacred geography between Khwarazm and Tashkent. Her story is preserved through relationships and shrine memory, the very forms of evidence in which women's historical work is often both visible and difficult to date.",
+    practice:
+      "Her remembered presence draws attention to endurance, hospitality, household responsibility, and care. These should not be romanticised as merely domestic virtues; they were among the means by which communities and teachings survived.",
+    textsAndSayings:
+      "No independent writings are securely known. The hagiographical narratives should be preserved as narratives, without converting every relationship or event into documentary fact.",
+    afterlife:
+      "Her mausoleum at the Zangi Ata complex gives a woman a durable public place within Yasawi sacred history. It also marks a research obligation: future work must seek women's voices beyond the male-centred chain of formal succession.",
+  },
+  "ismail-ata": {
+    lifeInPlace:
+      "Ismail Ata's remembered itinerary joins Khwarazm, Bukhara, Samarkand, Khujand, and Kazygurt. Whether every stage can be independently dated or not, the route captures the mobile world in which Central Asian teaching lineages were formed.",
+    practice:
+      "Study, travel, companionship, and authorization shape his profile. The lesson is that regional sanctity was not isolated: teachers moved through several centres before becoming rooted in a local community.",
+    textsAndSayings:
+      "No secure personal corpus has yet been identified. His importance is transmitted through lineage history and through the text associated with his son Ishaq Khwaja.",
+    afterlife:
+      "The Kazygurt tradition preserves a branch easily overlooked when Yasawi history is reduced to Turkistan alone. It broadens the Atlas from a single monumental centre into a network of foothill and oasis communities.",
+  },
+  "ishaq-khwaja": {
+    lifeInPlace:
+      "Ishaq Khwaja stands in the Kazygurt and Transoxianan teaching landscape inherited from Ismail Ata. His most important place, however, is the page: the effort to make a lineage narratable to later generations.",
+    practice:
+      "For a keeper of history, remembrance itself becomes a discipline. Recording names and teachings can serve adab when it protects a community from forgetting, but it also demands honesty about where memory, genealogy, and history diverge.",
+    textsAndSayings:
+      "Hadiqat al-'arifin survives in a layered manuscript tradition and more than one recension. It is a primary witness to Yasawi self-memory, not a transparent transcript of the twelfth century.",
+    afterlife:
+      "Ishaq Khwaja's legacy is archival. Through the work associated with him, later readers gained a map of early teachers; through source criticism, modern readers can understand how that map itself was made.",
+  },
   "najm-al-din-kubra": {
     lifeInPlace:
       "Kubra taught in Khwarazm as Kunya-Urgench stood among the most vibrant cities of the eastern Islamic world. His circle formed in a place where trade, scholarship, Persian literary culture, and the anxiety of an approaching political catastrophe met.",

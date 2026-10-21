@@ -19,25 +19,33 @@ export const Route = createFileRoute("/translations/$slug")({
       directions: getProjectDirections(project),
     };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      {
-        title: `${loaderData.project.englishTitle} — Nursafardiyya Translation Library`,
-      },
-      {
-        name: "description",
-        content: loaderData.project.rationale,
-      },
-      {
-        property: "og:title",
-        content: loaderData.project.englishTitle,
-      },
-      {
-        property: "og:description",
-        content: loaderData.project.websiteRole,
-      },
-    ],
-  }),
+  head: ({ loaderData }) =>
+    loaderData
+      ? {
+          meta: [
+            {
+              title: `${loaderData.project.englishTitle} — Nursafardiyya Translation Library`,
+            },
+            {
+              name: "description",
+              content: loaderData.project.rationale,
+            },
+            {
+              property: "og:title",
+              content: loaderData.project.englishTitle,
+            },
+            {
+              property: "og:description",
+              content: loaderData.project.websiteRole,
+            },
+          ],
+        }
+      : {
+          meta: [
+            { title: "Translation project not found" },
+            { name: "robots", content: "noindex" },
+          ],
+        },
   component: TranslationProjectPage,
 });
 
@@ -206,15 +214,6 @@ function TranslationProjectPage() {
                     >
                       <FileText className="h-3.5 w-3.5" />
                       Source
-                    </a>
-                    <a
-                      href={book.download}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-2 bg-lapis-deep px-3 py-2 text-xs text-ivory hover:bg-lapis"
-                    >
-                      <BookOpen className="h-3.5 w-3.5" />
-                      PDF
                     </a>
                   </div>
                 </div>

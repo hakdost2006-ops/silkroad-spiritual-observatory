@@ -125,7 +125,7 @@ export const yasawiyyaJourney: YasawiyyaJourneyChapter[] = [
       },
       {
         label: "Vusale Musali, St Petersburg Dīwān-i Hikmat copies",
-        href: "https://www.acarindex.com/turk-kulturu-ve-haci-bektas-veli-arastirma-dergisi/st-petersburg-dogu-yazmalari-enstitusunde-bulunan-divan-i-hikmet-nushalari-354892",
+        href: "https://dergipark.org.tr/en/pub/tkhcbva/article/1157847",
       },
     ],
     visual: "hikmet",
@@ -272,6 +272,7 @@ export const yasawiyyaJourney: YasawiyyaJourneyChapter[] = [
 export const yasawiyyaSuccessorRoads = [
   {
     name: "Mansur Ata",
+    masterSlug: undefined,
     route: "Family and early succession memory",
     geography: "Arslan Baba's remembered house · Otrar region",
     readiness: "Developing profile",
@@ -279,6 +280,7 @@ export const yasawiyyaSuccessorRoads = [
   },
   {
     name: "Said Ata",
+    masterSlug: undefined,
     route: "Ata'iya and steppe memory",
     geography: "Khwarazm · steppe corridors",
     readiness: "Branch history ready",
@@ -286,6 +288,7 @@ export const yasawiyyaSuccessorRoads = [
   },
   {
     name: "Sufi Muhammad Danishmand",
+    masterSlug: "sufi-muhammad-danishmand",
     route: "Prose teaching and textual transmission",
     geography: "Otrar region · later manuscript networks",
     readiness: "High once a direct witness is secured",
@@ -293,6 +296,7 @@ export const yasawiyyaSuccessorRoads = [
   },
   {
     name: "Hakim Ata / Sulayman Baqirgani",
+    masterSlug: "hakim-ata",
     route: "Poetry and the Khwarazmian road",
     geography: "Khwarazm-Aral region · Zangi Ata memory",
     readiness: "Source-labeled profile ready",

@@ -451,7 +451,8 @@ function GoldenSufiCenterPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm">
               <Link
-                to="/orders/naqshbandiyya"
+                to="/orders/$slug"
+                params={{ slug: "naqshbandiyya" }}
                 className="inline-flex items-center gap-2 text-lapis-deep hover:text-ruby"
               >
                 Naqshbandiyya <ArrowRight className="h-4 w-4" />

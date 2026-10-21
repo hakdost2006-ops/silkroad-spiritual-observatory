@@ -17,16 +17,21 @@ import { Route as MapRouteImport } from './routes/map'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as KhwajaganRouteImport } from './routes/khwajagan'
 import { Route as GoldenSufiCenterRouteImport } from './routes/golden-sufi-center'
+import { Route as AcademyRouteImport } from './routes/academy'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as LocaleRouteImport } from './routes/$locale'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TranslationsIndexRouteImport } from './routes/translations.index'
 import { Route as OrdersIndexRouteImport } from './routes/orders.index'
 import { Route as MastersIndexRouteImport } from './routes/masters.index'
+import { Route as LocaleIndexRouteImport } from './routes/$locale.index'
 import { Route as TranslationsSlugRouteImport } from './routes/translations.$slug'
 import { Route as StudySlugRouteImport } from './routes/study.$slug'
 import { Route as OrdersSlugRouteImport } from './routes/orders.$slug'
 import { Route as MastersSlugRouteImport } from './routes/masters.$slug'
+import { Route as LineageNaqshbandiyyaRouteImport } from './routes/lineage.naqshbandiyya'
 import { Route as LibraryIdriesShahRouteImport } from './routes/library.idries-shah'
+import { Route as LocaleSplatRouteImport } from './routes/$locale.$'
 
 const TimelineRoute = TimelineRouteImport.update({
   id: '/timeline',
@@ -68,9 +73,19 @@ const GoldenSufiCenterRoute = GoldenSufiCenterRouteImport.update({
   path: '/golden-sufi-center',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocaleRoute = LocaleRouteImport.update({
+  id: '/$locale',
+  path: '/$locale',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -93,6 +108,11 @@ const MastersIndexRoute = MastersIndexRouteImport.update({
   path: '/masters/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocaleIndexRoute = LocaleIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LocaleRoute,
+} as any)
 const TranslationsSlugRoute = TranslationsSlugRouteImport.update({
   id: '/translations/$slug',
   path: '/translations/$slug',
@@ -113,15 +133,27 @@ const MastersSlugRoute = MastersSlugRouteImport.update({
   path: '/masters/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LineageNaqshbandiyyaRoute = LineageNaqshbandiyyaRouteImport.update({
+  id: '/lineage/naqshbandiyya',
+  path: '/lineage/naqshbandiyya',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LibraryIdriesShahRoute = LibraryIdriesShahRouteImport.update({
   id: '/idries-shah',
   path: '/idries-shah',
   getParentRoute: () => LibraryRoute,
 } as any)
+const LocaleSplatRoute = LocaleSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => LocaleRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$locale': typeof LocaleRouteWithChildren
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
@@ -130,11 +162,14 @@ export interface FileRoutesByFullPath {
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
+  '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
+  '/$locale/': typeof LocaleIndexRoute
   '/masters/': typeof MastersIndexRoute
   '/orders/': typeof OrdersIndexRoute
   '/translations/': typeof TranslationsIndexRoute
@@ -142,6 +177,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
@@ -150,11 +186,14 @@ export interface FileRoutesByTo {
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
+  '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
+  '/$locale': typeof LocaleIndexRoute
   '/masters': typeof MastersIndexRoute
   '/orders': typeof OrdersIndexRoute
   '/translations': typeof TranslationsIndexRoute
@@ -162,7 +201,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$locale': typeof LocaleRouteWithChildren
   '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
@@ -171,11 +212,14 @@ export interface FileRoutesById {
   '/silsila': typeof SilsilaRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
+  '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
+  '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
+  '/$locale/': typeof LocaleIndexRoute
   '/masters/': typeof MastersIndexRoute
   '/orders/': typeof OrdersIndexRoute
   '/translations/': typeof TranslationsIndexRoute
@@ -184,7 +228,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$locale'
     | '/about'
+    | '/academy'
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
@@ -193,11 +239,14 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/$locale/$'
     | '/library/idries-shah'
+    | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
     | '/translations/$slug'
+    | '/$locale/'
     | '/masters/'
     | '/orders/'
     | '/translations/'
@@ -205,6 +254,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/academy'
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
@@ -213,18 +263,23 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/$locale/$'
     | '/library/idries-shah'
+    | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
     | '/translations/$slug'
+    | '/$locale'
     | '/masters'
     | '/orders'
     | '/translations'
   id:
     | '__root__'
     | '/'
+    | '/$locale'
     | '/about'
+    | '/academy'
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
@@ -233,11 +288,14 @@ export interface FileRouteTypes {
     | '/silsila'
     | '/sites'
     | '/timeline'
+    | '/$locale/$'
     | '/library/idries-shah'
+    | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
     | '/study/$slug'
     | '/translations/$slug'
+    | '/$locale/'
     | '/masters/'
     | '/orders/'
     | '/translations/'
@@ -245,7 +303,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LocaleRoute: typeof LocaleRouteWithChildren
   AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
   GoldenSufiCenterRoute: typeof GoldenSufiCenterRoute
   KhwajaganRoute: typeof KhwajaganRoute
   LibraryRoute: typeof LibraryRouteWithChildren
@@ -254,6 +314,7 @@ export interface RootRouteChildren {
   SilsilaRoute: typeof SilsilaRoute
   SitesRoute: typeof SitesRoute
   TimelineRoute: typeof TimelineRoute
+  LineageNaqshbandiyyaRoute: typeof LineageNaqshbandiyyaRoute
   MastersSlugRoute: typeof MastersSlugRoute
   OrdersSlugRoute: typeof OrdersSlugRoute
   StudySlugRoute: typeof StudySlugRoute
@@ -321,11 +382,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GoldenSufiCenterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$locale': {
+      id: '/$locale'
+      path: '/$locale'
+      fullPath: '/$locale'
+      preLoaderRoute: typeof LocaleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -356,6 +431,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MastersIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$locale/': {
+      id: '/$locale/'
+      path: '/'
+      fullPath: '/$locale/'
+      preLoaderRoute: typeof LocaleIndexRouteImport
+      parentRoute: typeof LocaleRoute
+    }
     '/translations/$slug': {
       id: '/translations/$slug'
       path: '/translations/$slug'
@@ -384,6 +466,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MastersSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lineage/naqshbandiyya': {
+      id: '/lineage/naqshbandiyya'
+      path: '/lineage/naqshbandiyya'
+      fullPath: '/lineage/naqshbandiyya'
+      preLoaderRoute: typeof LineageNaqshbandiyyaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/library/idries-shah': {
       id: '/library/idries-shah'
       path: '/idries-shah'
@@ -391,8 +480,28 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LibraryIdriesShahRouteImport
       parentRoute: typeof LibraryRoute
     }
+    '/$locale/$': {
+      id: '/$locale/$'
+      path: '/$'
+      fullPath: '/$locale/$'
+      preLoaderRoute: typeof LocaleSplatRouteImport
+      parentRoute: typeof LocaleRoute
+    }
   }
 }
+
+interface LocaleRouteChildren {
+  LocaleSplatRoute: typeof LocaleSplatRoute
+  LocaleIndexRoute: typeof LocaleIndexRoute
+}
+
+const LocaleRouteChildren: LocaleRouteChildren = {
+  LocaleSplatRoute: LocaleSplatRoute,
+  LocaleIndexRoute: LocaleIndexRoute,
+}
+
+const LocaleRouteWithChildren =
+  LocaleRoute._addFileChildren(LocaleRouteChildren)
 
 interface LibraryRouteChildren {
   LibraryIdriesShahRoute: typeof LibraryIdriesShahRoute
@@ -407,7 +516,9 @@ const LibraryRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LocaleRoute: LocaleRouteWithChildren,
   AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
   GoldenSufiCenterRoute: GoldenSufiCenterRoute,
   KhwajaganRoute: KhwajaganRoute,
   LibraryRoute: LibraryRouteWithChildren,
@@ -416,6 +527,7 @@ const rootRouteChildren: RootRouteChildren = {
   SilsilaRoute: SilsilaRoute,
   SitesRoute: SitesRoute,
   TimelineRoute: TimelineRoute,
+  LineageNaqshbandiyyaRoute: LineageNaqshbandiyyaRoute,
   MastersSlugRoute: MastersSlugRoute,
   OrdersSlugRoute: OrdersSlugRoute,
   StudySlugRoute: StudySlugRoute,
