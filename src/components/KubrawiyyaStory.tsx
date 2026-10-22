@@ -218,9 +218,9 @@ export function KubrawiyyaStory() {
             />
             <ReadingLink
               icon={<ScrollText className="h-5 w-5" />}
-              title="The Ten Principles English research edition"
-              body="Read the Atlas edition while the direct Arabic critical program continues privately."
-              href="/downloads/al-usul-al-asharah-ten-principles-english-research-edition.pdf"
+              title="The Ten Principles translation program"
+              body="Follow the Atlas research record while direct Arabic collation and publication review continue privately."
+              to="/library"
             />
             <ReadingLink
               icon={<Network className="h-5 w-5" />}

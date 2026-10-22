@@ -8,8 +8,8 @@ export const libraryDescriptions: Record<string, [string, string]> = {
     "Основополагающий кубравийский трактат о состояниях видения, цветных светах и дисциплине искателя.",
   ],
   "kubra-ten-principles": [
-    "Tavba, zuhd, tavakkul, qanoat, uzlat, zikr, tavajjuh, sabr, muroqaba va rizo orqali Kubroning o‘n asosli yo‘lini bayon qiluvchi, bezatilgan inglizcha tadqiqot nashri.",
-    "Оформленное английское исследовательское издание десятичастного пути Кубры: покаяние, отречение, упование, довольство, уединение, поминание, обращение, терпение, бдительность и рида.",
+    "Tavba, zuhd, tavakkul, qanoat, uzlat, zikr, tavajjuh, sabr, muroqaba va rizo orqali Kubroning o‘n asosli yo‘lini o‘rganuvchi manba-nazoratli tarjima dasturi. Inglizcha PDF hozircha ommaga tarqatilmaydi.",
+    "Контролируемая по источникам программа перевода десятичастного пути Кубры: покаяние, отречение, упование, довольство, уединение, поминание, обращение, терпение, бдительность и рида. Английский PDF пока не распространяется публично.",
   ],
   "kubra-minor-treatises": [
     "Atlas arxivi va ilmiy nashrlarda mavjud hayrat, safar va so‘fiy odobiga oid qisqa risolalarning katalog qaydi.",
