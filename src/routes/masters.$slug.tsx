@@ -130,7 +130,8 @@ function MasterPage() {
                 </p>
                 {shrine && (
                   <Link
-                    to="/map"
+                    to="/sites/$slug"
+                    params={{ slug: shrine.slug }}
                     className="mt-4 inline-flex items-center gap-2 border-b border-gold/50 text-sm text-lapis-deep hover:text-gold"
                   >
                     <RouteIcon className="h-4 w-4" /> Explore {shrine.name} on the map

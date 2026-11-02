@@ -10,12 +10,14 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as StudiesRouteImport } from './routes/studies'
 import { Route as SitesRouteImport } from './routes/sites'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SilsilaRouteImport } from './routes/silsila'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as NursafardiyyaRouteImport } from './routes/nursafardiyya'
 import { Route as MapRouteImport } from './routes/map'
+import { Route as LineagesRouteImport } from './routes/lineages'
 import { Route as LibraryRouteImport } from './routes/library'
 import { Route as KhwajaganRouteImport } from './routes/khwajagan'
 import { Route as GoldenSufiCenterRouteImport } from './routes/golden-sufi-center'
@@ -24,11 +26,13 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as LocaleRouteImport } from './routes/$locale'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as TranslationsIndexRouteImport } from './routes/translations.index'
+import { Route as SitesIndexRouteImport } from './routes/sites.index'
 import { Route as OrdersIndexRouteImport } from './routes/orders.index'
 import { Route as MastersIndexRouteImport } from './routes/masters.index'
 import { Route as LocaleIndexRouteImport } from './routes/$locale.index'
 import { Route as TranslationsSlugRouteImport } from './routes/translations.$slug'
 import { Route as StudySlugRouteImport } from './routes/study.$slug'
+import { Route as SitesSlugRouteImport } from './routes/sites.$slug'
 import { Route as OrdersSlugRouteImport } from './routes/orders.$slug'
 import { Route as MastersSlugRouteImport } from './routes/masters.$slug'
 import { Route as LineageNaqshbandiyyaRouteImport } from './routes/lineage.naqshbandiyya'
@@ -38,6 +42,11 @@ import { Route as LocaleSplatRouteImport } from './routes/$locale.$'
 const TimelineRoute = TimelineRouteImport.update({
   id: '/timeline',
   path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudiesRoute = StudiesRouteImport.update({
+  id: '/studies',
+  path: '/studies',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitesRoute = SitesRouteImport.update({
@@ -68,6 +77,11 @@ const NursafardiyyaRoute = NursafardiyyaRouteImport.update({
 const MapRoute = MapRouteImport.update({
   id: '/map',
   path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LineagesRoute = LineagesRouteImport.update({
+  id: '/lineages',
+  path: '/lineages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LibraryRoute = LibraryRouteImport.update({
@@ -110,6 +124,11 @@ const TranslationsIndexRoute = TranslationsIndexRouteImport.update({
   path: '/translations/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitesIndexRoute = SitesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SitesRoute,
+} as any)
 const OrdersIndexRoute = OrdersIndexRouteImport.update({
   id: '/orders/',
   path: '/orders/',
@@ -134,6 +153,11 @@ const StudySlugRoute = StudySlugRouteImport.update({
   id: '/study/$slug',
   path: '/study/$slug',
   getParentRoute: () => rootRouteImport,
+} as any)
+const SitesSlugRoute = SitesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => SitesRoute,
 } as any)
 const OrdersSlugRoute = OrdersSlugRouteImport.update({
   id: '/orders/$slug',
@@ -169,23 +193,27 @@ export interface FileRoutesByFullPath {
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
+  '/lineages': typeof LineagesRoute
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sites': typeof SitesRoute
+  '/sites': typeof SitesRouteWithChildren
+  '/studies': typeof StudiesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
+  '/sites/$slug': typeof SitesSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
   '/$locale/': typeof LocaleIndexRoute
   '/masters/': typeof MastersIndexRoute
   '/orders/': typeof OrdersIndexRoute
+  '/sites/': typeof SitesIndexRoute
   '/translations/': typeof TranslationsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -195,23 +223,26 @@ export interface FileRoutesByTo {
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
+  '/lineages': typeof LineagesRoute
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sites': typeof SitesRoute
+  '/studies': typeof StudiesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
+  '/sites/$slug': typeof SitesSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
   '/$locale': typeof LocaleIndexRoute
   '/masters': typeof MastersIndexRoute
   '/orders': typeof OrdersIndexRoute
+  '/sites': typeof SitesIndexRoute
   '/translations': typeof TranslationsIndexRoute
 }
 export interface FileRoutesById {
@@ -223,23 +254,27 @@ export interface FileRoutesById {
   '/golden-sufi-center': typeof GoldenSufiCenterRoute
   '/khwajagan': typeof KhwajaganRoute
   '/library': typeof LibraryRouteWithChildren
+  '/lineages': typeof LineagesRoute
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sites': typeof SitesRoute
+  '/sites': typeof SitesRouteWithChildren
+  '/studies': typeof StudiesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
   '/library/idries-shah': typeof LibraryIdriesShahRoute
   '/lineage/naqshbandiyya': typeof LineageNaqshbandiyyaRoute
   '/masters/$slug': typeof MastersSlugRoute
   '/orders/$slug': typeof OrdersSlugRoute
+  '/sites/$slug': typeof SitesSlugRoute
   '/study/$slug': typeof StudySlugRoute
   '/translations/$slug': typeof TranslationsSlugRoute
   '/$locale/': typeof LocaleIndexRoute
   '/masters/': typeof MastersIndexRoute
   '/orders/': typeof OrdersIndexRoute
+  '/sites/': typeof SitesIndexRoute
   '/translations/': typeof TranslationsIndexRoute
 }
 export interface FileRouteTypes {
@@ -252,23 +287,27 @@ export interface FileRouteTypes {
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
+    | '/lineages'
     | '/map'
     | '/nursafardiyya'
     | '/robots.txt'
     | '/silsila'
     | '/sitemap.xml'
     | '/sites'
+    | '/studies'
     | '/timeline'
     | '/$locale/$'
     | '/library/idries-shah'
     | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
+    | '/sites/$slug'
     | '/study/$slug'
     | '/translations/$slug'
     | '/$locale/'
     | '/masters/'
     | '/orders/'
+    | '/sites/'
     | '/translations/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -278,23 +317,26 @@ export interface FileRouteTypes {
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
+    | '/lineages'
     | '/map'
     | '/nursafardiyya'
     | '/robots.txt'
     | '/silsila'
     | '/sitemap.xml'
-    | '/sites'
+    | '/studies'
     | '/timeline'
     | '/$locale/$'
     | '/library/idries-shah'
     | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
+    | '/sites/$slug'
     | '/study/$slug'
     | '/translations/$slug'
     | '/$locale'
     | '/masters'
     | '/orders'
+    | '/sites'
     | '/translations'
   id:
     | '__root__'
@@ -305,23 +347,27 @@ export interface FileRouteTypes {
     | '/golden-sufi-center'
     | '/khwajagan'
     | '/library'
+    | '/lineages'
     | '/map'
     | '/nursafardiyya'
     | '/robots.txt'
     | '/silsila'
     | '/sitemap.xml'
     | '/sites'
+    | '/studies'
     | '/timeline'
     | '/$locale/$'
     | '/library/idries-shah'
     | '/lineage/naqshbandiyya'
     | '/masters/$slug'
     | '/orders/$slug'
+    | '/sites/$slug'
     | '/study/$slug'
     | '/translations/$slug'
     | '/$locale/'
     | '/masters/'
     | '/orders/'
+    | '/sites/'
     | '/translations/'
   fileRoutesById: FileRoutesById
 }
@@ -333,12 +379,14 @@ export interface RootRouteChildren {
   GoldenSufiCenterRoute: typeof GoldenSufiCenterRoute
   KhwajaganRoute: typeof KhwajaganRoute
   LibraryRoute: typeof LibraryRouteWithChildren
+  LineagesRoute: typeof LineagesRoute
   MapRoute: typeof MapRoute
   NursafardiyyaRoute: typeof NursafardiyyaRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SilsilaRoute: typeof SilsilaRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SitesRoute: typeof SitesRoute
+  SitesRoute: typeof SitesRouteWithChildren
+  StudiesRoute: typeof StudiesRoute
   TimelineRoute: typeof TimelineRoute
   LineageNaqshbandiyyaRoute: typeof LineageNaqshbandiyyaRoute
   MastersSlugRoute: typeof MastersSlugRoute
@@ -357,6 +405,13 @@ declare module '@tanstack/react-router' {
       path: '/timeline'
       fullPath: '/timeline'
       preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/studies': {
+      id: '/studies'
+      path: '/studies'
+      fullPath: '/studies'
+      preLoaderRoute: typeof StudiesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sites': {
@@ -399,6 +454,13 @@ declare module '@tanstack/react-router' {
       path: '/map'
       fullPath: '/map'
       preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lineages': {
+      id: '/lineages'
+      path: '/lineages'
+      fullPath: '/lineages'
+      preLoaderRoute: typeof LineagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/library': {
@@ -457,6 +519,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TranslationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sites/': {
+      id: '/sites/'
+      path: '/'
+      fullPath: '/sites/'
+      preLoaderRoute: typeof SitesIndexRouteImport
+      parentRoute: typeof SitesRoute
+    }
     '/orders/': {
       id: '/orders/'
       path: '/orders'
@@ -491,6 +560,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/study/$slug'
       preLoaderRoute: typeof StudySlugRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/sites/$slug': {
+      id: '/sites/$slug'
+      path: '/$slug'
+      fullPath: '/sites/$slug'
+      preLoaderRoute: typeof SitesSlugRouteImport
+      parentRoute: typeof SitesRoute
     }
     '/orders/$slug': {
       id: '/orders/$slug'
@@ -554,6 +630,18 @@ const LibraryRouteChildren: LibraryRouteChildren = {
 const LibraryRouteWithChildren =
   LibraryRoute._addFileChildren(LibraryRouteChildren)
 
+interface SitesRouteChildren {
+  SitesSlugRoute: typeof SitesSlugRoute
+  SitesIndexRoute: typeof SitesIndexRoute
+}
+
+const SitesRouteChildren: SitesRouteChildren = {
+  SitesSlugRoute: SitesSlugRoute,
+  SitesIndexRoute: SitesIndexRoute,
+}
+
+const SitesRouteWithChildren = SitesRoute._addFileChildren(SitesRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   LocaleRoute: LocaleRouteWithChildren,
@@ -562,12 +650,14 @@ const rootRouteChildren: RootRouteChildren = {
   GoldenSufiCenterRoute: GoldenSufiCenterRoute,
   KhwajaganRoute: KhwajaganRoute,
   LibraryRoute: LibraryRouteWithChildren,
+  LineagesRoute: LineagesRoute,
   MapRoute: MapRoute,
   NursafardiyyaRoute: NursafardiyyaRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SilsilaRoute: SilsilaRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SitesRoute: SitesRoute,
+  SitesRoute: SitesRouteWithChildren,
+  StudiesRoute: StudiesRoute,
   TimelineRoute: TimelineRoute,
   LineageNaqshbandiyyaRoute: LineageNaqshbandiyyaRoute,
   MastersSlugRoute: MastersSlugRoute,

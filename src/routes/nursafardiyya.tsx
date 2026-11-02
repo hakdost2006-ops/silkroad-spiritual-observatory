@@ -233,7 +233,7 @@ function NursafardiyyaPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  to="/silsila"
+                  to="/lineages"
                   className="inline-flex items-center gap-2 bg-gold px-5 py-3 text-lapis-deep hover:bg-gold-soft transition-colors"
                 >
                   Trace the Silsila <GitBranch className="h-4 w-4" />
@@ -373,7 +373,7 @@ function NursafardiyyaPage() {
                 Central Asian orders, not direct Nursafardiyya lineage links.
               </p>
               <Link
-                to="/silsila"
+                to="/lineages"
                 className="mt-8 inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory hover:bg-lapis transition-colors"
               >
                 Open Silsila Map <ArrowRight className="h-4 w-4" />
@@ -501,9 +501,8 @@ function NursafardiyyaPage() {
                   Editorial boundary
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-ivory/70">
-                  Sufi Atlas provides contextual introductions and source pointers.
-                  Nursafardiyya books, manuals, and other materials remain on the official
-                  Nursafardiyya website.
+                  Sufi Atlas provides contextual introductions and source pointers. Nursafardiyya
+                  books, manuals, and other materials remain on the official Nursafardiyya website.
                 </p>
               </div>
             </div>

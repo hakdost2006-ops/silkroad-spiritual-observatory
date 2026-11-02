@@ -7,6 +7,7 @@ import { orderVisuals } from "../data/visual-archive";
 import { PageHeader, Panel, FieldLabel, Chip, Ornament } from "../components/ui-primitives";
 import { KubrawiyyaStory } from "../components/KubrawiyyaStory";
 import { YasawiyyaStory } from "../components/YasawiyyaStory";
+import { KhwajaganStory } from "../components/KhwajaganStory";
 import {
   ArrowRight,
   BookOpenText,
@@ -48,6 +49,7 @@ function OrderPage() {
   const { order } = Route.useLoaderData() as { order: Order };
   if (order.slug === "kubrawiyya") return <KubrawiyyaStory />;
   if (order.slug === "yasaviyya") return <YasawiyyaStory />;
+  if (order.slug === "khwajagan") return <KhwajaganStory />;
   if (order.slug === "naqshbandiyya") return <NaqshbandiyyaPage />;
 
   const relatedDownloads = library.filter((l) => l.order === order.slug);
@@ -168,8 +170,14 @@ function OrderPage() {
                   const site = getSite(s);
                   if (!site) return null;
                   return (
-                    <li key={s} className="text-stone">
-                      {site.name}
+                    <li key={s}>
+                      <Link
+                        to="/sites/$slug"
+                        params={{ slug: site.slug }}
+                        className="border-b border-gold/40 text-lapis-deep hover:text-gold"
+                      >
+                        {site.name}
+                      </Link>
                     </li>
                   );
                 })}
@@ -631,7 +639,8 @@ function NaqshbandiyyaPage() {
               Trace the lineage <Network className="h-4 w-4" />
             </Link>
             <Link
-              to="/khwajagan"
+              to="/orders/$slug"
+              params={{ slug: "khwajagan" }}
               className="inline-flex items-center gap-2 bg-lapis-deep px-5 py-3 text-ivory transition-colors hover:bg-lapis"
             >
               Explore the Khwajagan <ArrowRight className="h-4 w-4" />

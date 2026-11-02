@@ -458,7 +458,8 @@ function GoldenSufiCenterPage() {
                 Naqshbandiyya <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                to="/khwajagan"
+                to="/orders/$slug"
+                params={{ slug: "khwajagan" }}
                 className="inline-flex items-center gap-2 text-lapis-deep hover:text-ruby"
               >
                 Khwajagan <ArrowRight className="h-4 w-4" />

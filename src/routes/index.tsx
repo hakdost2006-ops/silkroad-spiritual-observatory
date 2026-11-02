@@ -43,7 +43,8 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              to="/khwajagan"
+              to="/orders/$slug"
+              params={{ slug: "khwajagan" }}
               className="group inline-flex items-center gap-2 bg-gold text-lapis-deep px-6 py-3.5 font-medium tracking-wide hover:bg-gold-soft transition-colors"
             >
               Enter Masters of Wisdom

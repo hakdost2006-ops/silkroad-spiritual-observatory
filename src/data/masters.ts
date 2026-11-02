@@ -482,7 +482,7 @@ export const masters: Master[] = [
       "Solitude in the crowd",
     ],
     works: ["Aurād of Bahāʾ al-Dīn"],
-    shrine: "qasr-e-arifan",
+    shrine: "qasr-i-arifan",
     biography: [
       "Bahāʾ al-Dīn Naqshband was born near Bukhara and became the eponymous master of the Naqshbandiyya. His principal teacher was Amīr Kulāl, while later accounts also remember encounters with Yasawi teachers and the inherited Khwajagan path.",
       "His reputation grew through companions, shrine culture, and the literary work of later disciples. The designation of the earlier masters as one continuous Naqshbandi order is retrospective; the site presents that continuity as a tradition of memory, not as an unbroken institutional fact.",
@@ -557,7 +557,7 @@ export const masters: Master[] = [
     teachers: ["najm-al-din-kubra"],
     teachings: ["Kubrawī contemplative discipline"],
     works: ["Wāqiʿāt"],
-    shrine: "bukhara",
+    shrine: "qasr-i-arifan",
     biography: [
       "Sayf al-Dīn Bākharzī was a leading disciple of Najm al-Dīn Kubrā who established himself in Bukhara. In the Mongol and post-Mongol period, his khanaqah became a durable centre of teaching and patronage on the eastern edge of the city.",
       "His remembered authority demonstrates that the Kubrawiyya did not disappear with Khwarazm: it was reshaped through urban institutions, disciples, and shrine complexes across Central Asia.",

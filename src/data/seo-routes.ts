@@ -1,6 +1,7 @@
 import { masters } from "./masters";
 import { orders } from "./orders";
 import { translationProjects } from "./translations";
+import { sites } from "./sites";
 import { localeHref, localizedPaths, type Locale } from "../i18n/locale";
 
 export const siteOrigin = "https://sufiatlas.com";
@@ -11,7 +12,6 @@ const staticEnglishPaths = [
   "/about",
   "/academy",
   "/golden-sufi-center",
-  "/khwajagan",
   "/library",
   "/library/idries-shah",
   "/lineage/naqshbandiyya",
@@ -19,8 +19,8 @@ const staticEnglishPaths = [
   "/masters",
   "/nursafardiyya",
   "/orders",
-  "/silsila",
-  "/sites",
+  "/lineages",
+  "/studies",
   "/study/ahmad-yasawi",
   "/study/najm-al-din-kubra",
   "/timeline",
@@ -30,6 +30,7 @@ const staticEnglishPaths = [
 const dynamicEnglishPaths = [
   ...masters.map((master) => `/masters/${master.slug}`),
   ...orders.map((order) => `/orders/${order.slug}`),
+  ...sites.map((site) => `/sites/${site.slug}`),
   ...translationProjects.map((project) => `/translations/${project.slug}`),
 ];
 

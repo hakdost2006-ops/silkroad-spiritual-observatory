@@ -28,11 +28,14 @@ function About() {
         title="An atlas held with care"
         intro="A scholarly and spiritually resonant archive of Central Asian Sufi orders, masters, shrines, manuscripts and living practice."
       />
-      <section className="mx-auto max-w-3xl px-5 lg:px-8 py-16 prose-invert">
+      <section
+        id="method"
+        className="mx-auto max-w-3xl scroll-mt-28 px-5 lg:px-8 py-16 prose-invert"
+      >
         <p className="text-lg text-stone leading-relaxed">
-          Sufi Atlas is a growing archive dedicated to the great orders of Central
-          Asian Sufism — the Kubrawiyya, the Yasaviyya, the Khwājagān, the Naqshbandiyya and their
-          related branches — alongside living traditions such as the Nursafardiyya of Uzbekistan.
+          Sufi Atlas is a growing archive dedicated to the great orders of Central Asian Sufism —
+          the Kubrawiyya, the Yasaviyya, the Khwājagān, the Naqshbandiyya and their related branches
+          — alongside living traditions such as the Nursafardiyya of Uzbekistan.
         </p>
         <Ornament className="my-10" />
         <div className="grid sm:grid-cols-2 gap-6 not-prose">
@@ -67,6 +70,26 @@ function About() {
           The atlas is compiled with care by editors and practitioners in dialogue with scholars and
           living teachers. Corrections, contributions and manuscript references are warmly welcomed.
         </p>
+        <div className="mt-12 grid gap-6 border-t border-gold/30 pt-10 sm:grid-cols-2 not-prose">
+          <div id="corrections" className="scroll-mt-28">
+            <FieldLabel>Corrections</FieldLabel>
+            <h2 className="font-serif text-2xl text-lapis-deep">Make the record stronger</h2>
+            <p className="mt-3 text-sm leading-relaxed text-stone">
+              Corrections should identify the page, the proposed change, and a citable source. We
+              distinguish historical evidence, lineage tradition, community testimony, and editorial
+              interpretation.
+            </p>
+          </div>
+          <div id="contact" className="scroll-mt-28">
+            <FieldLabel>Contact</FieldLabel>
+            <h2 className="font-serif text-2xl text-lapis-deep">Contribute a source</h2>
+            <p className="mt-3 text-sm leading-relaxed text-stone">
+              Scholars, custodians, practitioners, and readers may send bibliographic corrections,
+              image permissions, manuscript references, and documented community histories through
+              the project’s public review channel.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

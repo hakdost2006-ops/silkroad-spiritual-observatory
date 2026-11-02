@@ -118,8 +118,9 @@ function LibraryPage() {
             )}
             {results.map((item) => (
               <article
+                id={item.id}
                 key={item.id}
-                className="bg-card border border-gold/25 hover:border-gold transition-colors p-6 grid gap-4 md:grid-cols-[1fr_auto]"
+                className="scroll-mt-28 bg-card border border-gold/25 hover:border-gold transition-colors p-6 grid gap-4 md:grid-cols-[1fr_auto]"
               >
                 <div>
                   <div className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-gold">

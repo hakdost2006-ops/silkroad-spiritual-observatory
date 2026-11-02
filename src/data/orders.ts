@@ -43,7 +43,7 @@ export const orders: Order[] = [
       { title: "Miṣbāḥ al-Hidāya", author: "ʿIzz al-Dīn Kāshānī" },
     ],
     masters: ["najm-al-din-kubra", "sayf-al-din-bakharzi", "ali-hamadani"],
-    sites: ["kunya-urgench", "bukhara"],
+    sites: ["kunya-urgench", "khiva"],
     related: ["nurbakhshiyya", "khwajagan"],
     legacy:
       "The Kubrawī inheritance survived both through named descendant lineages and through a wider afterlife of visionary psychology, retreat discipline, Persian spiritual anthropology, shrines, manuscripts, and regional memory.",
@@ -101,7 +101,7 @@ export const orders: Order[] = [
     practices: ["Silent dhikr", "Ṣuḥbat with the shaykh", "Vigilance over the breath"],
     texts: [{ title: "Kalimāt-i Qudsiyya" }, { title: "Risāla of ʿAbd al-Khāliq Ghujdawānī" }],
     masters: ["yusuf-hamadani", "abd-al-khaliq-ghujdawani", "bahauddin-naqshband"],
-    sites: ["ghujduwan", "bukhara"],
+    sites: ["ghujduwan", "qasr-i-arifan"],
     related: ["naqshbandiyya", "yasaviyya"],
     legacy:
       "From the Khwājagān sprang the Naqshbandī sensibility that would define Central Asian, Mughal and Ottoman Sufism.",
@@ -132,7 +132,7 @@ export const orders: Order[] = [
       { title: "Maktūbāt", author: "Aḥmad Sirhindī" },
     ],
     masters: ["bahauddin-naqshband", "khwaja-ahrar"],
-    sites: ["bukhara", "qasr-e-arifan"],
+    sites: ["qasr-i-arifan", "samarkand"],
     related: ["khwajagan", "mujaddidiyya"],
     legacy:
       "Through the Mujaddidī reform of Aḥmad Sirhindī the Naqshbandiyya entered Mughal India; through Khwāja Aḥrār it shaped the political and cultural life of Timurid Transoxiana.",
@@ -238,7 +238,7 @@ export const orders: Order[] = [
     ],
     texts: [{ title: "Archival practice manuals (in preparation)" }],
     masters: [],
-    sites: ["nursafardiyya-centers"],
+    sites: [],
     related: ["yasaviyya"],
     legacy:
       "An active carrier of Uzbek Sufi memory into the twenty-first century, presented as spiritual practice and traditional wellness rather than medical treatment.",

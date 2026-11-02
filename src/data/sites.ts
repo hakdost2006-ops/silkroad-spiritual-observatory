@@ -14,25 +14,12 @@ export type Site = {
 
 export const sites: Site[] = [
   {
-    slug: "bukhara",
-    name: "Bukhara — Bahāʾ al-Dīn Complex",
-    city: "Bukhara",
-    country: "Uzbekistan",
-    founded: "14th century",
-    orders: ["naqshbandiyya", "khwajagan", "kubrawiyya"],
-    masters: ["bahauddin-naqshband", "sayf-al-din-bakharzi"],
-    description:
-      "The spiritual capital of the Naqshbandī world, ringed by the great madrasas of Bukhara and the shrine complex of Bahāʾ al-Dīn at Qasr-i ʿĀrifān.",
-    x: 52,
-    y: 60,
-  },
-  {
-    slug: "qasr-e-arifan",
+    slug: "qasr-i-arifan",
     name: "Qasr-i ʿĀrifān",
     city: "Near Bukhara",
     country: "Uzbekistan",
     founded: "14th century",
-    orders: ["naqshbandiyya"],
+    orders: ["naqshbandiyya", "khwajagan"],
     masters: ["bahauddin-naqshband"],
     description:
       "The shrine of Khwāja Bahāʾ al-Dīn Naqshband, principal ziyāra of the Naqshbandiyya.",
@@ -176,19 +163,6 @@ export const sites: Site[] = [
     description: "Fertile valley of saints, poets, and enduring Sufi transmission.",
     x: 68,
     y: 55,
-  },
-  {
-    slug: "nursafardiyya-centers",
-    name: "Nursafardiyya Centres",
-    city: "Various",
-    country: "Uzbekistan",
-    founded: "Contemporary",
-    orders: ["nursafardiyya"],
-    masters: [],
-    description:
-      "Contemporary Uzbek centres of the Nursafardiyya living tradition of practice, healing and study.",
-    x: 54,
-    y: 62,
   },
 ];
 

@@ -120,8 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         { property: "og:image:height", content: "1200" },
         {
           property: "og:image:alt",
-          content:
-            "Illuminated architecture of Registan, visual identity of Sufi Atlas",
+          content: "Illuminated architecture of Registan, visual identity of Sufi Atlas",
         },
         {
           name: "twitter:image",
