@@ -38,7 +38,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <Emblem className="hidden sm:block h-9 w-9 shrink-0 text-lapis transition-transform group-hover:rotate-12" />
               <div className="leading-tight">
                 <div className="font-serif text-sm sm:text-lg text-lapis-deep">
-                  Silk Road Sufi Atlas
+                  Sufi Atlas
                 </div>
                 <div className="hidden sm:block text-[10px] uppercase text-stone">
                   {copy.subtitle}
@@ -103,7 +103,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
               <Emblem className="h-10 w-10 text-gold" />
-              <div className="font-serif text-2xl">Silk Road Sufi Atlas</div>
+              <div className="font-serif text-2xl">Sufi Atlas</div>
             </div>
             <p className="mt-4 text-sm text-ivory/70 max-w-md leading-relaxed">{copy.footer}</p>
           </div>
@@ -132,7 +132,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="border-t border-ivory/10">
           <div className="mx-auto max-w-7xl px-5 lg:px-8 py-5 text-xs text-ivory/50 flex flex-wrap justify-between gap-3">
             <span>
-              © {new Date().getFullYear()} Silk Road Sufi Atlas · {copy.copyright}.
+              © {new Date().getFullYear()} Sufi Atlas · {copy.copyright}.
             </span>
             <span className="tracking-[0.25em] uppercase">بسم الله</span>
           </div>

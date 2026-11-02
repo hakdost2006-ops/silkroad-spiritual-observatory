@@ -18,11 +18,13 @@ import { masterImpacts, orderNames, orderSummaries, paired } from "../i18n/catal
 import { libraryDescriptions } from "../i18n/library";
 import { evidenceLabels, yasawiyyaTranslations } from "../i18n/yasawiyya";
 import { yasawiyyaSupplements } from "../i18n/yasawiyya-supplements";
+import { LocalizedTranslationIndex } from "./LocalizedTranslationIndex";
 
 const mausoleumImage =
   "https://upload.wikimedia.org/wikipedia/commons/6/6c/Mausoleum_of_Khoja_Ahmed_Yasawi_in_Hazrat-e_Turkestan%2C_Kazakhstan.jpg";
 
 export function LocalizedAtlas({ locale, path }: { locale: TranslatedLocale; path: string }) {
+  if (path === "/translations") return <LocalizedTranslationIndex locale={locale} />;
   const copy = pageCopy[locale];
   const title =
     path === "/"

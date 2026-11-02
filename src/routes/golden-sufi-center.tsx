@@ -166,7 +166,7 @@ const pathMovements = [
 export const Route = createFileRoute("/golden-sufi-center")({
   head: () => ({
     meta: [
-      { title: "Golden Sufi Center - Silk Road Sufi Atlas" },
+      { title: "Golden Sufi Center — Sufi Atlas" },
       {
         name: "description",
         content:

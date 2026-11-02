@@ -7,7 +7,7 @@ import mapImg from "../assets/silk-road-map.jpg";
 export const Route = createFileRoute("/map")({
   head: () => ({
     meta: [
-      { title: "Sacred Map — Silk Road Sufi Atlas" },
+      { title: "Sacred Map — Sufi Atlas" },
       {
         name: "description",
         content: "An illustrated map of the shrines and sacred cities of Central Asian Sufism.",

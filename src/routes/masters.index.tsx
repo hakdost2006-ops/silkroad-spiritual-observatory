@@ -7,7 +7,7 @@ import { MapPin } from "lucide-react";
 export const Route = createFileRoute("/masters/")({
   head: () => ({
     meta: [
-      { title: "Masters of the Path — Central Asian Sufi Atlas" },
+      { title: "Masters of the Path — Sufi Atlas" },
       {
         name: "description",
         content:

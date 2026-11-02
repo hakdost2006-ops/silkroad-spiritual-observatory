@@ -5,7 +5,7 @@ import mapImg from "../assets/silk-road-map.jpg";
 export const Route = createFileRoute("/khwajagan")({
   head: () => ({
     meta: [
-      { title: "Khwajagan: Masters of Wisdom - Silk Road Sufi Atlas" },
+      { title: "Khwajagan: Masters of Wisdom — Sufi Atlas" },
       {
         name: "description",
         content:

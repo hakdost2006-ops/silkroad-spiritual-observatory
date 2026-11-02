@@ -6,13 +6,13 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
-import { useLocale, localeHref, resolveLocale, localizedPaths } from "../i18n/locale";
-import { localeLinks } from "../i18n/head";
+import { useLocale, localeHref } from "../i18n/locale";
+import { siteLinks } from "../i18n/head";
 import { pageCopy } from "../i18n/copy";
+import { defaultSocialImage } from "../data/seo-routes";
 
 function NotFoundComponent() {
   const { locale } = useLocale();
@@ -45,9 +45,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const copy = locale === "en" ? undefined : pageCopy[locale];
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -82,68 +79,71 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: ({ matches }) => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      {
-        name: "description",
-        content:
-          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
-      },
-      { name: "author", content: "Silk Road Sufi Archive" },
-      { property: "og:title", content: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      {
-        property: "og:description",
-        content:
-          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:locale", content: "en_US" },
-      {
-        property: "og:url",
-        content: `https://sufiatlas.com${matches[matches.length - 1]?.pathname ?? "/"}`,
-      },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Silk Road Sufi Atlas — Central Asian Sufi Houses" },
-      {
-        name: "twitter:description",
-        content:
-          "Central Asian Sufi Houses gathered as an atlas of lineages, masters, sacred sites, manuscripts, and living traditions.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/47d489e5-3668-4e05-96d9-66fc04d08b27/id-preview-b1ff3c3f--53b77a89-0138-4512-881c-47972aa78aba.lovable.app-1783700430265.png",
-      },
-    ],
-    links: [
-      ...(resolveLocale(matches[matches.length - 1]?.pathname ?? "/").locale === "en" &&
-      localizedPaths.includes(
-        resolveLocale(matches[matches.length - 1]?.pathname ?? "/")
-          .path as (typeof localizedPaths)[number],
-      )
-        ? localeLinks(resolveLocale(matches[matches.length - 1]?.pathname ?? "/").path)
-        : []),
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap",
-      },
-    ],
-  }),
+  head: ({ matches }) => {
+    const pathname = matches[matches.length - 1]?.pathname ?? "/";
+    return {
+      meta: [
+        { charSet: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { title: "Sufi Atlas — Central Asian Sufism" },
+        {
+          name: "description",
+          content:
+            "Central Asian Sufi traditions gathered through lineages, masters, sacred sites, manuscripts, and living communities.",
+        },
+        { name: "author", content: "Sufi Atlas" },
+        { property: "og:title", content: "Sufi Atlas — Central Asian Sufism" },
+        {
+          property: "og:description",
+          content:
+            "Central Asian Sufi traditions gathered through lineages, masters, sacred sites, manuscripts, and living communities.",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Sufi Atlas" },
+        { property: "og:locale", content: "en_US" },
+        {
+          property: "og:url",
+          content: `https://sufiatlas.com${pathname}`,
+        },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Sufi Atlas — Central Asian Sufism" },
+        {
+          name: "twitter:description",
+          content:
+            "Central Asian Sufi traditions gathered through lineages, masters, sacred sites, manuscripts, and living communities.",
+        },
+        {
+          property: "og:image",
+          content: defaultSocialImage,
+        },
+        { property: "og:image:width", content: "1920" },
+        { property: "og:image:height", content: "1200" },
+        {
+          property: "og:image:alt",
+          content:
+            "Illuminated architecture of Registan, visual identity of Sufi Atlas",
+        },
+        {
+          name: "twitter:image",
+          content: defaultSocialImage,
+        },
+      ],
+      links: [
+        ...siteLinks(pathname),
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+        { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap",
+        },
+      ],
+    };
+  },
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

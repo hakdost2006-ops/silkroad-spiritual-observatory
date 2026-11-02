@@ -8,6 +8,7 @@ export const localizedPaths = [
   "/orders",
   "/masters",
   "/library",
+  "/translations",
   "/orders/yasaviyya",
 ] as const;
 
@@ -37,7 +38,7 @@ export const localeNames: Record<Locale, string> = {
 
 export const chrome = {
   en: {
-    subtitle: "Central Asian Sufi Houses",
+    subtitle: "Central Asian Sufism",
     skip: "Skip to content",
     menu: "Menu",
     language: "Language",

@@ -36,7 +36,7 @@ import {
 export const Route = createFileRoute("/lineage/naqshbandiyya")({
   head: () => ({
     meta: [
-      { title: "Naqshbandiyya: A Lineage Across Centuries | Silk Road Sufi Atlas" },
+      { title: "Naqshbandiyya: A Lineage Across Centuries | Sufi Atlas" },
       {
         name: "description",
         content:

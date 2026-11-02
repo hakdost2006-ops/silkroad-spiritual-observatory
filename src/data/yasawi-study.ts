@@ -116,7 +116,7 @@ export const yasawiStudySections: YasawiStudySection[] = [
     title: "Why Yasawi continues to speak",
     paragraphs: [
       "Yasawi's afterlife reaches from Central Asia into the Volga region, Anatolia, and the wider Turkic Muslim imagination. But influence should not be reduced to an arrow drawn from one order to another. It travels through recitation, wandering dervishes, local teachers, manuscripts, shrines, translations, family memory, and the durable desire to hear religious language in one's own tongue.",
-      "For the Silk Road Sufi Atlas, Yasawi is therefore a beginning rather than a finished chapter. The task is to make the sources visible, publish translations with their witnesses named, and let the Hikmets remain poems: not slogans of heritage, not anonymous folklore, but difficult invitations to mercy, truthfulness, humility, and love of the Prophet.",
+      "For Sufi Atlas, Yasawi is therefore a beginning rather than a finished chapter. The task is to make the sources visible, publish translations with their witnesses named, and let the Hikmets remain poems: not slogans of heritage, not anonymous folklore, but difficult invitations to mercy, truthfulness, humility, and love of the Prophet.",
     ],
     sourceNotes: [
       "Köprülü, *Early Mystics in Turkish Literature*, read as foundational historiography rather than final authority.",

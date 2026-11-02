@@ -11,7 +11,7 @@ import {
 export const Route = createFileRoute("/translations/")({
   head: () => ({
     meta: [
-      { title: "Translation Library — Silk Road Sufi Atlas" },
+      { title: "Translation Library — Sufi Atlas" },
       {
         name: "description",
         content:

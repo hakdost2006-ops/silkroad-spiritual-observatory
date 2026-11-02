@@ -25,9 +25,9 @@ export const Route = createFileRoute("/orders/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.order.name} — Central Asian Sufi Houses` },
+          { title: `${loaderData.order.name} — Sufi Atlas` },
           { name: "description", content: loaderData.order.tagline },
-          { property: "og:title", content: `${loaderData.order.name} — Silk Road Sufi Atlas` },
+          { property: "og:title", content: `${loaderData.order.name} — Sufi Atlas` },
           { property: "og:description", content: loaderData.order.tagline },
         ]
       : [{ title: "Order not found" }, { name: "robots", content: "noindex" }],

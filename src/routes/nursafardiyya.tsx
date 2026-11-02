@@ -31,7 +31,7 @@ import nursafardiyyaEmblemImg from "../assets/nursafardiyya-emblem.png";
 export const Route = createFileRoute("/nursafardiyya")({
   head: () => ({
     meta: [
-      { title: "Nursafardiyya Sufi School — Silk Road Sufi Atlas" },
+      { title: "Nursafardiyya Sufi School — Sufi Atlas" },
       {
         name: "description",
         content:
@@ -501,7 +501,7 @@ function NursafardiyyaPage() {
                   Editorial boundary
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-ivory/70">
-                  The Silk Road Sufi Atlas provides contextual introductions and source pointers.
+                  Sufi Atlas provides contextual introductions and source pointers.
                   Nursafardiyya books, manuals, and other materials remain on the official
                   Nursafardiyya website.
                 </p>

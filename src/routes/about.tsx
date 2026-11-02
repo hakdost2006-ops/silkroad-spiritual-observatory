@@ -4,13 +4,13 @@ import { PageHeader, Ornament, Panel, FieldLabel } from "../components/ui-primit
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About the Atlas — Silk Road Sufi Archive" },
+      { title: "About — Sufi Atlas" },
       {
         name: "description",
         content:
-          "About the Silk Road Sufi Atlas — a scholarly and reverent archive of Central Asian Sufi lineages, sites and living traditions.",
+          "About Sufi Atlas — an independent, source-governed archive of Central Asian Sufi lineages, sites, texts, and living traditions.",
       },
-      { property: "og:title", content: "About the Silk Road Sufi Atlas" },
+      { property: "og:title", content: "About Sufi Atlas" },
       {
         property: "og:description",
         content: "Scholarship, devotion and living tradition, held in one archive.",
@@ -30,7 +30,7 @@ function About() {
       />
       <section className="mx-auto max-w-3xl px-5 lg:px-8 py-16 prose-invert">
         <p className="text-lg text-stone leading-relaxed">
-          The Silk Road Sufi Atlas is a growing archive dedicated to the great orders of Central
+          Sufi Atlas is a growing archive dedicated to the great orders of Central
           Asian Sufism — the Kubrawiyya, the Yasaviyya, the Khwājagān, the Naqshbandiyya and their
           related branches — alongside living traditions such as the Nursafardiyya of Uzbekistan.
         </p>

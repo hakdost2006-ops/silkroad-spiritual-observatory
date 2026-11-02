@@ -6,7 +6,7 @@ import { Chip, PageHeader, Panel, SectionHeader } from "../components/ui-primiti
 export const Route = createFileRoute("/library/idries-shah")({
   head: () => ({
     meta: [
-      { title: "Idries Shah Library — Silk Road Sufi Atlas" },
+      { title: "Idries Shah Library — Sufi Atlas" },
       {
         name: "description",
         content:

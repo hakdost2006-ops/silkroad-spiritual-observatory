@@ -2,7 +2,7 @@
 
 ## Outcome
 
-**EXTERNALLY VERIFIED** — version 3 of the Silk Road Sufi Atlas is publicly deployed at:
+**EXTERNALLY VERIFIED** — version 3 of Sufi Atlas is publicly deployed at:
 
 `https://silk-road-sufi-atlas-review.hakdost2006.chatgpt.site`
 
@@ -177,7 +177,7 @@ Gather feedback from the source communities on the editorial introductions befor
 
 ## Outcome
 
-**EXTERNALLY VERIFIED** — `https://sufiatlas.com` is active with SSL and serves the Silk Road Sufi Atlas.
+**EXTERNALLY VERIFIED** — `https://sufiatlas.com` is active with SSL and serves Sufi Atlas.
 
 ## Completed
 
@@ -189,7 +189,7 @@ Gather feedback from the source communities on the editorial introductions befor
 
 - Hosting custom-domain status: active.
 - SSL status: active.
-- Browser smoke test: `https://sufiatlas.com` loaded the Silk Road Sufi Atlas homepage without browser errors.
+- Browser smoke test: `https://sufiatlas.com` loaded the Sufi Atlas homepage without browser errors.
 
 ## Remaining Gate
 
@@ -302,3 +302,55 @@ Perform page-specific extraction from the first four sources, with page numbers 
 
 - Did not alter the existing Kubra research paper, founder translations, or live downloadable edition.
 - Did not launch new Yasawi, Naqshbandi, or Academy research agents in this publication task.
+
+---
+
+# SRSFA-20261030-01: SEO, Rights, and Launch Preparation
+
+## Outcome
+
+**VALIDATED LOCAL CANDIDATE** — route-derived SEO endpoints, canonical metadata, an Atlas-owned social image, and inert launch-integration previews are prepared. Nothing was deployed or connected.
+
+## Verified
+
+- The live `sitemap.xml` was absent before this work; the live `robots.txt` came from Cloudflare rather than repository source.
+- The former Ten Principles PDF URL and two plausible translation routes each return `404`. The current library record exposes no file URL.
+- `www.sufiatlas.com` does not currently resolve.
+- Existing titles and descriptions were substantially present; canonical coverage and self-hosted social metadata needed repair.
+
+## Files Changed
+
+- `src/data/seo-routes.ts`
+- `src/routes/sitemap[.]xml.ts`
+- `src/routes/robots[.]txt.ts`
+- `src/i18n/head.ts`
+- `src/routes/__root.tsx`
+- `src/routeTree.gen.ts`
+- `public/og/sufi-atlas.jpg`
+- `scripts/validate-seo.mjs`
+- `docs/SEO_AND_RIGHTS_AUDIT_2026-10-30.md`
+- `docs/LAUNCH_INTEGRATIONS_REVIEW.md`
+- `review/email-signup-preview.html`
+- `package.json`
+- `../KNOWLEDGE_MAP.md`
+- `AGENT_HANDOFF.md`
+
+## Validation
+
+- Production build: passed.
+- TypeScript `--noEmit`: passed.
+- ESLint: 0 errors; 6 pre-existing Fast Refresh warnings.
+- SEO validator: passed 65 sitemap URLs, titles, descriptions, canonicals, language alternates, robots, and social image.
+- `git diff --check`: passed.
+- Signup preview returned HTTP 200 and contains no network submission or storage behavior.
+- Package identity standardized as `sufi-atlas`; removal of the Lovable error invocation produced no build, type, lint, or route regression.
+
+## Remaining Gate
+
+Review the local candidate and decide separately whether to: deploy it; configure `www` DNS and redirect; connect privacy-light analytics; and select an email provider/consent policy. The checked-in Lovable error helper and required Lovable Vite package remain present but unused because this task authorized no deletion or platform migration.
+
+## Actions Not Taken
+
+- No deployment, DNS edit, analytics connection, token creation, subscriber storage, provider account connection, deletion, or build-directory cleanup.
+- No fake Uzbek/Russian hreflang links were created for English-only pages.
+- No Ten Principles file or translation was republished.

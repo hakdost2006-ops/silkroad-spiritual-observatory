@@ -6,15 +6,15 @@ import { silsilaLinks, silsilaNodes } from "../data/nursafardiyya";
 export const Route = createFileRoute("/silsila")({
   head: () => ({
     meta: [
-      { title: "Sufi Silsila — Silk Road Sufi Atlas" },
+      { title: "Sufi Silsila — Sufi Atlas" },
       {
         name: "description",
         content: "A visual lineage map of Central Asian Sufi masters, orders, and living houses.",
       },
-      { property: "og:title", content: "Sufi Silsila — Central Asian Sufi Houses" },
+      { property: "og:title", content: "Sufi Silsila — Sufi Atlas" },
       {
         property: "og:description",
-        content: "Trace the masters, places, and living lineages of the Silk Road Sufi Atlas.",
+        content: "Trace the masters, places, and evidence levels represented in Sufi Atlas.",
       },
     ],
   }),

@@ -32,15 +32,14 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-5 lg:px-8 pt-24 md:pt-36 pb-28 md:pb-40">
           <div className="text-[11px] uppercase tracking-[0.35em] text-gold flex items-center gap-3">
             <span className="h-px w-8 bg-gold/60" />
-            Central Asian Sufi Houses
+            Central Asian Sufism
           </div>
           <h1 className="mt-6 font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.02] text-balance max-w-5xl">
-            Silk Road
-            <span className="block italic text-gold-soft">Sufi Atlas</span>
+            Sufi Atlas
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-xl text-ivory/85 leading-relaxed">
-            Central Asian Sufi Houses gathered as a living atlas of lineages, masters, sacred sites,
-            manuscripts, healing traditions, and spiritual practice from the heart of the Silk Road.
+            Central Asian Sufi traditions gathered through lineages, masters, sacred sites,
+            manuscripts, intellectual history, and living communities.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
@@ -156,7 +155,7 @@ function Index() {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-lapis-deep text-ivory px-4 py-2 text-xs uppercase tracking-[0.25em]">
-              Silk Road Atlas
+              Sufi Atlas
             </div>
           </div>
         </div>

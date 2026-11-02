@@ -6,13 +6,13 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/orders/")({
   head: () => ({
     meta: [
-      { title: "Central Asian Sufi Houses — Silsilas of the Silk Road" },
+      { title: "Traditions and Orders — Sufi Atlas" },
       {
         name: "description",
         content:
           "The Kubrawiyya, Yasaviyya, Khwājagān, Naqshbandiyya, Mujaddidiyya, Nūrbakhshiyya, Bektashiyya, Chishtiyya and the living Nursafardiyya.",
       },
-      { property: "og:title", content: "Central Asian Sufi Houses" },
+      { property: "og:title", content: "Traditions and Orders — Sufi Atlas" },
       {
         property: "og:description",
         content: "Lineages, teachings and practices of the great Central Asian Sufi orders.",

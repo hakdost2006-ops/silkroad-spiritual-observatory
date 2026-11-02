@@ -42,7 +42,7 @@ export const library: LibraryItem[] = [
     id: "kubra-ten-principles",
     title: "al-Uṣūl al-ʿAshara (The Ten Principles)",
     author: "Najm al-Dīn Kubrā",
-    translator: "Silk Road Sufi Atlas research program",
+    translator: "Sufi Atlas research program",
     order: "kubrawiyya",
     language: "English",
     century: "13th / modern edition",

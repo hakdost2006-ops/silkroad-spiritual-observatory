@@ -6,7 +6,7 @@ import { MapPin } from "lucide-react";
 export const Route = createFileRoute("/sites")({
   head: () => ({
     meta: [
-      { title: "Sacred Sites — Silk Road Sufi Atlas" },
+      { title: "Sacred Sites — Sufi Atlas" },
       {
         name: "description",
         content: "Shrines, cities and thresholds of Central Asian Sufism from Bukhara to Kashgar.",

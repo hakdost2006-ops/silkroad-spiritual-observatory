@@ -11,7 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TimelineRouteImport } from './routes/timeline'
 import { Route as SitesRouteImport } from './routes/sites'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SilsilaRouteImport } from './routes/silsila'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as NursafardiyyaRouteImport } from './routes/nursafardiyya'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as LibraryRouteImport } from './routes/library'
@@ -43,9 +45,19 @@ const SitesRoute = SitesRouteImport.update({
   path: '/sites',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SilsilaRoute = SilsilaRouteImport.update({
   id: '/silsila',
   path: '/silsila',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NursafardiyyaRoute = NursafardiyyaRouteImport.update({
@@ -159,7 +171,9 @@ export interface FileRoutesByFullPath {
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
@@ -183,7 +197,9 @@ export interface FileRoutesByTo {
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
@@ -209,7 +225,9 @@ export interface FileRoutesById {
   '/library': typeof LibraryRouteWithChildren
   '/map': typeof MapRoute
   '/nursafardiyya': typeof NursafardiyyaRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/silsila': typeof SilsilaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sites': typeof SitesRoute
   '/timeline': typeof TimelineRoute
   '/$locale/$': typeof LocaleSplatRoute
@@ -236,7 +254,9 @@ export interface FileRouteTypes {
     | '/library'
     | '/map'
     | '/nursafardiyya'
+    | '/robots.txt'
     | '/silsila'
+    | '/sitemap.xml'
     | '/sites'
     | '/timeline'
     | '/$locale/$'
@@ -260,7 +280,9 @@ export interface FileRouteTypes {
     | '/library'
     | '/map'
     | '/nursafardiyya'
+    | '/robots.txt'
     | '/silsila'
+    | '/sitemap.xml'
     | '/sites'
     | '/timeline'
     | '/$locale/$'
@@ -285,7 +307,9 @@ export interface FileRouteTypes {
     | '/library'
     | '/map'
     | '/nursafardiyya'
+    | '/robots.txt'
     | '/silsila'
+    | '/sitemap.xml'
     | '/sites'
     | '/timeline'
     | '/$locale/$'
@@ -311,7 +335,9 @@ export interface RootRouteChildren {
   LibraryRoute: typeof LibraryRouteWithChildren
   MapRoute: typeof MapRoute
   NursafardiyyaRoute: typeof NursafardiyyaRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SilsilaRoute: typeof SilsilaRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SitesRoute: typeof SitesRoute
   TimelineRoute: typeof TimelineRoute
   LineageNaqshbandiyyaRoute: typeof LineageNaqshbandiyyaRoute
@@ -340,11 +366,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/silsila': {
       id: '/silsila'
       path: '/silsila'
       fullPath: '/silsila'
       preLoaderRoute: typeof SilsilaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nursafardiyya': {
@@ -524,7 +564,9 @@ const rootRouteChildren: RootRouteChildren = {
   LibraryRoute: LibraryRouteWithChildren,
   MapRoute: MapRoute,
   NursafardiyyaRoute: NursafardiyyaRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SilsilaRoute: SilsilaRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SitesRoute: SitesRoute,
   TimelineRoute: TimelineRoute,
   LineageNaqshbandiyyaRoute: LineageNaqshbandiyyaRoute,

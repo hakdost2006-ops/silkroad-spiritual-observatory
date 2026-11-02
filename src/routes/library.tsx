@@ -7,7 +7,7 @@ import { PageHeader, Chip } from "../components/ui-primitives";
 export const Route = createFileRoute("/library")({
   head: () => ({
     meta: [
-      { title: "Library & Downloads — Silk Road Sufi Atlas" },
+      { title: "Library & Sources — Sufi Atlas" },
       {
         name: "description",
         content:

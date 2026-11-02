@@ -19,8 +19,8 @@ export const Route = createFileRoute("/study/$slug")({
       {
         title:
           params.slug === "ahmad-yasawi"
-            ? "Aḥmad Yasawī: The Voice of the Hikmets — Silk Road Sufi Atlas"
-            : "Najm al-Dīn Kubrā: The Master of Inner Light — Silk Road Sufi Atlas",
+            ? "Aḥmad Yasawī: The Voice of the Hikmets — Sufi Atlas"
+            : "Najm al-Dīn Kubrā: The Master of Inner Light — Sufi Atlas",
       },
       {
         name: "description",
